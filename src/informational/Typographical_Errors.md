@@ -6,7 +6,7 @@
 
 Typos can reduce professionalism and may confuse readers.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 let amout = 100;

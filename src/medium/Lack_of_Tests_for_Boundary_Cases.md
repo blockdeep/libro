@@ -6,7 +6,7 @@
 
 Omitting tests for boundary cases can lead to unhandled conditions, causing potential bugs.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn test() { /* no boundary tests */ }

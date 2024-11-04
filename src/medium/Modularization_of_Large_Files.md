@@ -6,7 +6,7 @@
 
 Large files reduce readability and make navigation difficult for developers.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 // single large file with multiple functions

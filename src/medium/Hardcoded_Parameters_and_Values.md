@@ -6,7 +6,7 @@
 
 Hardcoding parameters can reduce flexibility, making it harder to adapt to different environments.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 const LIMIT: u32 = 100;

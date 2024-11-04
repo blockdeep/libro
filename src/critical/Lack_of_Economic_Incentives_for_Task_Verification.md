@@ -4,11 +4,13 @@
 
 ## Description
 
-Without proper incentives, verifiers may lack the motivation to perform accurate validations, which can lead to unreliable results and affect overall system integrity.
+Without proper incentives, verifiers may lack the motivation to perform accurate validations, which can lead to
+unreliable results and affect overall system integrity.
 
 ## What should not be done
 
-The following code allows verifiers to decide without any rewards or penalties, which may reduce the accuracy of verifications:
+The following code allows verifiers to decide without any rewards or penalties, which may reduce the accuracy of
+verifications:
 
 ```rust
 fn verify_task(task_id: u32) -> bool {
@@ -19,7 +21,8 @@ fn verify_task(task_id: u32) -> bool {
 
 ## What Can Be Done Instead
 
-Introduce economic incentives to reward correct verifications and penalize incorrect ones. This approach motivates verifiers to act reliably and increases the accuracy of task validation.
+Introduce economic incentives to reward correct verifications and penalize incorrect ones. This approach motivates
+verifiers to act reliably and increases the accuracy of task validation.
 
 ```rust
 fn verify_task_with_incentive(task_id: u32) -> Result<bool, DispatchError> {

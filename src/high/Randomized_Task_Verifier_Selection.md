@@ -6,7 +6,7 @@
 
 Using non-deterministic methods for selection can introduce manipulation opportunities.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn assign_verifier() { /* random selection */ }

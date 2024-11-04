@@ -6,7 +6,7 @@
 
 Without benchmarks for worst-case scenarios, execution weights may be underestimated.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 #[bench] fn typical_scenario() { /* typical path */ }

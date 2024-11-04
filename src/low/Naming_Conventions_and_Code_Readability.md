@@ -6,7 +6,7 @@
 
 Inconsistent naming conventions reduce code readability.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn processData() { /* vague name */ }

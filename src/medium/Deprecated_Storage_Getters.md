@@ -6,7 +6,7 @@
 
 Using deprecated storage getters may lead to compatibility issues in future versions.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 let value = Storage::<T>::get();

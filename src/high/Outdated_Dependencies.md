@@ -6,7 +6,7 @@
 
 Using outdated libraries may lead to security and compatibility issues.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 use outdated_library::deprecated_fn;

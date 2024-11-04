@@ -6,7 +6,7 @@
 
 The use of frontend-specific values may conflict with backend design.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn display_value() { /* frontend-specific */ }

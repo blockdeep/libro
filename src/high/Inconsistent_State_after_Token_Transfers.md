@@ -6,7 +6,7 @@
 
 Relying on the last buyer to cover delivery costs for previous buyers risks penalties and errors.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn finalize_purchase() { /* delivery for all */ }

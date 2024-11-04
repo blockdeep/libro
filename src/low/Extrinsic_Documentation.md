@@ -6,7 +6,7 @@
 
 Extrinsics without documentation can lead to confusion regarding their use.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 pub fn transfer() { /* no docs */ }

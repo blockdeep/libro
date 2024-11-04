@@ -6,7 +6,7 @@
 
 Redundant code and cloning increase code size and decrease efficiency.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 let data = my_data.clone();

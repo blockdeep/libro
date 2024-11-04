@@ -6,7 +6,7 @@
 
 Reliance on pseudo-random values can allow manipulations, risking fairness in verifier selection.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn select_verifier() -> Verifier { /* pseudo-random */ }

@@ -4,7 +4,8 @@
 
 ## Description
 
-Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid states or security issues.
+Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid
+states or security issues.
 
 ## Why It Should Not Be Done
 
@@ -18,7 +19,8 @@ fn process_input(data: u32) {
 
 ## What Can Be Done Instead
 
-Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid out-of-range values:
+Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid
+out-of-range values:
 
 ```rust
 fn process_input(data: u32) -> Result<(), Error> {
@@ -27,4 +29,5 @@ fn process_input(data: u32) -> Result<(), Error> {
 }
 ```
 
-By validating inputs, we prevent potentially harmful values from entering the system, enhancing reliability and security.
+By validating inputs, we prevent potentially harmful values from entering the system, enhancing reliability and
+security.

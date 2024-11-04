@@ -6,7 +6,7 @@
 
 Lack of extrinsic documentation can cause misunderstandings regarding usage permissions, inputs, and error handling.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 fn some_extrinsic() { /* undocumented extrinsic */ }

@@ -6,7 +6,7 @@
 
 Documentation that varies in quality across modules can create knowledge gaps.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 // No documentation for this function

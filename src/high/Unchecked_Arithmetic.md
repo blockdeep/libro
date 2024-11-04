@@ -6,7 +6,7 @@
 
 Unchecked arithmetic operations can lead to overflow errors.
 
-## Why It Should Not Be Done
+## What should not be done
 
 ```rust
 let total = a + b;
