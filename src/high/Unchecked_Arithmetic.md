@@ -21,7 +21,7 @@ In this example:
 - If `a` and `b` are large, the result may exceed the data type’s maximum value, causing an overflow and leading to
   incorrect results.
 
-## What Can Be Done Instead
+## What can be done instead
 
 ### Option 1: Use Checked Arithmetic
 

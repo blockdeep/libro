@@ -23,7 +23,7 @@ In this example:
 - `rand::random::<usize>() % verifiers.len()` selects a verifier at random, which could result in unfair frequency of
   selection for certain verifiers.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Implement a deterministic selection method, such as using the task ID as a basis to ensure a fair, repeatable selection:
 

@@ -13,26 +13,27 @@ The following code allows verifiers to decide without any rewards or penalties, 
 verifications:
 
 ```rust
-fn verify_task(task_id: u32) -> bool {
+fn verify_task(task_id: u32) {
     // Verification without incentive
-     reward_verifier(); // Rewarded regardless of the accuracy
+    reward_verifier(); // Rewarded regardless of the accuracy
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Introduce economic incentives to reward correct verifications and penalize incorrect ones. This approach motivates
 verifiers to act reliably and increases the accuracy of task validation.
 
 ```rust
-fn verify_task_with_incentive(task_id: u32) -> Result<bool, DispatchError> {
+fn verify_task_with_incentive(task_id: u32) -> bool {
     // Reward or penalize based on verification accuracy
     if is_correct_verification(task_id) {
         reward_verifier(); // Reward for correct verification
+        true
     } else {
         penalize_verifier(); // Penalty for incorrect verification
+        false
     }
-    Ok(true)
 }
 ```
 

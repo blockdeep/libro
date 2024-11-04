@@ -20,7 +20,7 @@ fn finalize_operations() {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use a claim-based process where each participant finalizes their operation individually, or use batch processing to
 distribute the load.

@@ -23,7 +23,7 @@ In this example:
 - The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
   others to use or modify it confidently.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected
 outcomes for each function.

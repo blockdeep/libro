@@ -18,7 +18,7 @@ fn some_extrinsic() {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Document each extrinsic clearly, detailing its purpose, input parameters, permissions, and potential errors to improve usability and clarity:
 

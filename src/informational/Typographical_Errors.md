@@ -20,7 +20,7 @@ In this example:
 - The misspelled variable `amout` is unclear and could lead to confusion, especially if referenced in multiple parts of
   the code.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Perform thorough proofreading to catch typos and enhance clarity, ensuring variable names and comments are accurate and
 descriptive.

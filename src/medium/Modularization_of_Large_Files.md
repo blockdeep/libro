@@ -25,7 +25,7 @@ In this example:
 
 - All functionality is packed into one file, making it difficult to navigate and locate specific functions.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Split the code into smaller, purpose-specific modules to improve organization and readability:
 

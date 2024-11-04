@@ -18,7 +18,7 @@ for item in big_data {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use a bounded iterator or limit the number of items processed in each iteration. This approach prevents excessive
 resource usage and keeps operations predictable.

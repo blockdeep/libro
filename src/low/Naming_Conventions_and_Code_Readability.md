@@ -23,7 +23,7 @@ In this example:
 - The function name `processData` is too generic, making it difficult for readers to understand its purpose without
   further inspection.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use clear and descriptive names that convey the function’s purpose and follow a consistent naming style:
 

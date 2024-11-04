@@ -18,7 +18,7 @@ pub fn execute() {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Implement access control checks to restrict function access to specific users or roles, such as administrators, to
 protect critical functions.

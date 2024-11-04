@@ -20,7 +20,7 @@ In this example:
 - `LIMIT` is fixed at compile time, so changing it requires editing the code, recompiling, and redeploying, which can be
   inefficient.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use configurable traits to allow parameter adjustments at the runtime level, enhancing flexibility and adaptability:
 

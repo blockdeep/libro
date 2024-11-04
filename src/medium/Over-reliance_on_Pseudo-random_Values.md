@@ -24,7 +24,7 @@ In this example:
 - The verifier selection is based on a pseudo-random index, which may favor certain verifiers over others, especially if
   the randomness source is predictable.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use a deterministic approach to ensure fair distribution across all participants, such as by hashing a unique
 identifier:

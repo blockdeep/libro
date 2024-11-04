@@ -17,7 +17,7 @@ fn add_entry(entry: Entry) {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Using `BoundedVec`, we can set a fixed maximum number of entries, enforcing storage limits directly within the data
 structure. This approach automatically restricts the growth of entries, enhancing efficiency.

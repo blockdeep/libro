@@ -24,7 +24,7 @@ In this example:
 
 - The benchmark uses a small data set (`10` items), which may not reflect the workload in a worst-case scenario.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Benchmark the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately
 reflects maximum resource usage:

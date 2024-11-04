@@ -22,7 +22,7 @@ fn process_data(data: Vec<u32>) {
 In this example:
 - The entire `data` vector is cloned, doubling the memory usage even if the original data can be processed directly or accessed via reference.
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use references to avoid unnecessary cloning, and review code for unused or redundant sections regularly to keep the codebase lean:
 

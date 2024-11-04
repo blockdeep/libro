@@ -17,7 +17,7 @@ fn process_input(data: u32) {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid
 out-of-range values:
