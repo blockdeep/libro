@@ -1,23 +1,45 @@
-# Inconsistent Documentation Standards
+# Maintain Consistent Documentation Standards Across Modules
 
 **Severity**: Informational
 
 ## Description
 
-Documentation that varies in quality across modules can create knowledge gaps.
+Inconsistent documentation across modules can create knowledge gaps, making code harder to understand, maintain, and use
+correctly, especially for new contributors.
 
-## What should not be done
+## What Should Not Be Done
+
+Lack of documentation or minimal comments can leave important details unclear, as shown below:
 
 ```rust
 // No documentation for this function
+fn process_data(data: u32) {
+    // Function logic here
+}
 ```
+
+In this example:
+
+- The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
+  others to use or modify it confidently.
 
 ## What Can Be Done Instead
 
-Establish a consistent documentation standard, including Readme file structure and content requirements.
+Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected
+outcomes for each function.
 
 ```rust
-// Detailed function description and parameters
+/// Processes the provided data by performing necessary calculations.
+/// 
+/// # Parameters
+/// - `data`: The input data to be processed, expected as an unsigned integer.
+/// 
+/// # Returns
+/// - Result of the processing operation as a `u32`.
+fn process_data(data: u32) -> u32 {
+    // Function logic here
+}
 ```
 
-
+With a standardized documentation format, each function is clearly explained, making the codebase easier to understand
+and maintain. This approach reduces the risk of misinterpretation and supports team collaboration.
