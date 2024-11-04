@@ -1,9 +1,9 @@
-# Substrate Code Review Best Practices
+# Substrate's Best Practices
 
 [Introduction](./README.md)
 
 - [Critical issues](critical/README.md)
-  - [Economic incentives for task verification](critical/Economic_Incentives_for_Task_Verification.md)
+  - [Economic incentives for task verification](critical/Lack_of_Economic_Incentives_for_Task_Verification.md)
   - [Lack of access control](critical/Lack_of_Access_Control.md)
   - [Unbounded iteration risks](critical/Unbounded_Iteration_Risks.md)
   - [Unchecked input data](critical/Unchecked_Input_Data.md)
@@ -18,12 +18,12 @@
 
 - [Medium severity issues](medium/README.md)
   - [Deprecated storage getters](medium/Deprecated_Storage_Getters.md)
-  - [Hardcoded parameters](medium/Hardcoded_Parameters.md)
+  - [Hardcoded parameters](medium/Hardcoded_Parameters_and_Values.md)
   - [Modulatization of large files](medium/Modularization_of_Large_Files.md)
 
 
 - [Low severity issues](low/README.md)
-  - [Naming conventions](low/Naming_Conventions.md)
+  - [Naming conventions and code readability](low/Naming_Conventions_and_Code_Readability.md)
   - [Unused code and redundant cloning](low/Unused_Code_and_Redundant_Cloning.md)
 
 

@@ -1,4 +1,4 @@
-# Introduction to Substrate Code Review Best Practices
+# Introduction to Substrate's Best Practices
 
 Welcome to the Substrate Code Review Best Practices guide. This resource compiles essential insights and best practices derived from comprehensive code reviews across various Substrate-based projects. The purpose of this guide is to help developers, auditors, and contributors understand and address common issues that can arise in blockchain development on Substrate, an open-source blockchain framework designed by Parity Technologies.
 

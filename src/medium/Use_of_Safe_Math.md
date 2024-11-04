@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Use of Safe Math
 
-**Severity**: Critical
+**Severity**: Medium
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Unchecked arithmetic operations can lead to overflow errors.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+let total = a + b;
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+let total = a.checked_add(b).ok_or(Error::<T>::Overflow)?;
 ```
 
 Explanation:

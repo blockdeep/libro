@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Lack of Economic Incentives for Task Verification
 
 **Severity**: Critical
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Without proper incentives, verifiers may lack motivation to perform accurate validations, risking system reliability.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn verify_task(task_id: u32) -> bool { /* verifier decides without incentive */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn verify_task_with_incentive(task_id: u32) -> Result<bool, DispatchError> { /* incentivized verifier logic */ }
 ```
 
 Explanation:

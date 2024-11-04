@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Undefined Storage Limits in Marketplace Offers
 
-**Severity**: Critical
+**Severity**: High
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Allowing unlimited offers can lead to storage overflow and high costs during clearing operations.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn add_offer(offer: Offer) { /* unlimited entries */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn add_offer_limited(offer: Offer) { /* enforce offer limits */ }
 ```
 
 Explanation:

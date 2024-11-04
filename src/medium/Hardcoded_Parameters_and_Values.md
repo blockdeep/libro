@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Hardcoded Parameters and Values
 
-**Severity**: Critical
+**Severity**: Medium
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Hardcoding parameters can reduce flexibility, making it harder to adapt to different environments.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+const LIMIT: u32 = 100;
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+pub trait Config: frame_system::Config { const LIMIT: u32; }
 ```
 
 Explanation:

@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Missing Extrinsic Documentation
 
-**Severity**: Critical
+**Severity**: Medium
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Lack of extrinsic documentation can cause misunderstandings regarding usage permissions, inputs, and error handling.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn some_extrinsic() { /* undocumented extrinsic */ }
 ```
 
 In this example:
@@ -21,7 +21,9 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+/// Performs operation. 
+ /// Params: description of each parameter
+ fn documented_extrinsic() { /* documented extrinsic */ }
 ```
 
 Explanation:

@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Over-reliance on Pseudo-random Values
 
-**Severity**: Critical
+**Severity**: Medium
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Reliance on pseudo-random values can allow manipulations, risking fairness in verifier selection.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn select_verifier() -> Verifier { /* pseudo-random */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn select_verifier_deterministic() -> Verifier { /* fair distribution */ }
 ```
 
 Explanation:

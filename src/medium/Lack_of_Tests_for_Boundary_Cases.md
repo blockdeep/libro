@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Lack of Tests for Boundary Cases
 
-**Severity**: Critical
+**Severity**: Medium
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Omitting tests for boundary cases can lead to unhandled conditions, causing potential bugs.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn test() { /* no boundary tests */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn test_with_boundary_cases() { /* test edge cases */ }
 ```
 
 Explanation:

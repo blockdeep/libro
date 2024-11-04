@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Extrinsic Documentation
 
-**Severity**: Critical
+**Severity**: Low
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Extrinsics without documentation can lead to confusion regarding their use.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+pub fn transfer() { /* no docs */ }
 ```
 
 In this example:
@@ -21,7 +21,8 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+/// Transfers assets from sender to recipient
+pub fn transfer() { /* documented */ }
 ```
 
 Explanation:

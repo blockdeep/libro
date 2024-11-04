@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Inconsistent State after Token Transfers
 
-**Severity**: Critical
+**Severity**: High
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Relying on the last buyer to cover delivery costs for previous buyers risks penalties and errors.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn finalize_purchase() { /* delivery for all */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn finalize_purchase_sequential() { /* claim-based delivery */ }
 ```
 
 Explanation:

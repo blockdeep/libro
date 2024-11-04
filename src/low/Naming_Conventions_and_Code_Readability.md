@@ -1,16 +1,16 @@
-# Lack of Access Control
+# Naming Conventions and Code Readability
 
-**Severity**: Critical
+**Severity**: Low
 
 ## Description
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Inconsistent naming conventions reduce code readability.
 
 ## Why It Should Not Be Done
 
 The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
-pub fn execute() { /* open access */ }
+fn processData() { /* vague name */ }
 ```
 
 In this example:
@@ -21,7 +21,7 @@ In this example:
 An improved version is shown below:
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+fn process_transaction_data() { /* descriptive name */ }
 ```
 
 Explanation:
