@@ -1,23 +1,44 @@
-# Benchmark Coverage for Worst-Case Scenarios
+# Benchmark Worst-Case Scenarios to Ensure Accurate Execution Weights
 
 **Severity**: High
 
 ## Description
 
-Without benchmarks for worst-case scenarios, execution weights may be underestimated.
+Benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource
+overuse or transaction failures in real-world usage.
 
-## What should not be done
+## What Should Not Be Done
+
+The following code benchmarks a typical scenario, which may not account for the heaviest possible execution path,
+leading to underestimated weights:
 
 ```rust
-#[bench] fn typical_scenario() { /* typical path */ }
+#[benchmark]
+fn typical_scenario() {
+    let items = generate_data(10); // Benchmark with a small data set
+    process_items(items);
+}
 ```
+
+In this example:
+
+- The benchmark uses a small data set (`10` items), which may not reflect the workload in a worst-case scenario.
 
 ## What Can Be Done Instead
 
-Benchmark worst-case paths and update extrinsics to reflect these cases accurately.
+Benchmark the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately
+reflects maximum resource usage:
 
 ```rust
-#[bench] fn worst_case_scenario() { /* cover worst path */ }
+#[benchmark]
+fn worst_case_scenario(s: Linear<1, MAX_ITEMS>) {
+    let items = generate_data(s); // Benchmark with maximum data
+    process_items(items);
+}
 ```
 
+In this improved example:
 
+- `generate_data(s)` creates the maximum allowed data set to simulate a heavy load.
+- By covering the worst-case path, this benchmark provides a realistic weight that prevents unexpected performance
+  issues during peak loads.
