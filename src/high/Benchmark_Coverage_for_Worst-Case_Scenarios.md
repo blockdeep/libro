@@ -16,7 +16,11 @@ leading to underestimated weights:
 #[benchmark]
 fn typical_scenario() {
     let items = generate_data(10); // Benchmark with a small data set
-    process_items(items);
+    
+    #[block]
+    {
+      process_items(items);
+    }
 }
 ```
 
@@ -33,7 +37,11 @@ reflects maximum resource usage:
 #[benchmark]
 fn worst_case_scenario(s: Linear<1, MAX_ITEMS>) {
     let items = generate_data(s); // Benchmark with maximum data
-    process_items(items);
+    
+    #[block]
+    {
+      process_items(items);
+    }
 }
 ```
 
