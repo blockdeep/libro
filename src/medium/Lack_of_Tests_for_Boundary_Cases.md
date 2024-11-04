@@ -1,23 +1,45 @@
-# Lack of Tests for Boundary Cases
+# Include Boundary Case Tests to Ensure Robustness
 
 **Severity**: Medium
 
 ## Description
 
-Omitting tests for boundary cases can lead to unhandled conditions, causing potential bugs.
+Omitting tests for boundary cases can leave critical edge conditions unhandled, leading to potential bugs and
+unpredictable behavior, especially when inputs approach their limits.
 
-## What should not be done
+## What Should Not Be Done
+
+Neglecting boundary cases in testing may overlook issues that occur at the extremes of expected input ranges:
 
 ```rust
-fn test() { /* no boundary tests */ }
+#[test]
+fn test_process_data() {
+    assert_eq!(process_data(50), Some(50)); // Typical case
+}
 ```
+
+In this example:
+
+- The function only tests a typical case (`50`) and misses important edge conditions that could cause issues if
+  unhandled.
 
 ## What Can Be Done Instead
 
-Include tests for boundary conditions and error scenarios to improve reliability.
+Include tests for boundary conditions to verify that the code handles edge cases, such as zero, maximum, and just beyond
+maximum values:
 
 ```rust
-fn test_with_boundary_cases() { /* test edge cases */ }
+#[test]
+fn test_process_data_with_boundary_cases() {
+    assert_eq!(process_data(0), Some(0)); // Minimum boundary
+    assert_eq!(process_data(MAX_LIMIT), Some(MAX_LIMIT)); // Maximum boundary
+    assert!(process_data(MAX_LIMIT + 1).is_none()); // Beyond maximum boundary
+}
 ```
 
+In this improved example:
 
+- We test the function at `0` (minimum boundary), `MAX_LIMIT` (maximum boundary), and `MAX_LIMIT + 1` (just beyond the
+  maximum).
+- This ensures that `process_data` behaves correctly at all crucial boundaries, improving robustness and reducing the
+  risk of bugs in production.
