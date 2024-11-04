@@ -1,0 +1,6 @@
+[book]
+authors = ["BlockDeep Labs <info@blockdeep.io>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Substrate Development Best Practices"
