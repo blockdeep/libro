@@ -1,17 +1,30 @@
-# Unchecked Input Data
+# Validate Input Data to Prevent Unexpected Behavior
 
 **Severity**: Critical
 
-**Description**: Lack of input validation can lead to unexpected behaviors and potential vulnerabilities.
+## Description
 
-**Why it should not be done**:
+Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid states or security issues.
 
-```rust
-fn process_input(data: u32) { /* no validation */ }
-```
+## Why It Should Not Be Done
 
-**What can be done instead**:
+The following code accepts input without validating its range or format, which can lead to unintended results:
 
 ```rust
-fn process_input(data: u32) -> Result<(), Error> { ensure!(data < MAX_LIMIT, Error::<T>::InvalidInput); }
+fn process_input(data: u32) {
+    // Processes data with no validation
+}
 ```
+
+## What Can Be Done Instead
+
+Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid out-of-range values:
+
+```rust
+fn process_input(data: u32) -> Result<(), Error> {
+    ensure!(data < MAX_LIMIT, Error::<T>::InvalidInput); // Validate input before processing
+    Ok(())
+}
+```
+
+By validating inputs, we prevent potentially harmful values from entering the system, enhancing reliability and security.

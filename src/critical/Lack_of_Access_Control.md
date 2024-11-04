@@ -1,21 +1,30 @@
-# Lack of Access Control
+# Enforce Access Control to Protect Critical Functions
 
 **Severity**: Critical
 
 ## Description
 
-Open access on extrinsics without checks may allow unauthorized actions that can compromise platform security.
+Leaving extrinsics open to all users without proper access control can allow unauthorized actions, potentially compromising platform security and functionality.
 
-## Why It Should Not Be Done
+## What should not be done
+
+In the following code, the `execute` function can be called by any user, which may lead to unauthorized or malicious actions:
 
 ```rust
-pub fn execute() { /* open access */ }
+pub fn execute() {
+    // Function with unrestricted access
+}
 ```
 
 ## What Can Be Done Instead
 
-Add access control checks to limit access to specific users or roles.
+Implement access control checks to restrict function access to specific users or roles, such as administrators, to protect critical functions.
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
+pub fn execute(origin: OriginFor<T>) -> DispatchResult {
+    ensure_root(origin)?; // Restrict access to the root (admin) user
+    // Secure function logic here
+}
 ```
+
+Using `ensure_root` enforces that only users with root permissions can execute this function, reducing the risk of unauthorized actions and enhancing security.

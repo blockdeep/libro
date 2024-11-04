@@ -25,7 +25,7 @@ This guide is organized by issue severity to help prioritize improvements. Each 
 Each issue is presented with:
 
 - **Description**: An overview of the issue and its potential impact.
-- **Why It Should Not Be Done**: Examples illustrating the risks or inefficiencies of poor implementation.
+- **What should not be done**: Examples illustrating the risks or inefficiencies of poor implementation.
 - **What Can Be Done Instead**: Suggested best practices, often with code snippets, to guide proper implementation.
 
 ## How to Use This Guide
