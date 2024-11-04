@@ -7,22 +7,17 @@ Open access on extrinsics without checks may allow unauthorized actions that can
 
 ## Why It Should Not Be Done
 
-The following code demonstrates a poor practice that can lead to issues:
 
 ```rust
 pub fn execute() { /* open access */ }
 ```
 
-In this example:
-- Explain the potential issue or lack of protection mechanisms.
+
 
 ## What Can Be Done Instead
 
-An improved version is shown below:
+
 
 ```rust
 pub fn execute(origin: OriginFor<T>) -> DispatchResult { ensure_root(origin)?; /* secure access */ }
 ```
-
-Explanation:
-- Detail how the changes provide safeguards or improvements.
