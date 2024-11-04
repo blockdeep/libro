@@ -3,20 +3,18 @@
 **Severity**: High
 
 ## Description
+
 Relying on the last buyer to cover delivery costs for previous buyers risks penalties and errors.
 
 ## Why It Should Not Be Done
-
 
 ```rust
 fn finalize_purchase() { /* delivery for all */ }
 ```
 
-
-
 ## What Can Be Done Instead
 
-
+Use a claim-based delivery process or batch processing.
 
 ```rust
 fn finalize_purchase_sequential() { /* claim-based delivery */ }
