@@ -7,6 +7,7 @@
     - [Lack of access control](critical/Lack_of_Access_Control.md)
     - [Unbounded iteration risks](critical/Unbounded_Iteration_Risks.md)
     - [Unchecked input data](critical/Unchecked_Input_Data.md)
+    - [Improve Error Handling to Avoid Panics](critical/Improve_Error_Handling_to_Avoid_Panics.md)
 
 
 - [High severity issues](high/README.md)
