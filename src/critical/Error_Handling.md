@@ -18,7 +18,7 @@ application crashes:
 let value = my_data.get(0).unwrap();
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Handle errors explicitly by using `Result` and providing descriptive error messages:
 

@@ -27,7 +27,7 @@ fn process_transaction() {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Apply the single responsibility principle by breaking down the function into smaller, focused functions:
 

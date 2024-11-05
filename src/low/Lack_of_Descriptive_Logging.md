@@ -15,7 +15,7 @@ Logging messages without context or relevant details makes troubleshooting diffi
 log::info!("Process started");
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Include context and relevant details in log messages to enhance debugging:
 

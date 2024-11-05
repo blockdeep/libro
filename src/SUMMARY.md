@@ -18,6 +18,7 @@
     - [Uncontrolled storage growth](high/Uncontrolled_Storage_Growth.md)
     - [Inconsistent state by distributing finalization costs](high/Inconsistent_State_by_Distributing_Finalization_Costs.md)
     - [Lack of transactional integrity](./high/Lack_of_Transactional_Integrity.md)
+    - [Redundant storage access in mutations](./high/Redundant_Storage_Access_in_Mutations.md)
 
 
 - [Medium severity issues](medium/README.md)
@@ -32,6 +33,7 @@
     - [Use of magic numbers](./medium/Use_of_Magic_Numbers.md)
     - [Lack of interface segregation](./medium/Lack_of_Interface_Segregation.md)
     - [Inadequate logging for critical actions](./medium/Inadequate_Logging_for_Critical_Actions.md)
+    - [Hardcoded `BoundedVec` size](./medium/Hardcoded_BoundedVec_Size.md)
 
 
 - [Low severity issues](low/README.md)
@@ -40,6 +42,7 @@
     - [Hardcoded error messages](./low/Hardcoded_Error_Messages.md)
     - [Insufficient use of enumerations](./low/Insufficient_Use_of_Enumerations.md)
     - [Lack of descriptive logging](./low/Lack_of_Descriptive_Logging.md)
+    - [Unnecessary return values](./low/Unnecessary_Return_Values.md)
 
 
 - [Informational issues](informational/README.md)

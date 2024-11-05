@@ -18,7 +18,7 @@ fn update_user_balance(user_id: u32, amount: u32) {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Add detailed logging for critical actions to improve traceability:
 

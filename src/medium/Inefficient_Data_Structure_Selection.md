@@ -16,7 +16,7 @@ Using a `Vec` for frequent lookups, which requires linear-time search, can slow 
 let result = vec_data.contains(&item);
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use a `HashSet` or `BTreeSet` for efficient lookup operations:
 

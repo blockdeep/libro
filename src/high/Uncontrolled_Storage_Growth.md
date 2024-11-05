@@ -27,8 +27,8 @@ structure. This approach automatically restricts the growth of entries, enhancin
 #[pallet::storage]
 pub type Entries<T: Config> = StorageValue<_, BoundedVec<Entry, MaxEntries>>;
 
-fn add_entry_limited(entry: Entry) -> Result<(), &'static str> {
-    Entries::<T>::try_push(entry).map_err(|_| "Max entries limit reached")
+fn add_entry_limited(entry: Entry) -> Result<(), Error> {
+    Entries::<T>::try_push(entry).map_err(|_| Error::<T>::TooManyEntries)
 }
 ```
 

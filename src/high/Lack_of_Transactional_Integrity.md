@@ -20,7 +20,7 @@ fn transfer_funds(sender: AccountId, recipient: AccountId, amount: u32) {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use atomic operations or implement rollback logic to ensure all changes are applied consistently:
 

@@ -19,7 +19,7 @@ trait FullService {
 }
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Separate interfaces into smaller, focused traits to simplify code:
 

@@ -17,7 +17,7 @@ value += 1;  // this can overflow!
 MyStorage::<T>::put(value);
 ```
 
-## What Can Be Done Instead
+## What can be done instead
 
 Use `try_mutate` or `try_mutate_exists` to combine read and write logic in a single, efficient operation:
 
