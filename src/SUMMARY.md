@@ -16,6 +16,7 @@
     - [Unchecked arithmetic](high/Unchecked_Arithmetic.md)
     - [Implement storage limits to prevent uncontrolled growth](high/Implement_Storage_Limits_to_Prevent_Uncontrolled_Growth.md)
     - [Inconsistent state by distributing finalization costs](high/Inconsistent_State_by_Distributing_Finalization_Costs.md)
+    - [Lack of Transactional Integrity](./high/Lack_of_Transactional_Integrity.md)
 
 
 - [Medium severity issues](medium/README.md)
@@ -25,11 +26,17 @@
     - [Missing extrinsic documentation](medium/Missing_Extrinsic_Documentation.md)
     - [Modulatization of large files](medium/Modularization_of_Large_Files.md)
     - [Over-reliance on pseudo-random values](medium/Over-reliance_on_Pseudo-random_Values.md)
+    - [Excessive Function Complexity](./medium/Excessive_Function_Complexity.md)
+    - [Inefficient Data Structure Selection](./medium/Inefficient_Data_Structure_Selection.md)
+    - [Use of Magic Numbers](./medium/Use_of_Magic_Numbers.md)
 
 
 - [Low severity issues](low/README.md)
     - [Naming conventions and code readability](low/Naming_Conventions_and_Code_Readability.md)
     - [Unused code and redundant cloning](low/Unused_Code_and_Redundant_Cloning.md)
+    - [Hardcoded Error Messages](./low/Hardcoded_Error_Messages.md)
+    - [Insufficient Use of Enumerations](./low/Insufficient_Use_of_Enumerations.md)
+    - [Lack of Descriptive Logging](./low/Lack_of_Descriptive_Logging.md)
 
 
 - [Informational issues](informational/README.md)
