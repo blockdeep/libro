@@ -4,11 +4,14 @@
 
 ## Description
 
-A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs, permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with the extrinsic correctly.
+A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs,
+permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with
+the extrinsic correctly.
 
 ## What should not be done
 
-Leaving extrinsics undocumented makes it difficult to understand their behavior, which may lead to misuse or unexpected errors:
+Leaving extrinsics undocumented makes it difficult to understand their behavior, which may lead to misuse or unexpected
+errors:
 
 ```rust
 #[pallet::call_index(0)]
@@ -20,7 +23,8 @@ fn some_extrinsic() {
 
 ## What can be done instead
 
-Document each extrinsic clearly, detailing its purpose, input parameters, permissions, and potential errors to improve usability and clarity:
+Document each extrinsic clearly, detailing its purpose, input parameters, permissions, and potential errors to improve
+usability and clarity:
 
 ```rust
 /// Transfers a specified amount from the sender to the recipient.
@@ -44,5 +48,7 @@ fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: u32) -> Dispatch
 ```
 
 In this example:
-- Each parameter, required permission, and potential error is clearly documented, ensuring users know exactly how to interact with the extrinsic and what conditions to expect.
+
+- Each parameter, required permission, and potential error is clearly documented, ensuring users know exactly how to
+  interact with the extrinsic and what conditions to expect.
 - This level of detail minimizes confusion and supports safer, more effective use of the extrinsic.

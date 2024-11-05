@@ -5,13 +5,13 @@ derived from comprehensive code reviews across various Substrate-based projects.
 developers, auditors, and contributors understand and address common issues that can arise in blockchain development on
 Substrate, an open-source blockchain framework designed by Parity Technologies.
 
-## Why This Guide?
+## Why this guide?
 
 Substrate is a powerful and flexible framework, but developing robust, secure, and efficient blockchain applications
 requires attention to detail and adherence to best practices. This guide serves as a practical reference to help you
 avoid common pitfalls, enhance code readability, and ensure optimal performance and security.
 
-## What You’ll Find Here
+## What you will find here
 
 This guide is organized by issue severity to help prioritize improvements. Each section covers a severity level:
 
@@ -28,13 +28,13 @@ Each issue is presented with:
 - **What should not be done**: Examples illustrating the risks or inefficiencies of poor implementation.
 - **What can be done instead**: Suggested best practices, often with code snippets, to guide proper implementation.
 
-## How to Use This Guide
+## How to use this guide
 
 Whether you are conducting a code review, refactoring, or writing new Substrate modules, this guide is designed to
 provide actionable insights and practical solutions. We encourage readers to consult this guide regularly to maintain
 high standards of quality, security, and efficiency in their projects.
 
-## A Collaborative Effort
+## A collaborative effort
 
 This guide is part of a collaborative effort to elevate the quality of blockchain development. By following these best
 practices, you contribute to building a resilient and trustworthy ecosystem on Substrate. Thank you for your commitment

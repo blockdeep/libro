@@ -1,6 +1,7 @@
 # Substrate's Best Practices
 
 [Introduction](./README.md)
+[Summary](./TABLE.md)
 
 - [Critical issues](critical/README.md)
     - [Lack of economic incentives for task verification](critical/Lack_of_Economic_Incentives_for_Task_Verification.md)
