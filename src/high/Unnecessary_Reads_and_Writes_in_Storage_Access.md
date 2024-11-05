@@ -23,7 +23,7 @@ Use `try_mutate` or `try_mutate_exists` to combine read and write logic in a sin
 
 ```rust
 MyStorage::<T>::try_mutate(|value| -> Result<(), Error> {
-    value.saturating_accrue();
+    value.checked_add(One::one()).ok_or(Error::<T>::Overflow)?;
     Ok(())
 })?;
 ```
