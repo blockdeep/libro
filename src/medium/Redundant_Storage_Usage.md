@@ -1,0 +1,33 @@
+# Redundant Storage Usage
+
+**Severity**: Medium
+
+## Description
+
+Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each storage location synchronized, potentially causing errors or unnecessary maintenance.
+
+## What should not be done
+
+Avoid creating separate data structures or fields that duplicate data already present within another structure, as this can lead to inefficient data management.
+
+```rust
+pub struct Info<AccountId, BlockNumber> {
+	pub owner: AccountId,
+	pub more_data_1: u32,
+	pub more_data_2: u32,
+}
+
+#[pallet::storage]
+pub type SomeInfo<T: Config> =
+	StorageMap<_, Identity, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
+
+#[pallet::storage]
+pub type InfoOwner<T: Config> =
+	StorageMap<_, Identity, SomeId, AccountId, BlockNumberFor<T>>, OptionQuery>;
+```
+
+In this example, the InfoOwner storage map is redundant since the owner is already stored within the Info structure.
+
+## What can be done instead
+
+To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
