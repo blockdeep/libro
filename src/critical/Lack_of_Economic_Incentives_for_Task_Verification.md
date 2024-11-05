@@ -1,4 +1,4 @@
-# Implement Economic Incentives for Task Verification
+# Lack of Economic Incentives for Task Verification
 
 **Severity**: Critical
 

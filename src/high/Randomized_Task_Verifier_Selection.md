@@ -1,4 +1,4 @@
-# Use Deterministic Selection for Task Assignments to Prevent Manipulation
+# Randomized Task Verified Selection
 
 **Severity**: High
 

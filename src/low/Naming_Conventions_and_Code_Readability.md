@@ -1,4 +1,4 @@
-# Use Consistent and Descriptive Naming Conventions to Enhance Readability
+# Naming Conventions and Code Readability
 
 **Severity**: Low
 

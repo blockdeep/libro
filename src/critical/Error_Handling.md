@@ -1,4 +1,4 @@
-# Improve Error Handling to Avoid Panics
+# Error Handling
 
 **Severity**: Critical
 

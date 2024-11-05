@@ -1,4 +1,4 @@
-# Avoid Over-reliance on Pseudo-random Values to Ensure Fairness
+# Over-reliance on Pseudo-random Values
 
 **Severity**: Medium
 

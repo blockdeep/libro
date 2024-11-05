@@ -1,4 +1,4 @@
-# Maintain Frontend-Agnostic Design in Backend Logic
+# Frontend-Agnostic Considerations
 
 **Severity**: Informational
 

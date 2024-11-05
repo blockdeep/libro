@@ -1,4 +1,4 @@
-# Enforce Access Control to Protect Critical Functions
+# Lack of Access Control
 
 **Severity**: Critical
 

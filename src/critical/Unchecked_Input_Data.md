@@ -1,4 +1,4 @@
-# Validate Input Data to Prevent Unexpected Behavior
+# Unchecked Input Data
 
 **Severity**: Critical
 

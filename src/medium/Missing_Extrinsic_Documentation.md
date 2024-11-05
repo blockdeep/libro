@@ -1,4 +1,4 @@
-# Document Extrinsics to Clarify Usage, Permissions, and Error Handling
+# Missing Extrinsic Documentation
 
 **Severity**: Medium
 

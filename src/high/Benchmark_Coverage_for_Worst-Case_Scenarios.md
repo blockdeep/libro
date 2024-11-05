@@ -1,4 +1,4 @@
-# Benchmark Worst-Case Scenarios to Ensure Accurate Execution Weights
+# Benchmark Coverage for Worst-case Scenarios
 
 **Severity**: High
 

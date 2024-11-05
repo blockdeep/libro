@@ -1,4 +1,4 @@
-# Include Boundary Case Tests to Ensure Robustness
+# Lack of Tests for Boundary Cases
 
 **Severity**: Medium
 

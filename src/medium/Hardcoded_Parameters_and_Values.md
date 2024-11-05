@@ -1,4 +1,4 @@
-# Avoid Hardcoded Parameters to Increase Flexibility
+# Hardcoded Parameters and Values
 
 **Severity**: Medium
 

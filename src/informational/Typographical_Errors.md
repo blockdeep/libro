@@ -1,4 +1,4 @@
-# Avoid Typographical Errors to Maintain Professionalism and Clarity
+# Typographical Errors
 
 **Severity**: Informational
 

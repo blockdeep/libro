@@ -1,4 +1,4 @@
-# Update Dependencies to Avoid Security and Compatibility Issues
+# Outdated Dependencies
 
 **Severity**: High
 

@@ -1,4 +1,4 @@
-# Use Checked or Saturating Arithmetic to Prevent Overflow Errors
+# Unchecked Arithmetic
 
 **Severity**: High
 

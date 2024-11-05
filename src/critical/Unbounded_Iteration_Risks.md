@@ -1,4 +1,4 @@
-# Avoid Unbounded Iterations to Prevent Resource Exhaustion
+# Unbounded Iteration Risks
 
 **Severity**: Critical
 

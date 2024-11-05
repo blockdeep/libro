@@ -1,4 +1,4 @@
-# Maintain Consistent Documentation Standards Across Modules
+# Maintain Consistent Documentation Standards
 
 **Severity**: Informational
 

@@ -1,4 +1,4 @@
-# Avoid Deprecated Pallet Getters for Improved Compatibility
+# Deprecated Storage Getters
 
 **Severity**: Medium
 

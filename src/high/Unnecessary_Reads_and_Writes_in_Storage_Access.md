@@ -1,4 +1,4 @@
-# Avoid Unnecessary Reads and Writes in Storage Access
+# Unnecessary Reads and Writes in Storage Access
 
 **Severity**: High
 

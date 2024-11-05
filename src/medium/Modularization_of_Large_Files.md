@@ -1,4 +1,4 @@
-# Modularize Large Files for Improved Readability and Maintainability
+# Modularization of Large Files
 
 **Severity**: Medium
 
