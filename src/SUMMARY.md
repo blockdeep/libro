@@ -40,6 +40,7 @@
   - [Hardcoded `BoundedVec` size](./medium/Hardcoded_BoundedVec_Size.md)
   - [Poor migration logging](./medium/Poor_Migration_Logging.md)
   - [Redundant storage usage](./medium/Redundant_Storage_Usage.md)
+  - [Missing tests for error cases](./medium/Missing_Tests_For_Error_Cases.md)
 
 - [Low severity issues](low/README.md)
 

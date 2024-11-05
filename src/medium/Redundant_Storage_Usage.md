@@ -26,7 +26,9 @@ pub type InfoOwner<T: Config> =
 	StorageMap<_, Identity, SomeId, AccountId, BlockNumberFor<T>>, OptionQuery>;
 ```
 
-In this example, the InfoOwner storage map is redundant since the owner is already stored within the Info structure.
+In this example:
+
+- The InfoOwner storage map is redundant since the owner is already stored within the Info structure.
 
 ## What can be done instead
 
