@@ -24,11 +24,13 @@
     - [Hardcoded parameters](medium/Hardcoded_Parameters_and_Values.md)
     - [Lack of tests for boundary cases](medium/Lack_of_Tests_for_Boundary_Cases.md)
     - [Missing extrinsic documentation](medium/Missing_Extrinsic_Documentation.md)
-    - [Modulatization of large files](medium/Modularization_of_Large_Files.md)
+    - [Modularization of large files](medium/Modularization_of_Large_Files.md)
     - [Over-reliance on pseudo-random values](medium/Over-reliance_on_Pseudo-random_Values.md)
     - [Excessive Function Complexity](./medium/Excessive_Function_Complexity.md)
     - [Inefficient Data Structure Selection](./medium/Inefficient_Data_Structure_Selection.md)
     - [Use of Magic Numbers](./medium/Use_of_Magic_Numbers.md)
+    - [Lack of Interface Segregation](./medium/Lack_of_Interface_Segregation.md)
+    - [Inadequate Logging for Critical Actions](./medium/Inadequate_Logging_for_Critical_Actions)
 
 
 - [Low severity issues](low/README.md)
