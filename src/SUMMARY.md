@@ -10,6 +10,7 @@
   - [Unbounded iteration risks](critical/Unbounded_Iteration_Risks.md)
   - [Unchecked input data](critical/Unchecked_Input_Data.md)
   - [Error handling](critical/Error_Handling.md)
+  - [Hardcoded Weights and missing benchmarks](critical/Hardcoded_Weights_And_Missing_Benchmarks.md)
 
 - [High severity issues](high/README.md)
 
