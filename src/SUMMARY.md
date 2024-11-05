@@ -19,6 +19,7 @@
     - [Inconsistent state by distributing finalization costs](high/Inconsistent_State_by_Distributing_Finalization_Costs.md)
     - [Lack of transactional integrity](./high/Lack_of_Transactional_Integrity.md)
     - [Redundant storage access in mutations](./high/Redundant_Storage_Access_in_Mutations.md)
+    - [Unnecessary reads and writes in storage access](./high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
 
 
 - [Medium severity issues](medium/README.md)
@@ -26,6 +27,7 @@
     - [Hardcoded parameters](medium/Hardcoded_Parameters_and_Values.md)
     - [Lack of tests for boundary cases](medium/Lack_of_Tests_for_Boundary_Cases.md)
     - [Missing extrinsic documentation](medium/Missing_Extrinsic_Documentation.md)
+    - [Missing error documentation](./medium/Missing_Error_Documentation.md)
     - [Modularization of large files](medium/Modularization_of_Large_Files.md)
     - [Over-reliance on pseudo-random values](medium/Over-reliance_on_Pseudo-random_Values.md)
     - [Excessive function complexity](./medium/Excessive_Function_Complexity.md)
@@ -34,6 +36,7 @@
     - [Lack of interface segregation](./medium/Lack_of_Interface_Segregation.md)
     - [Inadequate logging for critical actions](./medium/Inadequate_Logging_for_Critical_Actions.md)
     - [Hardcoded `BoundedVec` size](./medium/Hardcoded_BoundedVec_Size.md)
+    - [Poor migration logging](./medium/Poor_Migration_Logging.md)
 
 
 - [Low severity issues](low/README.md)
