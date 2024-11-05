@@ -13,11 +13,11 @@ storage.
 Using `try_mutate` followed by `insert` in a nested closure causes redundant writes:
 
 ```rust
-Communities::<T>::try_mutate(community_id, |community| {
-    *community = Some(new_value);
+MyStorage::<T>::try_mutate(id, |item| -> Result<(), Error> {
+    *item = Some(new_value);
     
     // Redundant insert
-    Communities::<T>::insert(community_id, new_value);
+    MyStorage::<T>::insert(id, new_value);
     
     Ok(())
 });
@@ -28,8 +28,8 @@ Communities::<T>::try_mutate(community_id, |community| {
 Use either `try_mutate` to modify the value in place or `insert` alone, but avoid combining them unnecessarily:
 
 ```rust
-Communities::<T>::try_mutate(community_id, |community| {
-    *community = Some(new_value);
+MyStorage::<T>::try_mutate(id, |item| -> Result<(), Error> {
+    *item = Some(new_value);
     Ok(())
 });
 ```
