@@ -42,6 +42,7 @@
   - [Poor migration logging](./medium/Poor_Migration_Logging.md)
   - [Redundant storage usage](./medium/Redundant_Storage_Usage.md)
   - [Missing tests for error cases](./medium/Missing_Tests_For_Error_Cases.md)
+  - [Resource intensive execution inside hooks](./medium/Resource_Intensive_Execution_Inside_Hooks.md)
 
 - [Low severity issues](low/README.md)
 
