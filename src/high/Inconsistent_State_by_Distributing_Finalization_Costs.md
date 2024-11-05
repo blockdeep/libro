@@ -15,7 +15,8 @@ potential failure and high resource usage:
 ```rust
 fn finalize_operations() {
     for item in pending_operations {
-        complete_operation(item); // Finalizing all operations at once
+        // Finalizing all operations at once
+        complete_operation(item);
     }
 }
 ```

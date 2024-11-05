@@ -12,7 +12,8 @@ unclear without comments or context.
 Hardcoding numeric constants directly in the code makes their intent unclear:
 
 ```rust
-let discount = price * Percent::from_percent(7); // What does 7% represent?
+// What does 7% represent?
+let discount = price * Percent::from_percent(7);
 ```
 
 ## What Can Be Done Instead

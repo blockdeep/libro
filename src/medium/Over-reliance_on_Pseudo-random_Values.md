@@ -14,7 +14,8 @@ Using pseudo-random values for selection can lead to inconsistent and potentiall
 
 ```rust
 fn select_verifier() -> Verifier {
-    let index = generate_random_number() % verifiers.len(); // Pseudo-randomly selects a verifier
+    // Pseudo-randomly selects a verifier
+    let index = generate_random_number() % verifiers.len();
     verifiers[index]
 }
 ```
@@ -31,7 +32,8 @@ identifier:
 
 ```rust
 fn select_verifier_deterministic(task_id: u32) -> Verifier {
-    let index = (task_id as usize) % verifiers.len(); // Deterministically selects a verifier based on task ID
+    // Deterministically selects a verifier based on task ID
+    let index = (task_id as usize) % verifiers.len();
     verifiers[index]
 }
 ```

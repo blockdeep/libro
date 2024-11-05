@@ -12,7 +12,8 @@ errors and make the code less readable.
 Using a string or integer to represent distinct categories increases the risk of typos and confusion:
 
 ```rust
-let status = "completed"; // Using string literals for statuses
+// Using string literals for statuses
+let status = "completed";
 ```
 
 ## What Can Be Done Instead

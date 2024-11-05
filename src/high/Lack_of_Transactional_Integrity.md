@@ -14,7 +14,9 @@ Modifying multiple resources without rollback mechanisms can lead to partial upd
 ```rust
 fn transfer_funds(sender: AccountId, recipient: AccountId, amount: u32) {
     update_balance(sender, -amount);
-    update_balance(recipient, amount); // No rollback if this fails
+    
+    // No rollback if this fails
+    update_balance(recipient, amount);
 }
 ```
 

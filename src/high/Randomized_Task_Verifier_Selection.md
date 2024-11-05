@@ -13,7 +13,8 @@ The following code relies on a random selection, which can lead to inconsistent 
 
 ```rust
 fn assign_verifier() {
-    let verifier = verifiers[rand::random::<usize>() % verifiers.len()]; // Random selection from the list
+    // Random selection from the list
+    let verifier = verifiers[rand::random::<usize>() % verifiers.len()];
     // Task assigned to verifier unpredictably
 }
 ```
@@ -29,7 +30,8 @@ Implement a deterministic selection method, such as using the task ID as a basis
 
 ```rust
 fn assign_verifier_deterministic(task_id: u32) -> &Verifier {
-    let index = task_id as usize % verifiers.len(); // Deterministic selection based on task ID
+    // Deterministic selection based on task ID
+    let index = task_id as usize % verifiers.len();
     &verifiers[index]
 }
 ```

@@ -12,7 +12,8 @@ and increased resource usage.
 Using a `Vec` for frequent lookups, which requires linear-time search, can slow down performance in large data sets:
 
 ```rust
-let result = vec_data.contains(&item); // Linear search
+// Linear search
+let result = vec_data.contains(&item);
 ```
 
 ## What Can Be Done Instead
@@ -20,7 +21,8 @@ let result = vec_data.contains(&item); // Linear search
 Use a `HashSet` or `BTreeSet` for efficient lookup operations:
 
 ```rust
-let result = set_data.contains(&item); // Constant or logarithmic time search
+// Constant or logarithmic time search
+let result = set_data.contains(&item);
 ```
 
 In this example:

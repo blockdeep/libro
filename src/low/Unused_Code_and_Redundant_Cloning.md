@@ -12,7 +12,9 @@ Cloning data unnecessarily creates additional memory allocations, as shown here:
 
 ```rust
 fn process_data(data: Vec<u32>) {
-    let cloned_data = data.clone(); // Cloning the entire vector unnecessarily
+    // Cloning the entire vector unnecessarily
+    let cloned_data = data.clone();
+    
     for elem in cloned_data {
         // processing the element
     }

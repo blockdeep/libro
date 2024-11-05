@@ -14,11 +14,11 @@ A single large file with multiple unrelated functions and types can become hard 
 
 ```rust
 // lib.rs (single large file with all logic)
-fn process_transaction() -> Result<Transaction, anyhow::Error> { /* transaction processing logic */ }
+fn process_transaction() -> Result<Transaction, Error> { /* transaction processing logic */ }
 
 fn calculate_fees() -> u32 { /* fee calculation logic */ }
 
-fn validate_data() -> Result<(), anyhow::Error> { /* data validation logic */ }
+fn validate_data() -> Result<(), Error> { /* data validation logic */ }
 ```
 
 In this example:
@@ -36,13 +36,13 @@ mod fees;
 mod validation;
 
 // transaction.rs
-pub fn process_transaction() -> Result<Transaction, anyhow::Error> { /* transaction processing logic */ }
+pub fn process_transaction() -> Result<Transaction, Error> { /* transaction processing logic */ }
 
 // fees.rs
 pub fn calculate_fees() -> u32 { /* fee calculation logic */ }
 
 // validation.rs
-pub fn validate_data() -> Result<(), anyhow::Error> { /* data validation logic */ }
+pub fn validate_data() -> Result<(), Error> { /* data validation logic */ }
 ```
 
 In this modularized structure:

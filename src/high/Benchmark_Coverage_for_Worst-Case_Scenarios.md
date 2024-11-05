@@ -15,7 +15,8 @@ leading to underestimated weights:
 ```rust
 #[benchmark]
 fn typical_scenario() {
-    let items = generate_data(10); // Benchmark with a small data set
+    // Benchmark with a small data set
+    let items = generate_data(10);
     
     #[block]
     {
@@ -36,7 +37,8 @@ reflects maximum resource usage:
 ```rust
 #[benchmark]
 fn worst_case_scenario(s: Linear<1, MAX_ITEMS>) {
-    let items = generate_data(s); // Benchmark with maximum data
+    // Benchmark with dynamic data
+    let items = generate_data(s);
     
     #[block]
     {

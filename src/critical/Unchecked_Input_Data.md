@@ -24,7 +24,8 @@ out-of-range values:
 
 ```rust
 fn process_input(data: u32) -> Result<(), Error> {
-    ensure!(data < MAX_LIMIT, Error::<T>::InvalidInput); // Validate input before processing
+    // Validate input before processing
+    ensure!(data < MAX_LIMIT, Error::<T>::InvalidInput);
     Ok(())
 }
 ```

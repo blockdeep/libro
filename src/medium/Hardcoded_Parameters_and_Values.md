@@ -12,7 +12,8 @@ Configurable parameters allow for greater versatility and make the code easier t
 Hardcoding values, such as limits or thresholds, can make it difficult to adapt the code without modifying the source:
 
 ```rust
-const LIMIT: u32 = 100; // Hardcoded limit
+// Hardcoded limit
+const LIMIT: u32 = 100;
 ```
 
 In this example:
@@ -31,7 +32,8 @@ pub trait Config: frame_system::Config {
 
 impl<T: Config> Pallet<T> {
     fn do_something() {
-        let limit = T::LIMIT; // Access configurable limit
+        // Access configurable limit
+        let limit = T::LIMIT;
         // Logic that uses the configurable limit
     }
 }

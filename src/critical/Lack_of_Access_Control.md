@@ -25,7 +25,8 @@ protect critical functions.
 
 ```rust
 pub fn execute(origin: OriginFor<T>) -> DispatchResult {
-    ensure_root(origin)?; // Restrict access to the root (admin) user
+    // Restrict access to the root (admin) user
+    ensure_root(origin)?;
     // Secure function logic here
 }
 ```

@@ -14,7 +14,8 @@ Neglecting boundary cases in testing may overlook issues that occur at the extre
 ```rust
 #[test]
 fn test_process_data() {
-    assert_eq!(process_data(50), Some(50)); // Typical case
+    // Typical case
+    assert_eq!(process_data(50), Some(50));
 }
 ```
 
@@ -31,9 +32,14 @@ maximum values:
 ```rust
 #[test]
 fn test_process_data_with_boundary_cases() {
-    assert_eq!(process_data(0), Some(0)); // Minimum boundary
-    assert_eq!(process_data(MAX_LIMIT), Some(MAX_LIMIT)); // Maximum boundary
-    assert!(process_data(MAX_LIMIT + 1).is_none()); // Beyond maximum boundary
+    // Minimum boundary
+    assert_eq!(process_data(0), Some(0));
+    
+    // Maximum boundary
+    assert_eq!(process_data(MAX_LIMIT), Some(MAX_LIMIT));
+    
+    // Beyond maximum boundary
+    assert!(process_data(MAX_LIMIT + 1).is_none());
 }
 ```
 

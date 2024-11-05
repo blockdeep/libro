@@ -12,7 +12,8 @@ or contributors who rely on clear naming and consistent language.
 Typographical errors can make code less readable and may even lead to bugs if used inconsistently:
 
 ```rust
-let amout = 100; // Typo in variable name
+// Typo in variable name
+let amout = 100;
 ```
 
 In this example:
@@ -26,7 +27,8 @@ Perform thorough proofreading to catch typos and enhance clarity, ensuring varia
 descriptive.
 
 ```rust
-let amount = 100; // Correctly spelled variable name
+// Correctly spelled variable name
+let amount = 100;
 ```
 
 Using clear and correctly spelled names improves readability, maintains professionalism, and helps prevent

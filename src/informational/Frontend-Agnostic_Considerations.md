@@ -15,7 +15,9 @@ make the backend harder to adapt:
 ```rust
 fn display_value() -> &str {
     let value = get_value();
-    format!("${:.2}", value) // Formats value with a frontend-specific currency display
+    
+    // Formats value with a frontend-specific currency display
+    format!("${:.2}", value)
 }
 ```
 
@@ -32,7 +34,9 @@ frontend as needed:
 ```rust
 fn display_value_generic() -> u32 {
     let value = get_value();
-    value // Returns raw value without formatting
+    
+    // Returns raw value without formatting
+    value
 }
 ```
 

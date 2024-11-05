@@ -28,10 +28,12 @@ verifiers to act reliably and increases the accuracy of task validation.
 fn verify_task_with_incentive(task_id: u32) -> bool {
     // Reward or penalize based on verification accuracy
     if is_correct_verification(task_id) {
-        reward_verifier(); // Reward for correct verification
+        // Reward for correct verification
+        reward_verifier();
         true
     } else {
-        penalize_verifier(); // Penalty for incorrect verification
+        // Penalty for incorrect verification
+        penalize_verifier();
         false
     }
 }

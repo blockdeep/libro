@@ -13,7 +13,8 @@ The following code allows adding entries without any limit, leading to uncontrol
 
 ```rust
 fn add_entry(entry: Entry) {
-    entries.push(entry); // Adds entries without limits
+    // Adds entries without limits
+    entries.push(entry);
 }
 ```
 
