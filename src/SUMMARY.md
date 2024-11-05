@@ -50,6 +50,7 @@
   - [Insufficient use of enumerations](./low/Insufficient_Use_of_Enumerations.md)
   - [Lack of descriptive logging](./low/Lack_of_Descriptive_Logging.md)
   - [Unnecessary return values](./low/Unnecessary_Return_Values.md)
+  - [Repetitive Generic Type Instantiation](./low/Repetitive_Generic_Type_Instantiation.md)
 
 - [Informational issues](informational/README.md)
   - [Inconsistent documentation standards](informational/Inconsistent_Documentation_Standards.md)
