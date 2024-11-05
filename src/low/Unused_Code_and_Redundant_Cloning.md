@@ -6,7 +6,7 @@
 
 Unused code and redundant cloning increase code size and reduce efficiency, leading to unnecessary memory usage and processing overhead. Removing unused code and minimizing cloning helps maintain a cleaner, more efficient codebase.
 
-## What Should Not Be Done
+## What should not be done
 
 Cloning data unnecessarily creates additional memory allocations, as shown here:
 

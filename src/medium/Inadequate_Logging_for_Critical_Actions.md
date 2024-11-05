@@ -7,7 +7,7 @@
 Failing to log critical actions can make it difficult to trace and debug issues, especially when tracking user actions
 or system changes.
 
-## What Should Not Be Done
+## What should not be done
 
 Omitting logging for important events makes it hard to identify what happened if an issue arises:
 

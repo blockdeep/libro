@@ -8,7 +8,7 @@ The `#[pallet::getter]` attribute in Substrate is deprecated and may lead to com
 versions. Using direct access methods or new approaches for storage access helps maintain compatibility and aligns with
 current best practices.
 
-## What Should Not Be Done
+## What should not be done
 
 Using `#[pallet::getter]` to define storage getters can lead to issues with future updates, as shown below:
 

@@ -7,7 +7,7 @@
 Omitting tests for boundary cases can leave critical edge conditions unhandled, leading to potential bugs and
 unpredictable behavior, especially when inputs approach their limits.
 
-## What Should Not Be Done
+## What should not be done
 
 Neglecting boundary cases in testing may overlook issues that occur at the extremes of expected input ranges:
 

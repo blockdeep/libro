@@ -7,7 +7,7 @@
 Functions that modify multiple resources without transactional integrity may leave the system in an inconsistent state
 if an error occurs mid-operation.
 
-## What Should Not Be Done
+## What should not be done
 
 Modifying multiple resources without rollback mechanisms can lead to partial updates if an error occurs:
 

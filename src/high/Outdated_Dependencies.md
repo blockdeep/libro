@@ -7,7 +7,7 @@
 Using outdated libraries can introduce security vulnerabilities, compatibility issues, and reduced performance, as older
 dependencies may lack recent bug fixes and security patches.
 
-## What Should Not Be Done
+## What should not be done
 
 The following code relies on an outdated library that may contain deprecated or insecure functions:
 

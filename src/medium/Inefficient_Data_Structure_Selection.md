@@ -7,7 +7,7 @@
 Choosing inefficient data structures can lead to suboptimal performance, especially as data scales, causing slowdowns
 and increased resource usage.
 
-## What Should Not Be Done
+## What should not be done
 
 Using a `Vec` for frequent lookups, which requires linear-time search, can slow down performance in large data sets:
 

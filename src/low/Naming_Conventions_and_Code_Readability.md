@@ -8,7 +8,7 @@ Inconsistent or vague naming conventions can make code harder to read and unders
 increasing the likelihood of errors. Clear and consistent naming improves code readability and helps maintain a
 well-organized codebase.
 
-## What Should Not Be Done
+## What should not be done
 
 Vague or inconsistent naming conventions make it unclear what a function or variable is supposed to do:
 

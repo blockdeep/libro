@@ -7,7 +7,7 @@
 Complex functions with multiple responsibilities are harder to test, understand, and maintain, increasing the risk of
 errors and making debugging more difficult.
 
-## What Should Not Be Done
+## What should not be done
 
 Combining multiple responsibilities in a single function increases its complexity:
 

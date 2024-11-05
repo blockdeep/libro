@@ -7,7 +7,7 @@
 Without descriptive logging, debugging and monitoring issues become challenging, as the log entries may lack context or
 detail.
 
-## What Should Not Be Done
+## What should not be done
 
 Logging messages without context or relevant details makes troubleshooting difficult:
 

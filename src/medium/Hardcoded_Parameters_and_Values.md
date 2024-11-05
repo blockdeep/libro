@@ -7,7 +7,7 @@
 Hardcoding parameters reduces flexibility, making the code less adaptable to different environments and configurations.
 Configurable parameters allow for greater versatility and make the code easier to adjust as requirements change.
 
-## What Should Not Be Done
+## What should not be done
 
 Hardcoding values, such as limits or thresholds, can make it difficult to adapt the code without modifying the source:
 

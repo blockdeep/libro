@@ -7,7 +7,7 @@
 Overloading interfaces with too many responsibilities can lead to complex dependencies, making code harder to understand
 and maintain.
 
-## What Should Not Be Done
+## What should not be done
 
 Using a single trait for multiple, unrelated responsibilities increases code complexity:
 

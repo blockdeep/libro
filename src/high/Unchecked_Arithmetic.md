@@ -7,7 +7,7 @@
 Unchecked arithmetic operations can lead to overflow or underflow, causing unexpected behavior or errors, especially
 when working with large numbers.
 
-## What Should Not Be Done
+## What should not be done
 
 The following code performs addition without checking for overflow, which may cause the program to wrap around to an
 unintended value:

@@ -7,7 +7,7 @@
 Inconsistent documentation across modules can create knowledge gaps, making code harder to understand, maintain, and use
 correctly, especially for new contributors.
 
-## What Should Not Be Done
+## What should not be done
 
 Lack of documentation or minimal comments can leave important details unclear, as shown below:
 

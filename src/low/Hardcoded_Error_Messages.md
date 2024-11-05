@@ -7,7 +7,7 @@
 Hardcoding error messages directly in code can make localization and future updates difficult, leading to
 inconsistencies in user-facing messages.
 
-## What Should Not Be Done
+## What should not be done
 
 Embedding error messages directly in function logic can be inflexible:
 

@@ -7,7 +7,7 @@
 Using basic types (e.g., strings, integers) instead of enumerations for distinct categories or statuses can lead to
 errors and make the code less readable.
 
-## What Should Not Be Done
+## What should not be done
 
 Using a string or integer to represent distinct categories increases the risk of typos and confusion:
 

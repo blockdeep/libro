@@ -8,7 +8,7 @@ Large files with numerous functions and types reduce readability, making it diff
 understand, and maintain the code. Modularizing large files into smaller, logically organized modules enhances
 readability and simplifies code management.
 
-## What Should Not Be Done
+## What should not be done
 
 A single large file with multiple unrelated functions and types can become hard to work with:
 

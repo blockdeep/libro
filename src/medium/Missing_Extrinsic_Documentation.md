@@ -6,7 +6,7 @@
 
 A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs, permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with the extrinsic correctly.
 
-## What Should Not Be Done
+## What should not be done
 
 Leaving extrinsics undocumented makes it difficult to understand their behavior, which may lead to misuse or unexpected errors:
 

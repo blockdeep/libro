@@ -7,7 +7,7 @@
 Using non-deterministic methods for assigning tasks or verifiers can create opportunities for manipulation, potentially
 allowing certain participants to be chosen more frequently or unfairly.
 
-## What Should Not Be Done
+## What should not be done
 
 The following code relies on a random selection, which can lead to inconsistent results and potential bias:
 

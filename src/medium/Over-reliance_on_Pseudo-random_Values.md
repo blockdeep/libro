@@ -8,7 +8,7 @@ Relying on pseudo-random values for critical operations, such as selecting verif
 manipulation, potentially leading to unfair or biased outcomes. Adopting deterministic methods ensures a predictable and
 fair distribution.
 
-## What Should Not Be Done
+## What should not be done
 
 Using pseudo-random values for selection can lead to inconsistent and potentially biased outcomes:
 

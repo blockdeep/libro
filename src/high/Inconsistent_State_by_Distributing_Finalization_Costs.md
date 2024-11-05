@@ -7,7 +7,7 @@
 Relying on a single transaction to finalize multiple operations can lead to excessive costs, penalties, or errors,
 especially if the final transaction fails. This approach risks incomplete operations and impacts system reliability.
 
-## What Should Not Be Done
+## What should not be done
 
 In the following example, one function is responsible for finalizing all previous actions, leading to a single point of
 potential failure and high resource usage:

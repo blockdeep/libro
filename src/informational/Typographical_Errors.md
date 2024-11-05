@@ -7,7 +7,7 @@
 Typographical errors in code or documentation can reduce professionalism, introduce potential bugs, and confuse readers
 or contributors who rely on clear naming and consistent language.
 
-## What Should Not Be Done
+## What should not be done
 
 Typographical errors can make code less readable and may even lead to bugs if used inconsistently:
 

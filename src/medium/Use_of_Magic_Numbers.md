@@ -7,7 +7,7 @@
 Magic numbers (unexplained numeric constants) can make code hard to understand and maintain, as their purpose is often
 unclear without comments or context.
 
-## What Should Not Be Done
+## What should not be done
 
 Hardcoding numeric constants directly in the code makes their intent unclear:
 
