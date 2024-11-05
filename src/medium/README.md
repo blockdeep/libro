@@ -1,4 +1,4 @@
-# Critical severity issues
+# Medium Severity Issues
 
 ## Description
 

@@ -1,4 +1,4 @@
-# Critical severity issues
+# Informational Issues
 
 ## Description
 

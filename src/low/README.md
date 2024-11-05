@@ -1,4 +1,4 @@
-# Critical severity issues
+# Low Severity Issues
 
 ## Description
 
