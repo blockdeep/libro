@@ -23,6 +23,7 @@
     - [Lack of transactional integrity](./high/Lack_of_Transactional_Integrity.md)
     - [Redundant storage access in mutations](./high/Redundant_Storage_Access_in_Mutations.md)
     - [Unnecessary reads and writes in storage access](./high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
+    - [Absence of Try-State hook](./high/Absence_of_Try_State_Hook.md)
 
 - [Medium severity issues](medium/README.md)
 
