@@ -1,7 +1,7 @@
 # Substrate's Best Practices
 
-[Introduction](./README.md)
-[Summary](./TABLE.md)
+[Introduction](README.md)
+[Summary](TABLE.md)
 
 - [Critical issues](critical/README.md)
 
@@ -20,10 +20,10 @@
   - [Unchecked arithmetic](high/Unchecked_Arithmetic.md)
   - [Uncontrolled storage growth](high/Uncontrolled_Storage_Growth.md)
   - [Inconsistent state by distributing finalization costs](high/Inconsistent_State_by_Distributing_Finalization_Costs.md)
-  - [Lack of transactional integrity](./high/Lack_of_Transactional_Integrity.md)
-  - [Redundant storage access in mutations](./high/Redundant_Storage_Access_in_Mutations.md)
-  - [Unnecessary reads and writes in storage access](./high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
-  - [Absence of Try-State hook](./high/Absence_of_Try_State_Hook.md)
+  - [Lack of transactional integrity](high/Lack_of_Transactional_Integrity.md)
+  - [Redundant storage access in mutations](high/Redundant_Storage_Access_in_Mutations.md)
+  - [Unnecessary reads and writes in storage access](high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
+  - [Absence of Try-State hook](high/Absence_of_Try_State_Hook.md)
 
 - [Medium severity issues](medium/README.md)
 
@@ -51,13 +51,13 @@
 
   - [Naming conventions and code readability](low/Naming_Conventions_and_Code_Readability.md)
   - [Unused code and redundant cloning](low/Unused_Code_and_Redundant_Cloning.md)
-  - [Hardcoded error messages](./low/Hardcoded_Error_Messages.md)
-  - [Insufficient use of enumerations](./low/Insufficient_Use_of_Enumerations.md)
-  - [Lack of descriptive logging](./low/Lack_of_Descriptive_Logging.md)
-  - [Unnecessary return values](./low/Unnecessary_Return_Values.md)
-  - [Repetitive Generic Type Instantiation](./low/Repetitive_Generic_Type_Instantiation.md)
-  - [Usage of deprecated benchmarking sintax](./low/Usage_Of_Deprecated_Benchmarking_Sintax.md)
-  - [Unexposed runtime APIs for key functionalities](./low/Unexposed_Runtime_APIs_For_Key_Functionalities.md)
+  - [Hardcoded error messages](low/Hardcoded_Error_Messages.md)
+  - [Insufficient use of enumerations](low/Insufficient_Use_of_Enumerations.md)
+  - [Lack of descriptive logging](low/Lack_of_Descriptive_Logging.md)
+  - [Unnecessary return values](low/Unnecessary_Return_Values.md)
+  - [Repetitive Generic Type Instantiation](low/Repetitive_Generic_Type_Instantiation.md)
+  - [Usage of deprecated benchmarking syntax](low/Usage_Of_Deprecated_Benchmarking_Syntax.md)
+  - [Unexposed runtime APIs for key functionalities](low/Unexposed_Runtime_APIs_For_Key_Functionalities.md)
 
 - [Informational issues](informational/README.md)
   - [Inconsistent documentation standards](informational/Inconsistent_Documentation_Standards.md)
