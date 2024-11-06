@@ -1,6 +1,6 @@
 # Substrate Best Practices
 
-This repository includes a compilation of the best coding practices when developing on substrate.
+This repository includes a compilation of the best coding practices when developing on Substrate.
 
 ## Installation
 
