@@ -55,7 +55,7 @@
     - [Lack of descriptive logging](./low/Lack_of_Descriptive_Logging.md)
     - [Unnecessary return values](./low/Unnecessary_Return_Values.md)
     - [Repetitive Generic Type Instantiation](./low/Repetitive_Generic_Type_Instantiation.md)
-    - [Usage of deprecated benchmarking sintax](./low/Usage_Of_Deprecated_Benchmarking_Sintax.md)
+    - [Usage of deprecated benchmarking syntax](./low/Usage_Of_Deprecated_Benchmarking_Syntax.md)
     - [Unexposed runtime APIs for key functionalities](./low/Unexposed_Runtime_APIs_For_Key_Functionalities.md)
 
 - [Informational issues](informational/README.md)
