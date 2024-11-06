@@ -4,11 +4,16 @@
 
 ## Description
 
-Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like on_finalize can significantly impact block execution time and lead to performance bottlenecks. Hooks are triggered automatically for every block, and if they contain complex or large-scale computations, there could be a reduction in transaction throughput and potentially affect the network’s overall performance.
+Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like on_finalize
+can significantly impact block execution time and lead to performance bottlenecks. Hooks are triggered automatically for
+every block, and if they contain complex or large-scale computations, there could be a reduction in transaction
+throughput and potentially affect the network’s overall performance.
 
 ## What should not be done
 
-Avoid conducting heavy computations or iterating through extensive data in hooks, as this adds unnecessary workload to every block. For example, consider the following inefficient approach in `on_finalize`, which processes votes for each proposal that ends within a block:
+Avoid conducting heavy computations or iterating through extensive data in hooks, as this adds unnecessary workload to
+every block. For example, consider the following inefficient approach in `on_finalize`, which processes votes for each
+proposal that ends within a block:
 
 ```rust
 impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
@@ -38,11 +43,13 @@ impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
 
 In this example:
 
-- Counting votes for each finalized proposal during on_finalize leads to high resource usage and may exceed block weight limits, especially as the number of proposals and votes grows.
+- Counting votes for each finalized proposal during on_finalize leads to high resource usage and may exceed block weight
+  limits, especially as the number of proposals and votes grows.
 
 ## What can be done instead
 
-Optimize by performing the calculations within the extrinsics, maintaining incremental counters in storage, or enabling users to trigger the logic explicitly outside the hooks.
+Optimize by performing the calculations within the extrinsics, maintaining incremental counters in storage, or enabling
+users to trigger the logic explicitly outside the hooks.
 
 Example 1: Perform the Execution Within the Extrinsic:
 Track necessary values as they are submitted, distributing the computation workload across each transaction.
@@ -79,7 +86,8 @@ fn on_finalize(block_number: T::BlockNumber) {
 
 Example 2: Allow Users to Trigger the Logic Explicitly
 
-Allow users to close/finalize manually by explicitly calling an extrinsic when necessary, which avoids performing the work automatically in on_finalize.
+Allow users to close/finalize manually by explicitly calling an extrinsic when necessary, which avoids performing the
+work automatically in on_finalize.
 
 ```rust
 

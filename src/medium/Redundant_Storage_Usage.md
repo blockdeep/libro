@@ -4,11 +4,14 @@
 
 ## Description
 
-Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each storage location synchronized, potentially causing errors or unnecessary maintenance.
+Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and
+usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each
+storage location synchronized, potentially causing errors or unnecessary maintenance.
 
 ## What should not be done
 
-Avoid creating separate data structures or fields that duplicate data already present within another structure, as this can lead to inefficient data management.
+Avoid creating separate data structures or fields that duplicate data already present within another structure, as this
+can lead to inefficient data management.
 
 ```rust
 pub struct Info<AccountId, BlockNumber> {
@@ -32,4 +35,5 @@ In this example:
 
 ## What can be done instead
 
-To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
+To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data
+needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
