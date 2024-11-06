@@ -31,6 +31,7 @@
     - [Lack of tests for boundary cases](medium/Lack_of_Tests_for_Boundary_Cases.md)
     - [Missing extrinsic documentation](medium/Missing_Extrinsic_Documentation.md)
     - [Missing error documentation](./medium/Missing_Error_Documentation.md)
+    - [Missing event documentation](./medium/Missing_Event_Documentation.md)
     - [Modularization of large files](medium/Modularization_of_Large_Files.md)
     - [Over-reliance on pseudo-random values](medium/Over-reliance_on_Pseudo-random_Values.md)
     - [Excessive function complexity](./medium/Excessive_Function_Complexity.md)
