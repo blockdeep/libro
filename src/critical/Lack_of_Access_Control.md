@@ -14,7 +14,7 @@ actions:
 
 ```rust
 #[pallet::call_index(0)]
-#[pallet::weight(Weight::execute_critical_operation())]
+#[pallet::weight(T::WeightInfo::execute_critical_operation())]
 pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Function with unrestricted access
 }
@@ -27,7 +27,7 @@ protect critical functions.
 
 ```rust
 #[pallet::call_index(0)]
-#[pallet::weight(Weight::execute_critical_operation())]
+#[pallet::weight(T::WeightInfo::execute_critical_operation())]
 pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Restrict access to the root (admin) user
     ensure_root(origin)?;

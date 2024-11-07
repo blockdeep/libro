@@ -19,7 +19,7 @@ Avoid using hardcoded weights directly in the function definition of extrinsics.
 pub fn do_something(
     origin: OriginFor<T>,
     some_data: Data
-) -> DispatchResult {...}
+) -> DispatchResult { /* Rest of the logic */ }
 ```
 
 In this example:

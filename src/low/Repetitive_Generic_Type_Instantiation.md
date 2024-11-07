@@ -52,8 +52,7 @@ pub fn do_something(
         BlockNumberFor<T>,
         BoundedVec<u8, T::MaxReasonLength>
     >
-) -> DispatchResult {...}
-
+) -> DispatchResult { /* Rest of the logic */ }
 ```
 
 In this example:
@@ -84,6 +83,5 @@ pub type InfoStorage<T: Config> = StorageMap<_, Blake2_128Concat, T::SomeId, Som
 pub fn do_something(
     origin: OriginFor<T>,
     info: SomeInfoOf<T>
-) -> DispatchResult {...}
-
+) -> DispatchResult { /* Rest of the logic */ }
 ```

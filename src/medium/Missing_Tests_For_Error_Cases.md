@@ -13,16 +13,19 @@ remain untested, which can compromise the robustness of the code.
 Avoid leaving out tests that validate the expected errors when certain invalid inputs or conditions are encountered.
 
 ```rust
-#[pallet::call_index(1)]
-pub fn do_something(origin: OriginFor<T>, inputs: Input) -> DispatchResult {
+// lib.rs
+#[pallet::call_index(0)]
+#[pallet::weight(T::WeightInfo::do_something())]
+pub fn do_something(origin: OriginFor<T>, input: Input) -> DispatchResult {
 	let who = ensure_signed(origin)?;
 
-    ensure!(who == SomeAccount::<T>::get(), Error::<T>::UnexpectedAccount)?;
-    ensure!(inputs == expected_input, Error::<T>::IncorrectInput)?;
+    ensure!(who == SomeAccount::<T>::get(), Error::<T>::UnexpectedAccount);
+    ensure!(input == expected_input, Error::<T>::IncorrectInput);
 
     Ok(())
 }
 
+// tests.rs
 #[test]
 fn do_something_works() {
     assert_ok!(SomethingPallet::<Test>::do_something(
@@ -52,7 +55,7 @@ fn do_something_works() {
 }
 
 #[test]
-fn fails_if_incorrect_account() {
+fn do_something_fails_if_wrong_account() {
     assert_noop!(SomethingPallet::<Test>::do_something(
         RuntimeOrigin::signed(wrong_account),
         expected_input
@@ -60,7 +63,7 @@ fn fails_if_incorrect_account() {
 }
 
 #[test]
-fn fails_if_invalid_inputs() {
+fn do_something_fails_if_invalid_input() {
     assert_noop!(SomethingPallet::<Test>::do_something(
         RuntimeOrigin::signed(right_account),
         wrong_input

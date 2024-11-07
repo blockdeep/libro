@@ -10,7 +10,7 @@
     - [Unbounded iteration risks](critical/Unbounded_Iteration_Risks.md)
     - [Unchecked input data](critical/Unchecked_Input_Data.md)
     - [Error handling](critical/Error_Handling.md)
-    - [Hardcoded Weights and missing benchmarks](critical/Hardcoded_Weights_And_Missing_Benchmarks.md)
+    - [Hardcoded weights and missing benchmarks](critical/Hardcoded_Weights_And_Missing_Benchmarks.md)
 
 - [High severity issues](high/README.md)
 
@@ -23,7 +23,7 @@
     - [Lack of transactional integrity](high/Lack_of_Transactional_Integrity.md)
     - [Redundant storage access in mutations](high/Redundant_Storage_Access_in_Mutations.md)
     - [Unnecessary reads and writes in storage access](high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
-    - [Absence of Try-State hook](high/Absence_of_Try_State_Hook.md)
+    - [Absence of `try-state` hook](high/Absence_of_Try_State_Hook.md)
 
 - [Medium severity issues](medium/README.md)
 
@@ -34,7 +34,6 @@
     - [Missing error documentation](./medium/Missing_Error_Documentation.md)
     - [Missing event documentation](./medium/Missing_Event_Documentation.md)
     - [Modularization of large files](medium/Modularization_of_Large_Files.md)
-    - [Over-reliance on pseudo-random values](medium/Over-reliance_on_Pseudo-random_Values.md)
     - [Excessive function complexity](./medium/Excessive_Function_Complexity.md)
     - [Inefficient data structure selection](./medium/Inefficient_Data_Structure_Selection.md)
     - [Use of magic numbers](./medium/Use_of_Magic_Numbers.md)
@@ -45,7 +44,7 @@
     - [Redundant storage usage](./medium/Redundant_Storage_Usage.md)
     - [Missing tests for error cases](./medium/Missing_Tests_For_Error_Cases.md)
     - [Resource intensive execution inside hooks](./medium/Resource_Intensive_Execution_Inside_Hooks.md)
-    - [Usage of deprecated Currency trait](./medium/Usage_Of_Deprecated_Currency_Trait.md)
+    - [Usage of deprecated `Currency` trait](./medium/Usage_Of_Deprecated_Currency_Trait.md)
 
 - [Low severity issues](low/README.md)
 

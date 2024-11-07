@@ -14,11 +14,11 @@ with the latest Substrate tooling.
 benchmarks! {
 	do_something {
         // Pre-benchmarking setup
-        ...
+        // ...
 	}: _(RawOrigin::Signed(caller), data)
 	verify {
         // Post-execution verifications
-		...
+		// ...
 	}
 ```
 
@@ -40,13 +40,13 @@ mod benchmarks {
 	#[benchmark]
 	fn do_something() {
         // Pre-benchmarking setup
-        ...
+        // ...
 
         // execute benchmark
 		#[extrinsic_call]
 		_(RawOrigin::Signed(caller), data);
 
         // Post execution verifications
-        ...
+        // ...
 	}
 ```

@@ -30,7 +30,7 @@ Provide detailed comments for each event to explain its purpose and usage:
 #[pallet::generate_deposit(pub(super) fn deposit_event)]
 pub type Event<T: Config> {
     /// An account was just created. This event gets triggered when the account 
-    /// has a balance greater than the existential deposit.
+    /// has a balance greater than the existential deposit for the first time.
     AccountCreated,
     /// The account got its balance updated, but over the existential deposit.
     AccountUpdated,

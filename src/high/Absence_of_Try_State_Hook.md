@@ -1,4 +1,4 @@
-# Absence of Try-State Hook
+# Absence of Try-state Hook
 
 **Severity**: High
 
