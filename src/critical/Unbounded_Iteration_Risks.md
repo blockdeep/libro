@@ -20,6 +20,8 @@ for item in big_data {
 
 ## What can be done instead
 
+### Option 1: Process up to a maximum number of elements
+
 Use a bounded iterator or limit the number of items processed in each iteration. This approach prevents excessive
 resource usage and keeps operations predictable.
 
@@ -30,3 +32,18 @@ for item in big_data.iter().take(MAX_ITEMS) {
 ```
 
 By setting a maximum limit, we can control the processing load and avoid potential performance issues.
+
+### Option 2: Use a bounded data structure
+
+Alternatively, you can use bounded data structures and perform the iteration over them.
+
+```rust
+#[pallet::storage]
+pub type BoundedData<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
+
+for item in BoundedData::<T>::get() {
+    // Iterates over a data structure with bounded size.
+}
+```
+
+By using a bounded data structure, we ensure the maximum number of iterations is under control.

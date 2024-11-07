@@ -13,7 +13,9 @@ In the following code, the `execute` function can be called by any user, which m
 actions:
 
 ```rust
-pub fn execute() {
+#[pallet::call_index(0)]
+#[pallet::weight(Weight::execute_critical_operation())]
+pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Function with unrestricted access
 }
 ```
@@ -24,7 +26,9 @@ Implement access control checks to restrict function access to specific users or
 protect critical functions.
 
 ```rust
-pub fn execute(origin: OriginFor<T>) -> DispatchResult {
+#[pallet::call_index(0)]
+#[pallet::weight(Weight::execute_critical_operation())]
+pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Restrict access to the root (admin) user
     ensure_root(origin)?;
     // Secure function logic here

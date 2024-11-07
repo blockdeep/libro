@@ -25,13 +25,13 @@ structure. This approach automatically restricts the growth of entries, enhancin
 
 ```rust
 #[pallet::storage]
-pub type Entries<T: Config> = StorageValue<_, BoundedVec<Entry, MaxEntries>>;
+pub type Entries<T: Config> = StorageValue<_, BoundedVec<Entry, T::MaxEntries>>;
 
 fn add_entry_limited(entry: Entry) -> Result<(), Error> {
     Entries::<T>::try_push(entry).map_err(|_| Error::<T>::TooManyEntries)
 }
 ```
 
-Here, the `BoundedVec` ensures that the number of entries cannot exceed `MaxEntries`, which enforces storage limits
+Here, the `BoundedVec` ensures that the number of entries cannot exceed `T::MaxEntries`, which enforces storage limits
 directly. This approach maintains predictable storage usage and efficient operations by preventing uncontrolled
 accumulation of data.
