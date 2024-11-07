@@ -1,4 +1,4 @@
-# Substrate's Best Practices
+# Substrate Development Best Practices
 
 [Introduction](README.md)
 [Summary](TABLE.md)

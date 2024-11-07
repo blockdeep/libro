@@ -1,4 +1,4 @@
-# Introduction to Substrate's Best Practices
+# Introduction to Substrate Development Best Practices
 
 Welcome to the Substrate Development Best Practices guide. This resource compiles essential insights and best practices
 derived from comprehensive code reviews across various Substrate-based projects. The purpose of this guide is to help

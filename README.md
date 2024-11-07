@@ -1,4 +1,4 @@
-# Substrate Best Practices
+# Substrate Development Best Practices
 
 This repository includes a compilation of the best coding practices when developing on Substrate.
 
