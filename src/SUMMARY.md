@@ -33,6 +33,7 @@
     - [Missing extrinsic documentation](medium/Missing_Extrinsic_Documentation.md)
     - [Missing error documentation](./medium/Missing_Error_Documentation.md)
     - [Missing event documentation](./medium/Missing_Event_Documentation.md)
+    - [Missing pallet configuration documentation](./medium/Missing_Pallet_Configuration_Documentation.md)
     - [Modularization of large files](medium/Modularization_of_Large_Files.md)
     - [Excessive function complexity](./medium/Excessive_Function_Complexity.md)
     - [Inefficient data structure selection](./medium/Inefficient_Data_Structure_Selection.md)
