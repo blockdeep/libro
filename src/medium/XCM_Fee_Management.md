@@ -4,7 +4,8 @@
 
 ## Description
 
-`FeeManager` is the most common trait implementation for handling fees charged by executors for executing XCM messages. If set to the unit type, fees will be burned.
+`FeeManager` is the most common trait implementation for handling fees charged by executors for executing XCM messages.
+If set to the empty tuple, fees will be burned.
 
 ## What should not be done
 
@@ -19,10 +20,11 @@ type FeeManager = ();
 Fees can be either deposited or distributed.
 
 ```rust
-	type FeeManager = XcmFeeManagerFromComponents<
-		WaivedLocations,
-		XcmFeeToAccountId20<Self::AssetTransactor, AccountId, StakingPot>,
-	>;
+type FeeManager = XcmFeeManagerFromComponents<
+    WaivedLocations,
+    XcmFeeToAccountId20<Self::AssetTransactor, AccountId, StakingPot>,
+>;
 ```
 
-In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to a `StakingPot` account.
+In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to
+a `StakingPot` account.
