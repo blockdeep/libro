@@ -4,7 +4,7 @@
 
 ## Description
 
-As the name suggests, the Barrier type in the commonly used XCM executor serves as entry protection for execution on a
+As the name suggests, the `Barrier` type in the commonly used XCM executor serves as entry protection for execution on a
 chain. It should be set explicitly to define which origins can execute without cost—such as for unbricking purposes—and
 which should incur charges. Additionally, consider carefully which origins should be entirely restricted from access via
 XCM.

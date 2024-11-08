@@ -1,4 +1,4 @@
-# Teleport ss Reserve Transfer
+# Teleport vs Reserve Transfer
 
 **Severity**: Critical
 
@@ -12,7 +12,7 @@ understand the differences between teleporting assets and using the reserve asse
 
 - Teleport: Assets are burned at the origin and minted at the destination, requiring full trust in issuance management
   between both parties.
-- Reserve Transfer: Assets are deposited into a commonly trusted reserve, with a representative derivative minted at the
+- Reserve transfer: Assets are deposited into a commonly trusted reserve, with a representative derivative minted at the
   destination. This approach allows both parties to rely on a globally trusted reserve, from which they can audit
   issuance.
 
@@ -43,5 +43,5 @@ pub type Reserves = ReserveAssetsFrom<AssetReserveLocation>;
 type IsReserve = Reserves;
 ```
 
-In this example, only assets from a predefined reserve are accepted via Reserve Transfer. Adjust the level of
+In this example, only assets from a predefined reserve are accepted via Reserve transfer. Adjust the level of
 permissiveness to suit your use case, and ensure sufficient time is spent making an informed decision.
