@@ -27,7 +27,7 @@ Use a claim-based process where each participant finalizes their operation indiv
 distribute the load.
 
 ```rust
-fn claim_operation(participant: AccountId) -> Result<(), DispatchError> {
+fn claim_operation(participant: AccountId) -> Result<(), Error> {
     // Each participant finalizes their own operation
     complete_operation_for(participant)?;
     Ok(())

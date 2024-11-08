@@ -12,7 +12,7 @@ or system changes.
 Omitting logging for important events makes it hard to identify what happened if an issue arises:
 
 ```rust
-fn update_user_balance(user_id: u32, amount: u32) {
+fn update_user_balance(user_id: AccountId, amount: u32) {
     // Updates user balance without logging
     balances.insert(user_id, amount);
 }
@@ -23,8 +23,8 @@ fn update_user_balance(user_id: u32, amount: u32) {
 Add detailed logging for critical actions to improve traceability:
 
 ```rust
-fn update_user_balance(user_id: u32, amount: u32) {
-    log::info!("Updating balance for user: {}, new amount: {}", user_id, amount);
+fn update_user_balance(user_id: AccountId, amount: u32) {
+    log::info!("Updating balance for user: {:?}, new amount: {:?}", user_id, amount);
     balances.insert(user_id, amount);
 }
 ```

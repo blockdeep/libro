@@ -32,8 +32,16 @@ getters:
 #[pallet::storage]
 pub type MyValue<T> = StorageValue<_, u32>;
 
-pub fn get_my_value() -> Option<u32> {
+// Create a custom getter
+fn get_my_value() -> Option<u32> {
     MyValue::<T>::get()
+}
+
+// Or simply access the storage item directly
+fn process_stuff() {
+    if let my_value = MyValue::<T>::get() {
+        // Use the value here
+    }
 }
 ```
 
@@ -41,4 +49,5 @@ In this example:
 
 - The `get_my_value` function provides controlled access to the storage item without using `#[pallet::getter]`,
   maintaining compatibility with future updates.
-- This approach ensures that storage access remains up-to-date and adaptable to evolving framework standards.
+- The same results can be yielded by simply accessing the storage item straightforwardly.
+- Both approaches ensure that storage access remains up-to-date and adaptable to evolving framework standards.

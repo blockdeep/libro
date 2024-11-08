@@ -1,4 +1,4 @@
-# Hardcoded Weights and missing benchmarks
+# Hardcoded Weights and Missing Benchmarks
 
 **Severity**: Critical
 
@@ -19,7 +19,7 @@ Avoid using hardcoded weights directly in the function definition of extrinsics.
 pub fn do_something(
     origin: OriginFor<T>,
     some_data: Data
-) -> DispatchResult {...}
+) -> DispatchResult { /* Rest of the logic */ }
 ```
 
 In this example:
@@ -33,23 +33,25 @@ Implement proper benchmarking to dynamically assess the weights of your function
 actual execution costs during test runs and then applying the generated weights in your extrinsic definitions.
 
 ```rust
-//benchmarking.rs file
+// benchmarking.rs file
 #[benchmark]
 fn do_something() {
-    //setup
-    ...
-    //exection
+    // Setup
+    // ...
+    
+    // Execution
 	#[extrinsic_call]
 	_(RawOrigin::Signed(account), data);
 }
 
-// Execute the benchmarks and then add the
-// corresponding WeightInfo to the extrinsic
-// inthe lib.rs file
+// Execute the benchmarks and then add the corresponding WeightInfo 
+// to the extrinsic in the lib.rs file
 #[pallet::call_index(0)]
-#[pallet::weight(<T as Config>::WeightInfo::do_something())]
+#[pallet::weight(T::WeightInfo::do_something())]
 pub fn do_something(
     origin: OriginFor<T>,
     some_data: Data
-) -> DispatchResult {...}
+) -> DispatchResult {
+   // Extrinsic logic
+}
 ```

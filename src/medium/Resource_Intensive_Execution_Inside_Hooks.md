@@ -1,13 +1,13 @@
-# Resource intensive execution inside hooks
+# Resource Intensive Execution Inside Hooks
 
 **Severity**: Medium
 
 ## Description
 
-Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like on_finalize
-can significantly impact block execution time and lead to performance bottlenecks. Hooks are triggered automatically for
-every block, and if they contain complex or large-scale computations, there could be a reduction in transaction
-throughput and potentially affect the network’s overall performance.
+Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like
+`on_finalize` can significantly impact block execution time and lead to performance bottlenecks. Hooks are triggered
+automatically for every block, and if they contain complex or large-scale computations, there could be a reduction in
+transaction throughput and potentially affect the network’s overall performance.
 
 ## What should not be done
 
@@ -35,7 +35,7 @@ impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
                 }
             }
 
-            // Process `ayes` and `nays` results as needed...
+            // Process `ayes` and `nays` results as needed
         }
     }
 }
@@ -43,25 +43,27 @@ impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
 
 In this example:
 
-- Counting votes for each finalized proposal during on_finalize leads to high resource usage and may exceed block weight
-  limits, especially as the number of proposals and votes grows.
+- Counting votes for each finalized proposal during `on_finalize` leads to high resource usage and may exceed block
+  weight limits, especially as the number of proposals and votes grows.
 
 ## What can be done instead
 
 Optimize by performing the calculations within the extrinsics, maintaining incremental counters in storage, or enabling
 users to trigger the logic explicitly outside the hooks.
 
-Example 1: Perform the Execution Within the Extrinsic:
+### Option 1: Perform the execution within the extrinsic
+
 Track necessary values as they are submitted, distributing the computation workload across each transaction.
 
 ```rust
-#[pallet::call_index(1)]
+#[pallet::call_index(0)]
+#[pallet::weight(T::WeightInfo::some_vote())]
 pub fn some_vote(
     origin: OriginFor<T>,
 	vote: VoteType
 ) -> DispatchResult {
-    //Any verification logic
-    ...
+    // Any verification logic
+    // ...
     ProposalVoteAmount::<T>::try_mutate(id, |item| -> Result<(), Error> {
         match vote {
             VoteType::Aye => *item.ayes = item.ayes.saturating_add(1),
@@ -73,34 +75,33 @@ pub fn some_vote(
 }
 
 fn on_finalize(block_number: T::BlockNumber) {
-        // Retrieve proposals that have ended at this block number
-        let proposals = EndedProposals::<T>::get(block_number);
-
-        for proposal_id in proposals.iter() {
-            let (ayes, nays) = ProposalVoteAmount::<T>::get(proposal_id);
-            // Process `ayes` and `nays` results as needed...
-        }
+    // Retrieve proposals that have ended at this block number
+    let proposals = EndedProposals::<T>::get(block_number);
+    
+    for proposal_id in proposals.iter() {
+        let (ayes, nays) = ProposalVoteAmount::<T>::get(proposal_id);
+        // Process `ayes` and `nays` results as needed
     }
-
+}
 ```
 
-Example 2: Allow Users to Trigger the Logic Explicitly
+### Option 2: Allow users to trigger the logic explicitly
 
 Allow users to close/finalize manually by explicitly calling an extrinsic when necessary, which avoids performing the
-work automatically in on_finalize.
+work automatically in `on_finalize`.
 
 ```rust
-
-#[pallet::call_index(1)]
+#[pallet::call_index(0)]
+#[pallet::weight(T::WeightInfo::close_proposal())]
 pub fn close_proposal(
     origin: OriginFor<T>,
 	proposal_id: ProposalId
 ) -> DispatchResult {
     // previous logic
-    ...
+    // ...
 
     let proposal = Proposals::<T>::get(proposal_id);
-    //make sure proposal has not ended
+    // Make sure proposal has not ended
     ensure!(proposal.end_block < current_block, Error::<T>::ProposalHasNotEnded);
 
     // Proceed to calculation
@@ -117,6 +118,6 @@ pub fn close_proposal(
         }
     }
 
-    // Process `ayes` and `nays` results as needed...
+    // Process `ayes` and `nays` results as needed
 }
 ```

@@ -47,5 +47,4 @@ impl pallet::PalletApi<Block, AccountId> for Runtime {
 		Pallet::pot_account()
 	}
 }
-
 ```

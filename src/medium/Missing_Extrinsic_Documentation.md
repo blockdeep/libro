@@ -16,7 +16,7 @@ errors:
 ```rust
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::transfer())]
-fn some_extrinsic() {
+pub fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: BalanceOf<T>) {
     // Performs operation with no explanation of parameters, permissions, or errors
 }
 ```
@@ -30,19 +30,19 @@ usability and clarity:
 /// Transfers a specified amount from the sender to the recipient.
 ///
 /// # Parameters
-/// - `sender`: The account ID of the entity initiating the transfer.
+/// - `sender`: The origin initiating the transfer.
 /// - `recipient`: The account ID of the entity receiving the funds.
-/// - `amount`: The amount to be transferred, specified as a `u32`.
+/// - `amount`: The amount to be transferred.
 ///
 /// # Permissions
 /// Only callable by accounts with sufficient balance to cover the `amount`.
 ///
 /// # Errors
-/// - Returns `Error::<T>::InsufficientBalance` if the sender's balance is too low.
-/// - Returns `Error::<T>::InvalidRecipient` if the recipient account is invalid.
+/// - `InsufficientBalance` if the sender's balance is too low.
+/// - `InvalidRecipient` if the recipient account is invalid.
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::transfer())]
-fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: u32) -> DispatchResult {
+pub fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: BalanceOf<T>) -> DispatchResult {
     // Function implementation here
 }
 ```

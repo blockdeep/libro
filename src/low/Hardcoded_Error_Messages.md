@@ -12,7 +12,7 @@ inconsistencies in user-facing messages.
 Embedding error messages directly in function logic can be inflexible:
 
 ```rust
-Err("Insufficient balance".to_string())
+Err("Insufficient balance")
 ```
 
 ## What can be done instead

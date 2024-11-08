@@ -12,7 +12,7 @@ processing overhead. Removing unused code and minimizing cloning helps maintain 
 Cloning data unnecessarily creates additional memory allocations, as shown here:
 
 ```rust
-fn process_data(data: Vec<u32>) {
+fn process_data(data: &Vec<u32>) {
     // Cloning the entire vector unnecessarily
     let cloned_data = data.clone();
     
