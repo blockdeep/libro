@@ -26,6 +26,8 @@
     - [Unnecessary reads and writes in storage access](high/Unnecessary_Reads_and_Writes_in_Storage_Access.md)
     - [Absence of `try-state` hook](high/Absence_of_Try_State_Hook.md)
     - [Proper `Barrier` setup](high/Proper_Barrier_Setup.md)
+    - [Asset registration](high/Asset_Registration.md)
+    - [Usage of `Junction`s](high/Usage_Of_Junctions.md)
 
 - [Medium severity issues](medium/README.md)
 
