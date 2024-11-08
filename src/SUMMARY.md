@@ -27,7 +27,7 @@
     - [Absence of `try-state` hook](high/Absence_of_Try_State_Hook.md)
     - [Proper `Barrier` setup](high/Proper_Barrier_Setup.md)
     - [Asset registration](high/Asset_Registration.md)
-    - [Usage of `Junction`s](high/Usage_Of_Junctions.md)
+    - [Usage of `Junction`s](high/Usage_of_Junctions.md)
 
 - [Medium severity issues](medium/README.md)
 
