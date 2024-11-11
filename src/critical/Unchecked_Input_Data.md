@@ -1,4 +1,4 @@
-# Unchecked Input Data
+# Unchecked Input Parameters
 
 **Severity**: Critical
 
@@ -7,9 +7,11 @@
 Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid
 states or security issues.
 
-## What should not be done
+## Don't Do This
 
 The following code accepts input without validating its range or format, which can lead to unintended results:
+
+**TODO: The code snippet should have more code and must show what's wrong here.**
 
 ```rust
 fn process_input(data: u32) {
@@ -17,7 +19,7 @@ fn process_input(data: u32) {
 }
 ```
 
-## What can be done instead
+## Do This Instead
 
 Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid
 out-of-range values:

@@ -4,12 +4,14 @@
 
 ## Description
 
-Hardcoding weights for extrinsics in a blockchain environment can lead to significant inaccuracies in resource
+Hardcoding weights for extrinsics in a blockchain environment can lead to significant inaccuracies in execution resource
 estimation. When weights are fixed, they may not reflect the actual execution costs or resource usage, resulting in
-either overestimation or underestimation. This can adversely affect the performance of the blockchain, leading to
+either overestimation or underestimation. 
+
+**TODO: More concrete example should be given >>** This can adversely affect the performance of the blockchain, leading to
 inefficient resource allocation and potentially causing failures under load.
 
-## What should not be done
+## Don't Do This
 
 Avoid using hardcoded weights directly in the function definition of extrinsics.
 
@@ -25,9 +27,9 @@ pub fn do_something(
 In this example:
 
 - The weight is fixed, leading to potential inaccuracies in resource estimation, which can result in suboptimal
-  performance and affect transaction processing on the network
+  performance and affect transaction processing on the network.
 
-## What can be done instead
+## Do This Instead
 
 Implement proper benchmarking to dynamically assess the weights of your functions. This process involves measuring the
 actual execution costs during test runs and then applying the generated weights in your extrinsic definitions.

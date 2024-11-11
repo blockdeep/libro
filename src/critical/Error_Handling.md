@@ -1,4 +1,4 @@
-# Error Handling
+# Don't Use Unwrap in Runtime
 
 **Severity**: Critical
 
@@ -8,7 +8,7 @@ Using `unwrap()` and similar methods for error handling can cause runtime panics
 conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production
 environments.
 
-## What should not be done
+## Don't Do This
 
 Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected
 application crashes:
@@ -18,12 +18,12 @@ application crashes:
 let value = my_data.get(0).unwrap();
 ```
 
-## What can be done instead
+## Do This Instead
 
-Handle errors explicitly by using `Result` and providing descriptive error messages:
+Handle errors explicitly by using `Result` and provide descriptive error messages:
 
 ```rust
-let value = my_data.get(0).ok_or(Error::<T>::EmptyData)?;
+let value = my_data.get(0).ok_or(Error::<T>::MyError)?;
 ```
 
 In this example:

@@ -1,4 +1,4 @@
-# Unbounded Iteration Risks
+# Unbounded Iterations
 
 **Severity**: Critical
 
@@ -7,7 +7,7 @@
 Unbounded iterations over large data structures can lead to resource exhaustion and may result in denial of service (
 DoS) attacks if the process consumes too many resources.
 
-## What should not be done
+## Don't Do This
 
 The following code iterates over all items in `big_data` without any limit, which can overwhelm system resources if
 `big_data` is large:
@@ -18,7 +18,7 @@ for item in big_data {
 }
 ```
 
-## What can be done instead
+## Do This Instead
 
 ### Option 1: Process up to a maximum number of elements
 

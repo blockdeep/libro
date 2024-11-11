@@ -7,7 +7,9 @@
 Without proper incentives, verifiers may lack the motivation to perform accurate validations, which can lead to
 unreliable results and affect overall system integrity.
 
-## What should not be done
+**TODO: This lacks context and clarity on what are verifiers and in what context this issue is listed. Let's add more detail here.**
+
+## Don't Do This
 
 The following code allows verifiers to decide without any rewards or penalties, which may reduce the accuracy of
 verifications:
@@ -19,7 +21,7 @@ fn verify_task(task_id: u32) {
 }
 ```
 
-## What can be done instead
+## Do This Instead
 
 Introduce economic incentives to reward correct verifications and penalize incorrect ones. This approach motivates
 verifiers to act reliably and increases the accuracy of task validation.
