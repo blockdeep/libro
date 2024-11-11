@@ -6,10 +6,9 @@
 
 Hardcoding weights for extrinsics in a blockchain environment can lead to significant inaccuracies in execution resource
 estimation. When weights are fixed, they may not reflect the actual execution costs or resource usage, resulting in
-either overestimation or underestimation. 
+either overestimation or underestimation.
 
-**TODO: More concrete example should be given >>** This can adversely affect the performance of the blockchain, leading to
-inefficient resource allocation and potentially causing failures under load.
+A hardcoded weight might underestimate the cost of processing transactions with complex logic inside, resulting in unexpected execution costs and a potential causing issues when building a block. Conversely, overestimated weights could prevent some transactions from proceeding, wasting network resources and limiting scalability.
 
 ## Don't Do This
 
@@ -29,7 +28,7 @@ In this example:
 - The weight is fixed, leading to potential inaccuracies in resource estimation, which can result in suboptimal
   performance and affect transaction processing on the network.
 
-## Do This Instead
+## Best Practice
 
 Implement proper benchmarking to dynamically assess the weights of your functions. This process involves measuring the
 actual execution costs during test runs and then applying the generated weights in your extrinsic definitions.
@@ -40,13 +39,13 @@ actual execution costs during test runs and then applying the generated weights 
 fn do_something() {
     // Setup
     // ...
-    
+
     // Execution
 	#[extrinsic_call]
 	_(RawOrigin::Signed(account), data);
 }
 
-// Execute the benchmarks and then add the corresponding WeightInfo 
+// Execute the benchmarks and then add the corresponding WeightInfo
 // to the extrinsic in the lib.rs file
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::do_something())]

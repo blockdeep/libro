@@ -7,7 +7,7 @@
 Relying on a single transaction to finalize multiple operations can lead to excessive costs, penalties, or errors,
 especially if the final transaction fails. This approach risks incomplete operations and impacts system reliability.
 
-## What should not be done
+## Avoid this
 
 In the following example, one function is responsible for finalizing all previous actions, leading to a single point of
 potential failure and high resource usage:
@@ -21,7 +21,7 @@ fn finalize_operations() {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Use a claim-based process where each participant finalizes their operation individually, or use batch processing to
 distribute the load.

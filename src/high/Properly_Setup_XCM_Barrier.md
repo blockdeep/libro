@@ -1,4 +1,4 @@
-# Proper Barrier Setup
+# Properly Setup XCM Barrier
 
 **Severity**: High
 
@@ -11,7 +11,7 @@ XCM.
 
 As a rule of thumb, it is always recommended to be as restrictive as possible.
 
-## What should not be done
+## Avoid this
 
 In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this
 configuration
@@ -27,7 +27,7 @@ pub type Barrier = (
 );
 ```
 
-## What must be done instead
+## Best Practice
 
 Properly identify each relevant case, aiming to be as restrictive as possible while also requiring explicit
 authorization for unpaid execution when necessary.

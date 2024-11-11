@@ -1,4 +1,4 @@
-# Unbounded Iterations
+# Avoid Unbounded Iterations
 
 **Severity**: Critical
 
@@ -18,7 +18,7 @@ for item in big_data {
 }
 ```
 
-## Do This Instead
+## Best Practice
 
 ### Option 1: Process up to a maximum number of elements
 

@@ -1,4 +1,4 @@
-# Unchecked Arithmetic
+# Use Safe Arithmetic Operations
 
 **Severity**: High
 
@@ -7,7 +7,7 @@
 Unchecked arithmetic operations can lead to overflow or underflow, causing unexpected behavior or errors, especially
 when working with large numbers.
 
-## What should not be done
+## Avoid this
 
 The following code performs addition without checking for overflow, which may cause the program to wrap around to an
 unintended value:
@@ -22,7 +22,7 @@ In this example:
 - If `a` and `b` are large, the result may exceed the data type’s maximum value, causing an overflow and leading to
   incorrect results.
 
-## What can be done instead
+## Best Practice
 
 ### Option 1: Use Checked Arithmetic
 

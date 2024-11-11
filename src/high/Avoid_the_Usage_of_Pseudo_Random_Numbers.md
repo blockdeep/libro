@@ -1,13 +1,13 @@
-# Randomized Task Verified Selection
+Avoid the Usage of Pseudo Random Numbers
 
 **Severity**: High
 
 ## Description
 
-Using non-deterministic methods for assigning tasks or verifiers can create opportunities for manipulation, potentially
+Using non-deterministic methods for important process such as selecting/assigning tasks for example or can create opportunities for manipulation, potentially
 allowing certain participants to be chosen more frequently or unfairly.
 
-## What should not be done
+## Avoid this
 
 The following code relies on a random selection, which can lead to inconsistent results and potential bias:
 
@@ -24,7 +24,7 @@ In this example:
 - `rand::random::<usize>() % verifiers.len()` selects a verifier at random, which could result in unfair frequency of
   selection for certain verifiers.
 
-## What can be done instead
+## Best Practice
 
 Implement a deterministic selection method, such as using the task ID as a basis to ensure a fair, repeatable selection:
 

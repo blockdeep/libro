@@ -1,4 +1,4 @@
-# Don't Use Unwrap in Runtime
+# Avoid Unwrap Usage Inside Runtime
 
 **Severity**: Critical
 
@@ -8,7 +8,7 @@ Using `unwrap()` and similar methods for error handling can cause runtime panics
 conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production
 environments.
 
-## Don't Do This
+## Avoid This
 
 Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected
 application crashes:
@@ -18,7 +18,7 @@ application crashes:
 let value = my_data.get(0).unwrap();
 ```
 
-## Do This Instead
+## Best Practice
 
 Handle errors explicitly by using `Result` and provide descriptive error messages:
 

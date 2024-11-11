@@ -1,4 +1,4 @@
-# Absence of Try-state Hook
+# Implement `try-state` Hook
 
 **Severity**: High
 
@@ -10,7 +10,7 @@ sensible after upgrades or other critical operations. These hooks are only execu
 correctness. It is a best practice to run `try-runtime` prior to any migration to catch potential issues in a controlled
 environment.
 
-## What should not be done
+## Avoid this
 
 Skipping sanity checks during runtime upgrades or migrations can leave storage inconsistencies unnoticed, leading to
 potential bugs:
@@ -24,7 +24,7 @@ fn on_runtime_upgrade() {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Implement the `try-state` hook to perform thorough state checks without altering storage. Use `try-runtime` to simulate
 migrations and validate state consistency before deploying updates:

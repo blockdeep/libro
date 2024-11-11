@@ -1,4 +1,4 @@
-# Usage of `Junctions`
+# Make Proper Usage of XCM `Junctions`
 
 **Severity**: High
 
@@ -12,7 +12,7 @@ However, due to their nature, some junctions are more explicit than others, whic
 
 When defining junctions, adhere closely to their intended definitions to ensure they are used appropriately.
 
-## What should not be done
+## What to avoid
 
 Using `GeneralIndex`, or any other `Junction`, for purposes beyond representing the intended entity can result in
 misuse.
@@ -26,7 +26,7 @@ pub const AssetOfZ: Location = Location::new(1, [Parachain(PARA_ID_OF_Z), Genera
 In this example, `GeneralIndex` is used to send information that describes a characteristic (the number of decimals)
 rather than the entity itself, which deviates from its intended purpose.
 
-## What can be done instead
+## Best Practice
 
 Use `Junctions` strictly to represent entities in the `Location` path, adhering to their intended definitions.
 
