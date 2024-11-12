@@ -1,4 +1,4 @@
-# Use of Magic Numbers
+# Define Constants to Replace Magic Numbers
 
 **Severity**: Medium
 

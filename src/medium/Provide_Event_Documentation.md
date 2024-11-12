@@ -1,10 +1,10 @@
-# Missing Event Documentation
+# Provide Event Documentation
 
 **Severity**: Medium
 
 ## Description
 
-Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose.
+Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose. Additionally Event documentation for each error provides valuable context inside the code metadata allowing frontent clients and users to get more insigh regarding an event that is emmited.
 
 ## What should be avoided
 
@@ -20,6 +20,10 @@ pub type Event<T: Config> {
     AccountLocked,
 }
 ```
+
+In this example:
+
+- No documentation is provided for the evnt variants inside the `Event` enum.
 
 ## Best Practice
 

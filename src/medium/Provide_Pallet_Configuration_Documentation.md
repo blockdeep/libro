@@ -1,4 +1,4 @@
-# Missing Pallet Configuration Documentation
+# Provide Pallet Configuration Documentation
 
 **Severity**: Medium
 

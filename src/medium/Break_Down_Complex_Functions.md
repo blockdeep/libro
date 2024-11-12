@@ -1,4 +1,4 @@
-# Excessive Function Complexity
+# Break Down Complex Functions
 
 **Severity**: Medium
 

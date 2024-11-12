@@ -1,4 +1,4 @@
-# Deprecated Storage Getters
+# Remove Deprecated Storage Getters
 
 **Severity**: Medium
 

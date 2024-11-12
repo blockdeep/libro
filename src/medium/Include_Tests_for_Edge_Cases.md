@@ -1,4 +1,4 @@
-# Lack of Tests for Boundary Cases
+# Include Tests for Edge Cases
 
 **Severity**: Medium
 

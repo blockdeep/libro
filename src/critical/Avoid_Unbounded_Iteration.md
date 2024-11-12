@@ -7,7 +7,7 @@
 Unbounded iterations over large data structures can lead to resource exhaustion and may result in denial of service (
 DoS) attacks if the process consumes too many resources.
 
-## Don't Do This
+## What should be avoided
 
 The following code iterates over all items in `big_data` without any limit, which can overwhelm system resources if
 `big_data` is large:

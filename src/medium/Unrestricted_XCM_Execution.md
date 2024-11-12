@@ -1,4 +1,4 @@
-# Unrestricted XCM Execution
+# Avoid Unrestricted XCM Execution
 
 **Severity**: Medium
 
@@ -13,7 +13,7 @@ such as when the chain must regularly register assets on other chains.
 
 ## What should be avoided
 
-The following code permits extrinsics with XCM instructions to pass through `pallet-xcm`.
+The following code allows extrinsics with XCM instructions to pass through `pallet-xcm`.
 
 ```rust
 type XcmExecuteFilter = Everything;

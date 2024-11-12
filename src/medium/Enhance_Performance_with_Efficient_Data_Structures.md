@@ -1,4 +1,4 @@
-# Inefficient Data Structure Selection
+# Enhance Performance with Efficient Data Structures
 
 **Severity**: Medium
 
@@ -9,7 +9,7 @@ and increased resource usage.
 
 ## What should be avoided
 
-Using a `Vec` for frequent lookups, which requires linear-time search, can slow down performance in large data sets:
+Using a `Vec` for frequent lookups is often inefficient, as it requires linear-time search, which can significantly slow down performance with large data sets:
 
 ```rust
 // Linear search
@@ -20,7 +20,7 @@ let result = vec_data.contains(&item);
 
 ### Option 1: Use more performant data structures
 
-Use a `HashSet` or `BTreeSet` for efficient lookup operations:
+Consider data structures like `HashSet` or `BTreeSet` for improved lookup performance. These structures are optimized for constant or logarithmic time complexity, respectively, making them more suitable for large-scale data:
 
 ```rust
 // Constant or logarithmic time search

@@ -1,4 +1,4 @@
-# Resource Intensive Execution Inside Hooks
+# Avoid Resource Intensive Execution Inside Hooks
 
 **Severity**: Medium
 

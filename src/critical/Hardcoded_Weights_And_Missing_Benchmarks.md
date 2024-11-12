@@ -10,7 +10,7 @@ either overestimation or underestimation.
 
 A hardcoded weight might underestimate the cost of processing transactions with complex logic inside, resulting in unexpected execution costs and a potential causing issues when building a block. Conversely, overestimated weights could prevent some transactions from proceeding, wasting network resources and limiting scalability.
 
-## Don't Do This
+## What should be avoided
 
 Avoid using hardcoded weights directly in the function definition of extrinsics.
 

@@ -1,4 +1,4 @@
-# Usage of deprecated Currency trait
+# Transition Away from Currency Trait
 
 **Severity**: Medium
 

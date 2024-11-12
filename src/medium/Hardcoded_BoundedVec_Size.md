@@ -1,4 +1,4 @@
-# Hardcoded `BoundedVec` Size
+# Make `BoundedVec` Size Configurable
 
 **Severity**: Medium
 
@@ -23,6 +23,7 @@ pub type Domain = BondedVec<u8, ConstU32<256>>;
 Define the size as a configurable parameter within the `Config` trait, which provides flexibility for future changes:
 
 ```rust
+// --- In pallet/lib.rs file ----
 #[pallet::config]
 pub trait Config: frame_system::Config {
     type MaxDomainSize: Get<u32>;
@@ -30,6 +31,13 @@ pub trait Config: frame_system::Config {
 
 #[pallet::storage]
 pub type Domain<T> = BoundedVec<u8, T::MaxDomainSize>;
+
+
+// --- In runtime/lib.rs file ---
+impl some_pallet::Config for Runtime {
+    ...
+    type MaxDomainSize = ConstU32<256>;
+}
 ```
 
 This approach allows the `MaxDomainSize` to be defined in the runtime configuration, making the code adaptable and

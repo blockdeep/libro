@@ -1,4 +1,4 @@
-# Modularization of Large Files
+# Modularize Large Files
 
 **Severity**: Medium
 
@@ -13,36 +13,54 @@ readability and simplifies code management.
 A single large file with multiple unrelated functions and types can become hard to work with:
 
 ```rust
-// lib.rs (single large file with all logic)
+// lib.rs (single large file with all logic and types)
 fn process_transaction() -> Result<Transaction, Error> { /* transaction processing logic */ }
 
 fn calculate_fees() -> u32 { /* fee calculation logic */ }
 
 fn validate_data() -> Result<(), Error> { /* data validation logic */ }
+
+pub struct SomeStruct{
+  ...
+}
+
+pub type MyType = BoundedVec<u8, 20>;
+
+pub enum UsefulEnum {
+  ...
+}
 ```
 
 In this example:
 
-- All functionality is packed into one file, making it difficult to navigate and locate specific functions.
+- All functionality and types is packed into one file, making it difficult to navigate and locate specific parts of the code.
 
 ## Best Practice
 
 Split the code into smaller, purpose-specific modules to improve organization and readability:
 
 ```rust
-// lib.rs (main module file)
-mod transaction;
-mod fees;
-mod validation;
+// ./lib.rs (main module file)
+mod helpers;
+mod types;
 
-// transaction.rs
+// --- ./helpers.rs ---
 pub fn process_transaction() -> Result<Transaction, Error> { /* transaction processing logic */ }
 
-// fees.rs
 pub fn calculate_fees() -> u32 { /* fee calculation logic */ }
 
-// validation.rs
 pub fn validate_data() -> Result<(), Error> { /* data validation logic */ }
+
+// --- ./types.rs ---
+pub struct SomeStruct{
+  ...
+}
+
+pub type MyType = BoundedVec<u8, 20>;
+
+pub enum UsefulEnum {
+  ...
+}
 ```
 
 In this modularized structure:

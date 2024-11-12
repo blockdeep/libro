@@ -1,4 +1,4 @@
-# Missing Error Documentation
+# Include Error Documentation
 
 **Severity**: Medium
 
@@ -19,6 +19,10 @@ pub enum Error {
     InvalidAsset,
 }
 ```
+
+In this example:
+
+- No documentation is provided for the error variants inside the `Error` enum.
 
 ## Best Practice
 

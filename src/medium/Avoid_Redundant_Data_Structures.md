@@ -1,4 +1,4 @@
-# Redundant Storage Usage
+# Avoid Redundant Data Structures
 
 **Severity**: Medium
 
@@ -31,9 +31,25 @@ pub type InfoOwner<T: Config> =
 
 In this example:
 
-- The InfoOwner storage map is redundant since the owner is already stored within the Info structure.
+- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` StorageMap.
 
 ## Best Practice
 
 To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data
 needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
+
+```rust
+pub struct Info<AccountId, BlockNumber> {
+	pub owner: AccountId,
+	pub more_data_1: u32,
+	pub more_data_2: u32,
+}
+
+#[pallet::storage]
+pub type SomeInfo<T: Config> =
+	StorageMap<_, Identity, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
+```
+
+In this example:
+
+- The `InfoOwner` storage map was deleted to remove storage redundancy.

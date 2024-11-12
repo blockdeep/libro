@@ -1,4 +1,4 @@
-# Hardcoded Parameters and Values
+# Avoid Hardcoded Parameters and Values
 
 **Severity**: Medium
 
@@ -26,6 +26,7 @@ In this example:
 Use configurable traits to allow parameter adjustments at the runtime level, enhancing flexibility and adaptability:
 
 ```rust
+// --- In pallet/lib.rs file ----
 pub trait Config: frame_system::Config {
     const LIMIT: u32;
 }
@@ -36,6 +37,12 @@ impl<T: Config> Pallet<T> {
         let limit = T::LIMIT;
         // Logic that uses the configurable limit
     }
+}
+
+// --- In runtime/lib.rs file ---
+impl some_pallet::Config for Runtime {
+    ...
+    type LIMIT = 100;
 }
 ```
 
