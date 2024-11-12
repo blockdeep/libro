@@ -12,16 +12,15 @@ correctly, especially for new contributors.
 Lack of documentation or minimal comments can leave important details unclear, as shown below:
 
 ```rust
-// No documentation for this function
 fn process_data(data: u32) {
-    // Function logic here
+  ...
 }
 ```
 
 In this example:
 
 - The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
-  others to use or modify it confidently.
+  others to understand, use or modify it confidently.
 
 ## What can be done instead
 
@@ -30,14 +29,15 @@ outcomes for each function.
 
 ```rust
 /// Processes the provided data by performing necessary calculations.
-/// 
+///
 /// # Parameters
 /// - `data`: The input data to be processed, expected as an unsigned integer.
-/// 
+///
 /// # Returns
 /// - Result of the processing operation as a `u32`.
 fn process_data(data: u32) -> u32 {
     // Function logic here
+    ...
 }
 ```
 

@@ -1,4 +1,4 @@
-# Naming Criteria
+# Use Proper Naming Criteria
 
 **Severity**: Informational
 
@@ -7,7 +7,7 @@
 It is recommended to avoid using well-known nomenclature for naming conventions. Conduct preliminary research on terms
 commonly used by popular chains (e.g., relay chains or system chains) before finalizing names.
 
-## What should not be done
+## Avoid this
 
 In this example, assets bridged from another consensus system are referred to as "foreign", a term strongly associated
 with `Asset Hub`’s foreign assets. Given the chain’s intended integration with Asset Hub, this terminology could mislead
@@ -26,7 +26,7 @@ pallet_assets::Pallet::<T>::transfer_keep_alive(
 )?;
 ```
 
-## What can be done instead
+## Best Practice
 
 After conducting initial ecosystem research, particularly on chains with which the product is designed to integrate, a
 more informed naming decision can be made.
@@ -39,4 +39,4 @@ In this approach:
 
 - The terminology chosen clarifies the origin and nature of the assets.
 - Ambiguous terms like "native", "foreign", or "wrapped", commonly used in the context of `pallet-assets`, were avoided
-  to prevent misunderstanding. 
+  to prevent misunderstanding.
