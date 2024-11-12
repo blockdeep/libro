@@ -7,7 +7,7 @@
 `FeeManager` is the most common trait implementation for handling fees charged by executors for executing XCM messages.
 If set to the empty tuple, fees will be burned.
 
-## What should not be done
+## What should be avoided
 
 Use the `FeeManager` unit type without recognizing that this results in fee burning.
 
@@ -15,7 +15,7 @@ Use the `FeeManager` unit type without recognizing that this results in fee burn
 type FeeManager = ();
 ```
 
-## What can be done instead
+## Best Practice
 
 Fees can be either deposited or distributed.
 

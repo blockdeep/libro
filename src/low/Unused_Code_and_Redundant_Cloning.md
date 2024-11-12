@@ -7,7 +7,7 @@
 Unused code and redundant cloning increase code size and reduce efficiency, leading to unnecessary memory usage and
 processing overhead. Removing unused code and minimizing cloning helps maintain a cleaner, more efficient codebase.
 
-## What should not be done
+## What should be avoided
 
 Cloning data unnecessarily creates additional memory allocations, as shown here:
 
@@ -15,7 +15,7 @@ Cloning data unnecessarily creates additional memory allocations, as shown here:
 fn process_data(data: &Vec<u32>) {
     // Cloning the entire vector unnecessarily
     let cloned_data = data.clone();
-    
+
     for elem in cloned_data {
         // processing the element
     }
@@ -27,7 +27,7 @@ In this example:
 - The entire `data` vector is cloned, doubling the memory usage even if the original data can be processed directly or
   accessed via reference.
 
-## What can be done instead
+## Best Practice
 
 Use references to avoid unnecessary cloning, and review code for unused or redundant sections regularly to keep the
 codebase lean:

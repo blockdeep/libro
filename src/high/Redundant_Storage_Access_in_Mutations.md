@@ -8,7 +8,7 @@ Improper usage of `try_mutate` leads to redundant storage operations, which can 
 both `try_mutate` and `insert` in the same closure causes unnecessary overhead by performing multiple accesses to
 storage.
 
-## Avoid this
+## What should be avoided
 
 Using `try_mutate` followed by `insert` in a nested closure causes redundant writes:
 

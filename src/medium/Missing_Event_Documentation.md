@@ -6,7 +6,7 @@
 
 Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose.
 
-## What should not be done
+## What should be avoided
 
 Emitting events without descriptions or explanations:
 
@@ -21,7 +21,7 @@ pub type Event<T: Config> {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Provide detailed comments for each event to explain its purpose and usage:
 
@@ -29,7 +29,7 @@ Provide detailed comments for each event to explain its purpose and usage:
 #[pallet::event]
 #[pallet::generate_deposit(pub(super) fn deposit_event)]
 pub type Event<T: Config> {
-    /// An account was just created. This event gets triggered when the account 
+    /// An account was just created. This event gets triggered when the account
     /// has a balance greater than the existential deposit for the first time.
     AccountCreated,
     /// The account got its balance updated, but over the existential deposit.

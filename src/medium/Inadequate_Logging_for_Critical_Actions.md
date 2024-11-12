@@ -7,7 +7,7 @@
 Failing to log critical actions can make it difficult to trace and debug issues, especially when tracking user actions
 or system changes.
 
-## What should not be done
+## What should be avoided
 
 Omitting logging for important events makes it hard to identify what happened if an issue arises:
 
@@ -18,7 +18,7 @@ fn update_user_balance(user_id: AccountId, amount: u32) {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Add detailed logging for critical actions to improve traceability:
 

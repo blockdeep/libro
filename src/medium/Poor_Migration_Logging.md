@@ -7,7 +7,7 @@
 Logging messages in migration scripts should provide clear and specific information about the migration process. Adding
 more explicit logs helps track progress, identify issues, and understand the migration flow.
 
-## What should not be done
+## What should be avoided
 
 Using general log messages in migration scripts provides minimal information:
 
@@ -15,7 +15,7 @@ Using general log messages in migration scripts provides minimal information:
 log::info!("Migration started");
 ```
 
-## What can be done instead
+## Best Practice
 
 Use more detailed logging, including migration-specific information and conditions:
 

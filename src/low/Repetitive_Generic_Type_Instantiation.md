@@ -1,4 +1,4 @@
-# Repetitive Generic Type Instantiation
+# Avoid Repetitive Generic Type Instantiation
 
 **Severity**: Low
 
@@ -8,7 +8,7 @@ Defining complex generic types repeatedly within a codebase leads to verbosity a
 specific type instance of a generic struct is needed multiple times, duplicating its definition can make the code harder
 to read and more error-prone if updates to the type are required.
 
-## What should not be done
+## What should be avoided
 
 Avoid duplicating the entire definition of a complex type instance across multiple places in the code.
 
@@ -60,7 +60,7 @@ In this example:
 - The `SomeInfo` generic type is defined twice with the same parameters, making the code repetitive and harder to
   maintain.
 
-## What can be done instead
+## Best Practice
 
 Define a type alias for the specific instance of the generic type, and reuse this alias throughout the code. By creating
 a single type alias, such as `SomeInfoOf<T>`, for the specific instance, you can reference it without repeating its full

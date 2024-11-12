@@ -7,7 +7,7 @@
 Overloading interfaces with too many responsibilities can lead to complex dependencies, making code harder to understand
 and maintain.
 
-## What should not be done
+## What should be avoided
 
 Using a single trait for multiple, unrelated responsibilities increases code complexity:
 
@@ -19,7 +19,7 @@ trait FullService {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Separate interfaces into smaller, focused traits to simplify code:
 

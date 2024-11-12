@@ -7,7 +7,7 @@ Avoid the Usage of Pseudo Random Numbers
 Using non-deterministic methods for important process such as selecting/assigning tasks for example or can create opportunities for manipulation, potentially
 allowing certain participants to be chosen more frequently or unfairly.
 
-## Avoid this
+## What should be avoided
 
 The following code relies on a random selection, which can lead to inconsistent results and potential bias:
 

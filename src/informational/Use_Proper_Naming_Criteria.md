@@ -7,7 +7,7 @@
 It is recommended to avoid using well-known nomenclature for naming conventions. Conduct preliminary research on terms
 commonly used by popular chains (e.g., relay chains or system chains) before finalizing names.
 
-## Avoid this
+## What should be avoided
 
 In this example, assets bridged from another consensus system are referred to as "foreign", a term strongly associated
 with `Asset Hub`’s foreign assets. Given the chain’s intended integration with Asset Hub, this terminology could mislead

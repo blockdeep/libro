@@ -8,7 +8,7 @@ Lack of documentation on error variants can make it challenging for developers t
 documentation for each error provides valuable context in code metadata, making it easier to identify the cause of
 failures.
 
-## What should not be done
+## What should be avoided
 
 Leaving error variants undocumented can lead to confusion and slow down debugging:
 
@@ -20,7 +20,7 @@ pub enum Error {
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Add documentation for each error variant to clarify its cause and expected behavior:
 

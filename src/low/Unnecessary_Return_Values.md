@@ -1,4 +1,4 @@
-# Unnecessary Return Values
+# Remove Unnecessary Return Values
 
 **Severity**: Low
 
@@ -8,7 +8,7 @@ Returning values that are not modified or required by the function can clutter t
 reducing readability. Removing these unnecessary return values simplifies function signatures and clarifies function
 purpose.
 
-## What should not be done
+## What should be avoided
 
 Returning an input parameter without modification is redundant and can be confusing:
 
@@ -16,20 +16,20 @@ Returning an input parameter without modification is redundant and can be confus
 fn project_validation(project_metadata: Metadata) -> Metadata {
     // Perform validation
     // ...
-    
+
     // Returns the same value without changes
     project_metadata
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 If the return value is not needed, avoid returning it, focusing the function solely on its primary operation:
 
 ```rust
 fn project_validation(project_metadata: &Metadata) -> Result<(), Error> {
     // Perform validation without returning project_metadata
-    
+
     Ok(())
 }
 ```

@@ -9,7 +9,7 @@ Performing resource-intensive operations, such as iterating over large data sets
 automatically for every block, and if they contain complex or large-scale computations, there could be a reduction in
 transaction throughput and potentially affect the network’s overall performance.
 
-## What should not be done
+## What should be avoided
 
 Avoid conducting heavy computations or iterating through extensive data in hooks, as this adds unnecessary workload to
 every block. For example, consider the following inefficient approach in `on_finalize`, which processes votes for each
@@ -46,7 +46,7 @@ In this example:
 - Counting votes for each finalized proposal during `on_finalize` leads to high resource usage and may exceed block
   weight limits, especially as the number of proposals and votes grows.
 
-## What can be done instead
+## Best Practice
 
 Optimize by performing the calculations within the extrinsics, maintaining incremental counters in storage, or enabling
 users to trigger the logic explicitly outside the hooks.
@@ -77,7 +77,7 @@ pub fn some_vote(
 fn on_finalize(block_number: T::BlockNumber) {
     // Retrieve proposals that have ended at this block number
     let proposals = EndedProposals::<T>::get(block_number);
-    
+
     for proposal_id in proposals.iter() {
         let (ayes, nays) = ProposalVoteAmount::<T>::get(proposal_id);
         // Process `ayes` and `nays` results as needed

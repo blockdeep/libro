@@ -7,7 +7,7 @@
 The use of a hardcoded size for `BondedVec` limits flexibility and maintainability. Introducing a configurable parameter
 allows for easier adjustments and improves readability and code scalability.
 
-## What should not be done
+## What should be avoided
 
 Using a fixed size for `BondedVec` without a configurable option restricts adaptability:
 
@@ -18,7 +18,7 @@ Using a fixed size for `BondedVec` without a configurable option restricts adapt
 pub type Domain = BondedVec<u8, ConstU32<256>>;
 ```
 
-## What can be done instead
+## Best Practice
 
 Define the size as a configurable parameter within the `Config` trait, which provides flexibility for future changes:
 

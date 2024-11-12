@@ -7,7 +7,7 @@
 Backend logic should be designed independently of frontend-specific values, formats, or preferences to ensure
 flexibility and maintain consistency across different interfaces.
 
-## Avoid this
+## What should be avoided
 
 The following example ties backend logic to frontend-specific display preferences, which can cause inconsistencies and
 make the backend harder to adapt:

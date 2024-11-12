@@ -1,4 +1,4 @@
-# Unnecessary Reads and Writes in Storage Access
+# Prevent Unnecessary Reads and Writes in Storage Access
 
 **Severity**: High
 
@@ -7,7 +7,7 @@
 Unnecessary reads and writes increase execution time and storage costs, impacting performance and efficiency. Using
 `try_mutate` and similar methods can reduce redundant operations by wrapping read-write logic into a single call.
 
-## Avoid this
+## What should be avoided
 
 Reading from and then writing to storage separately leads to redundant operations:
 

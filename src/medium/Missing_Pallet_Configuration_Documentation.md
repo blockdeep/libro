@@ -8,7 +8,7 @@ Pallet configuration items (types, constants, or associated items within the `Co
 confuse developers and users. Without clear descriptions, it becomes harder to understand their purpose, leading to
 misconfigurations or inefficient implementations.
 
-## What should not be done
+## What should be avoided
 
 Leaving pallet configuration items undocumented leads to ambiguity and reduces maintainability:
 
@@ -24,7 +24,7 @@ In this example:
 - The `Currency` and `MaxSize` configuration items lack documentation, making their usage unclear to developers
   implementing the pallet.
 
-## What can be done instead
+## Best Practice
 
 Document each pallet configuration item with a brief description of its purpose and constraints:
 

@@ -7,7 +7,7 @@
 Hardcoding parameters reduces flexibility, making the code less adaptable to different environments and configurations.
 Configurable parameters allow for greater versatility and make the code easier to adjust as requirements change.
 
-## What should not be done
+## What should be avoided
 
 Hardcoding values, such as limits or thresholds, can make it difficult to adapt the code without modifying the source:
 
@@ -21,7 +21,7 @@ In this example:
 - `LIMIT` is fixed at compile time, so changing it requires editing the code, recompiling, and redeploying, which can be
   inefficient.
 
-## What can be done instead
+## Best Practice
 
 Use configurable traits to allow parameter adjustments at the runtime level, enhancing flexibility and adaptability:
 

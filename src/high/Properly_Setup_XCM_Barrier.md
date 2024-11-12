@@ -11,7 +11,7 @@ XCM.
 
 As a rule of thumb, it is always recommended to be as restrictive as possible.
 
-## Avoid this
+## What should be avoided
 
 In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this
 configuration

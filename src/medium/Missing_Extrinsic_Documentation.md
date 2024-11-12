@@ -8,7 +8,7 @@ A lack of documentation for extrinsics can lead to misunderstandings about their
 permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with
 the extrinsic correctly.
 
-## What should not be done
+## What should be avoided
 
 Leaving extrinsics undocumented makes it difficult to understand their behavior, which may lead to misuse or unexpected
 errors:
@@ -21,7 +21,7 @@ pub fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: BalanceOf<T>
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Document each extrinsic clearly, detailing its purpose, input parameters, permissions, and potential errors to improve
 usability and clarity:

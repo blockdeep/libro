@@ -7,7 +7,7 @@
 Complex functions with multiple responsibilities are harder to test, understand, and maintain, increasing the risk of
 errors and making debugging more difficult.
 
-## What should not be done
+## What should be avoided
 
 Combining multiple responsibilities in a single function increases its complexity:
 
@@ -15,19 +15,19 @@ Combining multiple responsibilities in a single function increases its complexit
 fn process_transaction() {
     // Transaction validion code
     // ...
-    
+
     // Fee calculation code
     // ...
-    
+
     // Balance update code
     // ...
-    
+
     // Update the storage
     // ...
 }
 ```
 
-## What can be done instead
+## Best Practice
 
 Apply the single responsibility principle by breaking down the function into smaller, focused functions:
 

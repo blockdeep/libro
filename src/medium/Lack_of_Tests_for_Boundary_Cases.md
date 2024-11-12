@@ -7,7 +7,7 @@
 Omitting tests for boundary cases can leave critical edge conditions unhandled, leading to potential bugs and
 unpredictable behavior, especially when inputs approach their limits.
 
-## What should not be done
+## What should be avoided
 
 Neglecting boundary cases in testing may overlook issues that occur at the extremes of expected input ranges:
 
@@ -24,7 +24,7 @@ In this example:
 - The function only tests a typical case (`50`) and misses important edge conditions that could cause issues if
   unhandled.
 
-## What can be done instead
+## Best Practice
 
 Include tests for boundary conditions to verify that the code handles edge cases, such as zero, maximum, and just beyond
 maximum values:
@@ -34,10 +34,10 @@ maximum values:
 fn test_process_data_with_boundary_cases() {
     // Minimum boundary
     assert_eq!(process_data(0), Some(0));
-    
+
     // Maximum boundary
     assert_eq!(process_data(MAX_LIMIT), Some(MAX_LIMIT));
-    
+
     // Beyond maximum boundary
     assert!(process_data(MAX_LIMIT + 1).is_none());
 }

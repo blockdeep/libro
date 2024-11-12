@@ -7,7 +7,7 @@
 Inconsistent documentation across modules can create knowledge gaps, making code harder to understand, maintain, and use
 correctly, especially for new contributors.
 
-## What should not be done
+## What should be avoided
 
 Lack of documentation or minimal comments can leave important details unclear, as shown below:
 
@@ -22,7 +22,7 @@ In this example:
 - The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
   others to understand, use or modify it confidently.
 
-## What can be done instead
+## Best Practice
 
 Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected
 outcomes for each function.

@@ -19,7 +19,7 @@ understand the differences between teleporting assets and using the reserve asse
 The key distinction lies in trust: teleportation requires bilateral trust in issuance management, while reserve
 transfers depend on a single, globally trusted reserve for transparency and auditability.
 
-## Avoid This Approach
+## What should be avoided Approach
 
 Accept teleports from multiple origins and set teleportation as the default method for sending and receiving tokens
 across other consensus systems.

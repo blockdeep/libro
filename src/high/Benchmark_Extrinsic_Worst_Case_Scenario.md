@@ -7,7 +7,7 @@
 Benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource
 overuse or transaction failures in real-world usage.
 
-## Avoid this
+## What should be avoided
 
 The following code benchmarks a typical scenario, which may not account for the heaviest possible execution path,
 leading to underestimated weights:

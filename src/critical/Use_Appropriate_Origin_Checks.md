@@ -7,7 +7,7 @@
 Leaving extrinsics open to all users without proper origin checks can allow unauthorized actions, potentially
 compromising security and functionality.
 
-## Avoid This
+## What should be avoided
 
 In the following code, the `execute` function can be called by any user, which may lead to unauthorized or malicious
 actions:

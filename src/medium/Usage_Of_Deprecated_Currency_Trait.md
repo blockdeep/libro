@@ -8,7 +8,7 @@ Using deprecated traits, such as `Currency`, can lead to issues with compatibili
 may limit functionality as updates to the ecosystem continue. Migrating to the recommended traits ensures ongoing
 support, compatibility with future releases, and access to newer features.
 
-## What should not be done
+## What should be avoided
 
 Avoid using the deprecated `Currency` trait in new implementations:
 
@@ -26,7 +26,7 @@ In this example:
 
 - The `Currency` trait is used to handle account balances. This trait is already deprecated and should not be used.
 
-## What can be done instead
+## Best Practice
 
 The usage of fungible traits is preferred instead.
 

@@ -7,7 +7,7 @@
 Using outdated libraries can introduce security vulnerabilities, compatibility issues, and reduced performance, as older
 dependencies may lack recent bug fixes and security patches.
 
-## Avoid this
+## What should be avoided
 
 ### Example 1:
 

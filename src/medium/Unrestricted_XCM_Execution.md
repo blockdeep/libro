@@ -11,7 +11,7 @@ While standard security measures for extrinsics generally apply here, certain vu
 Therefore, it is advisable to be as restrictive as possible unless a specific need justifies a more permissive approach,
 such as when the chain must regularly register assets on other chains.
 
-## What should not be done
+## What should be avoided
 
 The following code permits extrinsics with XCM instructions to pass through `pallet-xcm`.
 
@@ -19,7 +19,7 @@ The following code permits extrinsics with XCM instructions to pass through `pal
 type XcmExecuteFilter = Everything;
 ```
 
-## What can be done instead
+## Best Practice
 
 Ideally, no execution extrinsics should be allowed or should at least be restricted to privileged users unless there is
 a clear justification for allowing them.
@@ -27,4 +27,3 @@ a clear justification for allowing them.
 ```rust
 type XcmExecuteFilter = Nothing;
 ```
-

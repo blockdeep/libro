@@ -8,7 +8,7 @@ Using `unwrap()` and similar methods for error handling can cause runtime panics
 conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production
 environments.
 
-## Avoid This
+## What should be avoided
 
 Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected
 application crashes:

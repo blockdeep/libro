@@ -7,7 +7,7 @@
 Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid
 states or security issues.
 
-## Avoid This
+## What should be avoided
 
 The following code accepts input without validating its range or format, which can lead to unintended results:
 

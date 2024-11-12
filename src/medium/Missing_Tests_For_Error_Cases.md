@@ -8,7 +8,7 @@ Omitting tests for error cases in extrinsics can lead to unhandled scenarios and
 execution. By not verifying that specific errors are emitted when invalid conditions occur, important failure paths
 remain untested, which can compromise the robustness of the code.
 
-## What should not be done
+## What should be avoided
 
 Avoid leaving out tests that validate the expected errors when certain invalid inputs or conditions are encountered.
 
@@ -40,7 +40,7 @@ In this example:
 - The test only confirms that the function succeeds with valid inputs. It does not check whether appropriate errors are
   triggered when invalid accounts or inputs are provided.
 
-## What can be done instead
+## Best Practice
 
 Include tests that specifically verify all error cases the extrinsic is expected to handle. This ensures the extrinsic
 behaves predictably even with incorrect inputs, making the system more robust and resilient.

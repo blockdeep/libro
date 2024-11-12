@@ -10,7 +10,7 @@ sensible after upgrades or other critical operations. These hooks are only execu
 correctness. It is a best practice to run `try-runtime` prior to any migration to catch potential issues in a controlled
 environment.
 
-## Avoid this
+## What should be avoided
 
 Skipping sanity checks during runtime upgrades or migrations can leave storage inconsistencies unnoticed, leading to
 potential bugs:
