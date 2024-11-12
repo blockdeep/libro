@@ -1,4 +1,4 @@
-# Unused Code and Redundant Cloning
+# Avoid Redundant Cloning
 
 **Severity**: Low
 

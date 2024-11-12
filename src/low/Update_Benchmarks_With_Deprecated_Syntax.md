@@ -1,4 +1,4 @@
-# Usage of deprecated benchmarking syntax
+# Update Benchmarks With Deprecated Syntax
 
 **Severity**: Low
 
