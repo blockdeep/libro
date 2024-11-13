@@ -35,18 +35,21 @@ In this example:
 
 ```rust
 #[pallet::call_index(0)]
-fn some_extrinsic(input: bool){
-  let result = match input {
+#[pallet::weight(T::WeightInfo::some_extrinsic())]
+pub fn some_extrinsic(origin: OriginFor<T>, input: bool) -> DispatchResult {
+  let computation_result = match input {
     true  => 1,
-    false => very_heavy_function()
+    false => very_heavy_function(),
   };
+  
+  // Do something with the result.
 
-  result
+  Ok(())
 }
 
 #[benchmark]
 fn some_extrinsic() {
-  let input = true
+  let input = true;
 
   // Execution
   #[extrinsic_call]
@@ -56,12 +59,14 @@ fn some_extrinsic() {
 
 In this example:
 
-- The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark, input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated execution cost will be an underestimate
+- The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark,
+  input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated
+  execution cost will be an underestimate.
 
 ## Best practice
 
-Benchmark the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately
-reflects maximum resource usage:
+Benchmark at least the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight
+accurately reflects maximum resource usage:
 
 ### Example 1
 
@@ -87,23 +92,66 @@ In this improved example:
 ### Example 2
 
 ```rust
-#[pallet::call_index(0)]
-fn some_extrinsic(input: bool){
-  let result = match input {
-    true  => 1,
-    false => very_heavy_function()
-  };
-
-  result
-}
-
 #[benchmark]
 fn some_extrinsic() {
-  // Set the value to execute the worst path
-  let input = false
+  // Set the value to execute the worst-case path.
+  let input = false;
 
   // Execution
   #[extrinsic_call]
   _(RawOrigin::Signed(account), input);
 }
 ```
+
+### Example 3
+
+Alternatively, in mission-critical extrinsics that are meant to be used a lot, there could be a more fine-grained
+approach, which is to benchmark each execution path independently:
+
+```rust
+#[pallet::call_index(0)]
+#[pallet::weight(
+     T::WeightInfo::some_extrinsic_path_1().max(
+     T::WeightInfo::some_extrinsic_path_2())
+)]
+pub fn some_extrinsic(origin: OriginFor<T>, input: bool) -> DispatchResultWithPostInfo {
+  let (result, weight) = match input {
+    true  => (1, T::WeightInfo::some_extrinsic_path_1()),
+    false => (very_heavy_function(), T::WeightInfo::some_extrinsic_path_2())
+  };
+  
+  // Do something with the result.
+
+  Ok(Some(weight).into())
+}
+
+#[benchmark]
+fn some_extrinsic_path_1() {
+  // Set the value to execute the path where the variable is true.
+  let input = true;
+
+  // Execution
+  #[block]
+  {
+      some_extrinsic(RawOrigin::Signed(account), input);
+  }
+}
+
+#[benchmark]
+fn some_extrinsic_path_2() {
+  // Set the value to execute the path where the variable is false.
+  let input = false;
+
+  // Execution
+  #[block]
+  {
+      some_extrinsic(RawOrigin::Signed(account), input);
+  }
+}
+```
+
+In this example:
+
+- The fee corresponding to the worst-case execution path will be initially taken from the user.
+- However, not necessarily the worst-case execution path will be actually executed, and if the actual consumed fee is
+  lower, the difference will be refunded to the user.
