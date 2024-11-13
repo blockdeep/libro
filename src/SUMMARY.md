@@ -65,7 +65,7 @@
   - [Remove unused code](low/Remove_Unused_Code.md)
 
 - [Informational issues](informational/README.md)
-  - [Maintain consistent documentation standards](informational/Inconsistent_Documentation_Standards.md)
+  - [Maintain consistent documentation standards](informational/Maintain_Consistent_Documentation_Standards.md)
   - [Avoid typographical errors](informational/Avoid_Typographical_Errors.md)
   - [Make backend logic Frontend-Agnostic](informational/Make_Backend_Logic_Frontend_Agnostic.md)
   - [Use proper naming criteria](informational/Use_Proper_Naming_Criteria.md)
