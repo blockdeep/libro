@@ -49,8 +49,8 @@ fn some_extrinsic() {
   let input = true
 
   // Execution
-	#[extrinsic_call]
-	_(RawOrigin::Signed(account), input);
+  #[extrinsic_call]
+  _(RawOrigin::Signed(account), input);
 }
 ```
 
@@ -103,7 +103,7 @@ fn some_extrinsic() {
   let input = false
 
   // Execution
-	#[extrinsic_call]
-	_(RawOrigin::Signed(account), input);
+  #[extrinsic_call]
+  _(RawOrigin::Signed(account), input);
 }
 ```
