@@ -1,6 +1,6 @@
 # Implement Proper XCM Fee Management
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Implement Proper Interface Segregation
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

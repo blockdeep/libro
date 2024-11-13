@@ -1,6 +1,6 @@
 # Use Proper Naming Criteria
 
-**Severity**: Informational
+**Severity**: <span style="color:blue;">Informational</span>
 
 ## Description
 

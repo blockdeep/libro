@@ -1,6 +1,6 @@
 # Avoid Unrestricted XCM Execution
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

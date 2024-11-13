@@ -1,6 +1,6 @@
 # Enhance Performance with Efficient Data Structures
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

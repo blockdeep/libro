@@ -1,6 +1,6 @@
 # Expose Runtime APIs for Key Functionalities
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Benchmark Extrinsic Worst-case Scenario
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

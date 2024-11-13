@@ -1,6 +1,6 @@
 # Ensure Consistent Asset Registration by Adhering to Host Chain Schema
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

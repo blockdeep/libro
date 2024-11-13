@@ -1,6 +1,6 @@
 # Prevent Inconsistent State by Distributing Finalization Costs
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

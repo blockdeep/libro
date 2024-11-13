@@ -1,6 +1,6 @@
 # Break Down Complex Functions
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

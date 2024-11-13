@@ -1,6 +1,6 @@
 # Use Benchmarking for Accurate Dynamic Weights
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 

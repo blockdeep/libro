@@ -1,6 +1,6 @@
 # Define Constants to Replace Magic Numbers
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Provide Pallet Configuration Documentation
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

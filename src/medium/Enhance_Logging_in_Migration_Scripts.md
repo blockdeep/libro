@@ -1,6 +1,6 @@
 # Enhance Logging in Migration Scripts
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

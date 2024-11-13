@@ -1,6 +1,6 @@
 # Properly Setup XCM Barrier
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

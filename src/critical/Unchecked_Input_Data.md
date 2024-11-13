@@ -1,6 +1,6 @@
 # Unchecked Input Parameters
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 

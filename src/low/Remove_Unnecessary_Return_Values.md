@@ -1,6 +1,6 @@
 # Remove Unnecessary Return Values
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

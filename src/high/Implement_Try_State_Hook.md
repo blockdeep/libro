@@ -1,6 +1,6 @@
 # Implement `try-state` Hook
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Make `BoundedVec` Size Configurable
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

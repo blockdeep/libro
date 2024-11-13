@@ -1,6 +1,6 @@
 # Avoid Resource Intensive Execution Inside Hooks
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

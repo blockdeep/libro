@@ -1,6 +1,6 @@
 # Avoid Hardcoded Parameters and Values
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

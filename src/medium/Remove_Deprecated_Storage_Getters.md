@@ -1,6 +1,6 @@
 # Remove Deprecated Storage Getters
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

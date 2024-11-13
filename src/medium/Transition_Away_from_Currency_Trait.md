@@ -1,6 +1,6 @@
 # Transition Away from Currency Trait
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

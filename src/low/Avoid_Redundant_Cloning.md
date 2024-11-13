@@ -1,6 +1,6 @@
 # Avoid Redundant Cloning
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

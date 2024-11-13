@@ -1,6 +1,6 @@
 # Prevent Unnecessary Reads and Writes in Storage Access
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

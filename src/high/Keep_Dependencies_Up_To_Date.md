@@ -1,6 +1,6 @@
 # Keep Dependencies Up to Date
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

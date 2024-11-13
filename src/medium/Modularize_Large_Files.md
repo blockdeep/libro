@@ -1,6 +1,6 @@
 # Modularize Large Files
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

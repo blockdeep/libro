@@ -1,6 +1,6 @@
 Avoid the Usage of Pseudo Random Numbers
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

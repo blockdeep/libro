@@ -1,6 +1,6 @@
 # Use Appropriate Origin Checks
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 
@@ -24,7 +24,7 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 ## Best practice
 
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
-protect critical functions.
+protect<span style="color:red;">Critical</span> functions.
 
 ```rust
 #[pallet::call_index(0)]

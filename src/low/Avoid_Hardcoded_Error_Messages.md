@@ -1,6 +1,6 @@
 # Avoid Hardcoded Error Messages
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

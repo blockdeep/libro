@@ -1,6 +1,6 @@
 # Prioritize Reserve Asset Transfer Over Teleport
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 

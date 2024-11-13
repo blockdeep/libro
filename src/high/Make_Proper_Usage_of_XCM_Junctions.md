@@ -1,6 +1,6 @@
 # Make Proper Usage of XCM `Junctions`
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

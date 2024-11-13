@@ -1,6 +1,6 @@
 # Provide Event Documentation
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

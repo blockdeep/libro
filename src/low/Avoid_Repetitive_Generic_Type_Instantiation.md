@@ -1,6 +1,6 @@
 # Avoid Repetitive Generic Type Instantiation
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

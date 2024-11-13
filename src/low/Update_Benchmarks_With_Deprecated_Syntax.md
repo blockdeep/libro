@@ -1,6 +1,6 @@
 # Update Benchmarks With Deprecated Syntax
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

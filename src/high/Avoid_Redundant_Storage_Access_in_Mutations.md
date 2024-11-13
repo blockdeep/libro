@@ -1,6 +1,6 @@
 # Avoid Redundant Storage Access in Mutations
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 

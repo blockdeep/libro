@@ -1,6 +1,6 @@
 # Include Extrinsic Documentation
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

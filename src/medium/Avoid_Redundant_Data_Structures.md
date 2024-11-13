@@ -1,6 +1,6 @@
 # Avoid Redundant Data Structures
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

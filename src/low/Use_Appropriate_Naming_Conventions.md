@@ -1,6 +1,6 @@
 # Use Appropriate Naming Conventions
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 

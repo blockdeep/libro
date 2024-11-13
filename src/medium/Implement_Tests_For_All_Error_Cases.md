@@ -1,6 +1,6 @@
 # Implement Tests For All Error Cases
 
-**Severity**: Medium
+**Severity**: <span style="color:gold;">Medium</span>
 
 ## Description
 

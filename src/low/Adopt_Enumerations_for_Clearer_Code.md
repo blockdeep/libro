@@ -1,6 +1,6 @@
 # Adopt Enumerations for Clearer Code
 
-**Severity**: Low
+**Severity**: <span style="color:green;">Low</span>
 
 ## Description
 
