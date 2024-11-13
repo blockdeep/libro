@@ -1,4 +1,4 @@
-# Hardcoded Weights and Missing Benchmarks
+# Use Benchmarking for Accurate Dynamic Weights
 
 **Severity**: Critical
 

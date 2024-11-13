@@ -1,4 +1,4 @@
-# Enhance Logging in Migration Scripts for Better Traceability
+# Enhance Logging in Migration Scripts
 
 **Severity**: Medium
 
