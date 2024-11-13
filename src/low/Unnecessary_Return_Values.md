@@ -22,7 +22,7 @@ fn project_validation(project_metadata: Metadata) -> Metadata {
 }
 ```
 
-## Best Practice
+## Best practice
 
 If the return value is not needed, avoid returning it, focusing the function solely on its primary operation:
 

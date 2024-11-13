@@ -15,7 +15,7 @@ Logging messages without context or specific details can make troubleshooting ch
 log::info!("Process started");
 ```
 
-## Best Practice
+## Best practice
 
 Add context and relevant details to log messages to improve clarity and facilitate debugging:
 

@@ -24,7 +24,7 @@ In this example:
 - The function only tests a typical case (`50`) and misses important edge conditions that could cause issues if
   unhandled.
 
-## Best Practice
+## Best practice
 
 Include tests for boundary conditions to verify that the code handles edge cases, such as zero, maximum, and just beyond
 maximum values:

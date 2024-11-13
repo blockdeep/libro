@@ -22,7 +22,7 @@ In this example:
 
 - The FullService trait contains methods for unrelated operations (saving, loading, and processing), leading to unnecessary dependencies for any type that implements it.
 
-## Best Practice
+## Best practice
 
 Break down interfaces into smaller, focused traits to simplify code:
 

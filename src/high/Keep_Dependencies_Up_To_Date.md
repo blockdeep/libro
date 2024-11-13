@@ -26,7 +26,7 @@ The following code relies on an outdated library that may contain deprecated or 
 sp-runtime = { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v1.0.0" }
 ```
 
-## Best Practice
+## Best practice
 
 Regularly update dependencies to their latest stable versions, ensuring the use of secure and well-maintained functions:
 

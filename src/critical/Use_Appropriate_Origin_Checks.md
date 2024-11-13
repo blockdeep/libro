@@ -21,7 +21,7 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 }
 ```
 
-## Best Practice
+## Best practice
 
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
 protect critical functions.

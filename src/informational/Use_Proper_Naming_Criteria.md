@@ -26,7 +26,7 @@ pallet_assets::Pallet::<T>::transfer_keep_alive(
 )?;
 ```
 
-## Best Practice
+## Best practice
 
 After conducting initial ecosystem research, particularly on chains with which the product is designed to integrate, a
 more informed naming decision can be made.

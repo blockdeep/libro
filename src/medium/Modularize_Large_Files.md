@@ -35,7 +35,7 @@ In this example:
 
 - All functionality and types is packed into one file, making it difficult to navigate and locate specific parts of the code.
 
-## Best Practice
+## Best practice
 
 Split the code into smaller, purpose-specific modules to improve organization and readability:
 

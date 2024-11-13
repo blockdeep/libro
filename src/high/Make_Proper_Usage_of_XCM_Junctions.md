@@ -26,7 +26,7 @@ pub const AssetOfZ: Location = Location::new(1, [Parachain(PARA_ID_OF_Z), Genera
 In this example, `GeneralIndex` is used to send information that describes a characteristic (the number of decimals)
 rather than the entity itself, which deviates from its intended purpose.
 
-## Best Practice
+## Best practice
 
 Use `Junctions` strictly to represent entities in the `Location` path, adhering to their intended definitions.
 

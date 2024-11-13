@@ -16,7 +16,7 @@ Using a string or integer to represent distinct categories increases the risk of
 let status = "completed";
 ```
 
-## Best Practice
+## Best practice
 
 Define an enumeration to represent distinct categories or statuses more clearly:
 

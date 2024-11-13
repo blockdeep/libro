@@ -55,7 +55,7 @@ In these examples:
 - The variable names `x` and `tmp` do not describe the data they hold, making the code harder to follow.
 - The type alias `T` and struct `Info` lack meaningful context, obscuring their intent.
 
-## Best Practice
+## Best practice
 
 Use clear and descriptive names that convey the purpose and role of each function, variable, or type, and follow
 consistent naming styles:

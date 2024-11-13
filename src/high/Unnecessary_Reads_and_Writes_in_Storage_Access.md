@@ -17,7 +17,7 @@ value += 1;
 MyStorage::<T>::put(value);
 ```
 
-## Best Practice
+## Best practice
 
 Use `try_mutate` or `try_mutate_exists` to combine read and write logic in a single, efficient operation:
 

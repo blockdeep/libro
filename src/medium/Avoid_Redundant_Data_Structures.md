@@ -33,7 +33,7 @@ In this example:
 
 - The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` StorageMap.
 
-## Best Practice
+## Best practice
 
 To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data
 needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.

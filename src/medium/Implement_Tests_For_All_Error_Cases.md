@@ -40,7 +40,7 @@ In this example:
 - The test only confirms that the function succeeds with valid inputs. It does not check whether appropriate errors are
   triggered when invalid accounts or inputs are provided.
 
-## Best Practice
+## Best practice
 
 Include tests that specifically verify all error cases the extrinsic is expected to handle. This ensures the extrinsic
 behaves predictably even with incorrect inputs, making the system more robust and resilient.

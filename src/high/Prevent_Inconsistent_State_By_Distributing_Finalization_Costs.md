@@ -21,7 +21,7 @@ fn finalize_operations() {
 }
 ```
 
-## Best Practice
+## Best practice
 
 Use a claim-based process where each participant finalizes their operation individually, or use batch processing to
 distribute the load.

@@ -35,7 +35,7 @@ In this example:
 - The process_important_data function is commented out and no longer needed but has not been removed.
 - The important_variable initialized with data[0] is also commented out and unnecessary.
 
-## Best Practice
+## Best practice
 
 To keep the codebase clean and efficient, remove unused or redundant elements like unused functions and variables. The streamlined version of the example above is more readable and maintainable:
 

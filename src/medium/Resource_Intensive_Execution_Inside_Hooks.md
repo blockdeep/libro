@@ -46,7 +46,7 @@ In this example:
 - Counting votes for each finalized proposal during `on_finalize` leads to high resource usage and may exceed block
   weight limits, especially as the number of proposals and votes grows.
 
-## Best Practice
+## Best practice
 
 Optimize by performing the calculations within the extrinsics, maintaining incremental counters in storage, or enabling
 users to trigger the logic explicitly outside the hooks.

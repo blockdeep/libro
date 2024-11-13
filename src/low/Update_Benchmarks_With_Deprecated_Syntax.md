@@ -27,7 +27,7 @@ In this example:
 - The benchmark setup and verification steps are embedded directly within the benchmarks! macro, which is now deprecated
   in favor of more modular and explicit syntax.
 
-## Best Practice
+## Best practice
 
 Use the new `#[benchmarks]` module syntax to define benchmarks in a more modular and explicit way. This structure
 improves code organization by separating each benchmark into its own function with a more comprehensive syntax.

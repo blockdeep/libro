@@ -26,7 +26,7 @@ In this example:
 - The function formats `value` in a currency-specific way, which may not be consistent with other frontends or
   localization requirements.
 
-## Best Practice
+## Best practice
 
 Keep backend functions agnostic to frontend requirements. Instead, return a raw value that can be formatted by the
 frontend as needed:

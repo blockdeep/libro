@@ -22,7 +22,7 @@ In this example:
 - If `a` and `b` are large, the result may exceed the data type’s maximum value, causing an overflow and leading to
   incorrect results.
 
-## Best Practice
+## Best practice
 
 ### Option 1: Use Checked Arithmetic
 

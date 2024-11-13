@@ -22,7 +22,7 @@ In this example:
 - The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
   others to understand, use or modify it confidently.
 
-## Best Practice
+## Best practice
 
 Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected
 outcomes for each function.

@@ -23,7 +23,7 @@ In this example:
   runtime. This limitation prevents clients or users from querying the account balance or initiating transfers to this
   account, as there is no way to know which account this is.
 
-## Best Practice
+## Best practice
 
 Expose necessary runtime functionalities by implementing Runtime APIs. This approach allows external users or clients to
 access useful information as needed.

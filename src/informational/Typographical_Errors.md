@@ -21,7 +21,7 @@ In this example:
 - The misspelled variable `amout_valu` is unclear and could lead to confusion, especially if referenced in multiple parts of
   the code.
 
-## Best Practice
+## Best practice
 
 Perform thorough proofreading to catch typos and enhance clarity, ensuring variable names and comments are accurate and
 descriptive.

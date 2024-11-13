@@ -18,7 +18,7 @@ Using a fixed size for `BondedVec` without a configurable option restricts adapt
 pub type Domain = BondedVec<u8, ConstU32<256>>;
 ```
 
-## Best Practice
+## Best practice
 
 Define the size as a configurable parameter within the `Config` trait, which provides flexibility for future changes:
 

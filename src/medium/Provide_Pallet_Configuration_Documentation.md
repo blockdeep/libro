@@ -24,7 +24,7 @@ In this example:
 - The `Currency` and `MaxSize` configuration items lack documentation, making their usage unclear to developers
   implementing the pallet.
 
-## Best Practice
+## Best practice
 
 Document each pallet configuration item with a brief description of its purpose and constraints:
 

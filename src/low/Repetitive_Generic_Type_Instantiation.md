@@ -60,7 +60,7 @@ In this example:
 - The `SomeInfo` generic type is defined twice with the same parameters, making the code repetitive and harder to
   maintain.
 
-## Best Practice
+## Best practice
 
 Define a type alias for the specific instance of the generic type, and reuse this alias throughout the code. By creating
 a single type alias, such as `SomeInfoOf<T>`, for the specific instance, you can reference it without repeating its full

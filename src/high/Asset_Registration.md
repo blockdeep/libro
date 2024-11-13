@@ -33,7 +33,7 @@ While this could be accepted by the host system, it disrupts the established sch
 with the host would now need to account for an additional `Junction` to retrieve `ASSET_OF_Y`, creating an exception
 that complicates integration and consistency across assets.
 
-## Best Practice
+## Best practice
 
 The host’s adopted schema must be carefully studied and followed. In the case of `AssetOfY`, it should be registered as
 follows:

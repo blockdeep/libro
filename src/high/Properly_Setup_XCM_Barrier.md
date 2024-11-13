@@ -27,7 +27,7 @@ pub type Barrier = (
 );
 ```
 
-## Best Practice
+## Best practice
 
 Properly identify each relevant case, aiming to be as restrictive as possible while also requiring explicit
 authorization for unpaid execution when necessary.

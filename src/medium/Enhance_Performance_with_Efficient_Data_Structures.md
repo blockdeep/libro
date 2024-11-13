@@ -16,7 +16,7 @@ Using a `Vec` for frequent lookups is often inefficient, as it requires linear-t
 let result = vec_data.contains(&item);
 ```
 
-## Best Practice
+## Best practice
 
 ### Option 1: Use more performant data structures
 

@@ -26,7 +26,7 @@ Each issue is presented with:
 
 - **Description**: An overview of the issue and its potential impact.
 - **What should be avoided**: Examples illustrating the risks or inefficiencies of poor implementation.
-- **Best Practice**: Suggested best practices, often with code snippets, to guide proper implementation.
+- **Best practice**: Suggested best practices, often with code snippets, to guide proper implementation.
 
 ## How to use this guide
 

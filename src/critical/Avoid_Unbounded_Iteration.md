@@ -18,7 +18,7 @@ for item in big_data {
 }
 ```
 
-## Best Practice
+## Best practice
 
 ### Option 1: Process up to a maximum number of elements
 

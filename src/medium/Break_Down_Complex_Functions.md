@@ -27,7 +27,7 @@ fn process_transaction() {
 }
 ```
 
-## Best Practice
+## Best practice
 
 Apply the single responsibility principle by breaking down the function into smaller, focused functions:
 

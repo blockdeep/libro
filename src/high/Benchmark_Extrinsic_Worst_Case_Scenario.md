@@ -58,7 +58,7 @@ In this example:
 
 - The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark, input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated execution cost will be an underestimate
 
-## Best Practice
+## Best practice
 
 Benchmark the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately
 reflects maximum resource usage:

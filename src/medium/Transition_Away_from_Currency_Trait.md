@@ -26,7 +26,7 @@ In this example:
 
 - The `Currency` trait is used to handle account balances. This trait is already deprecated and should not be used.
 
-## Best Practice
+## Best practice
 
 The usage of fungible traits is preferred instead.
 

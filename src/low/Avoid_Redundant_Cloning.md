@@ -27,7 +27,7 @@ In this example:
 - The entire `data` vector is cloned, doubling the memory usage even if the original data can be processed directly or
   accessed via reference.
 
-## Best Practice
+## Best practice
 
 Use references to avoid unnecessary cloning, and review code for unused or redundant sections regularly to keep the
 codebase lean:

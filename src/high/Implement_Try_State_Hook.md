@@ -24,7 +24,7 @@ fn on_runtime_upgrade() {
 }
 ```
 
-## Best Practice
+## Best practice
 
 Implement the `try-state` hook to perform thorough state checks without altering storage. Use `try-runtime` to simulate
 migrations and validate state consistency before deploying updates:

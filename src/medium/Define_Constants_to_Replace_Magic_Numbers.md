@@ -16,7 +16,7 @@ Hardcoding numeric constants directly in the code makes their intent unclear:
 let discount = price * Percent::from_percent(7);
 ```
 
-## Best Practice
+## Best practice
 
 Define constants with descriptive names to clarify their purpose and make code easier to read:
 

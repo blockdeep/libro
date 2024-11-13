@@ -23,7 +23,7 @@ MyStorage::<T>::try_mutate(id, |item| -> Result<(), Error> {
 });
 ```
 
-## Best Practice
+## Best practice
 
 Use either `try_mutate` to modify the value in place or `insert` alone, but avoid combining them unnecessarily:
 

@@ -24,7 +24,7 @@ In this example:
 
 - No documentation is provided for the error variants inside the `Error` enum.
 
-## Best Practice
+## Best practice
 
 Add documentation for each error variant to clarify its cause and expected behavior:
 

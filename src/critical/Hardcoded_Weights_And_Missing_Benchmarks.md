@@ -28,7 +28,7 @@ In this example:
 - The weight is fixed, leading to potential inaccuracies in resource estimation, which can result in suboptimal
   performance and affect transaction processing on the network.
 
-## Best Practice
+## Best practice
 
 Implement proper benchmarking to dynamically assess the weights of your functions. This process involves measuring the
 actual execution costs during test runs and then applying the generated weights in your extrinsic definitions.

@@ -21,7 +21,7 @@ pub fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: BalanceOf<T>
 }
 ```
 
-## Best Practice
+## Best practice
 
 Document each extrinsic clearly, detailing its purpose, input parameters, permissions, and potential errors to improve
 usability and clarity:

@@ -24,7 +24,7 @@ In this example:
 
 - Lack of Error Handling: If increase_balance fails, there is no mechanism to revert the changes made by reduce_balance. This creates an inconsistent state where the sender’s balance has been reduced, but the recipient’s balance hasn’t been updated accordingly, leading to potential issues in the system’s data integrity.
 
-## Best Practice
+## Best practice
 
 Use atomic operations or implement rollback logic to ensure all changes are applied consistently:
 

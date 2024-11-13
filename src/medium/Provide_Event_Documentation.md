@@ -25,7 +25,7 @@ In this example:
 
 - No documentation is provided for the evnt variants inside the `Event` enum.
 
-## Best Practice
+## Best practice
 
 Provide detailed comments for each event to explain its purpose and usage:
 

@@ -19,7 +19,7 @@ The following code allows extrinsics with XCM instructions to pass through `pall
 type XcmExecuteFilter = Everything;
 ```
 
-## Best Practice
+## Best practice
 
 Ideally, no execution extrinsics should be allowed or should at least be restricted to privileged users unless there is
 a clear justification for allowing them.

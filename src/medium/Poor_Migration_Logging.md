@@ -15,7 +15,7 @@ Using general log messages in migration scripts provides minimal information:
 log::info!("Migration started");
 ```
 
-## Best Practice
+## Best practice
 
 Use more detailed logging, including migration-specific information and conditions:
 

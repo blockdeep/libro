@@ -23,7 +23,7 @@ In this example:
 - The `#[pallet::getter]` attribute defines a deprecated getter function (`deprecated_getter`), which may no longer be
   supported in future Substrate versions.
 
-## Best Practice
+## Best practice
 
 Access the storage value directly or use custom functions to handle storage access without relying on deprecated
 getters:
