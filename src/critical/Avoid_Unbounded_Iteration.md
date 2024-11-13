@@ -1,6 +1,6 @@
 # Avoid Unbounded Iterations
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 
