@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Substrate Development Best Practices"
+
+
+[output.html]
+additional-css = [ "style.css" ]
