@@ -1,6 +1,6 @@
 # Maintain Consistent Documentation Standards
 
-**Severity**: <span style="color:blue;">Informational</span>
+**Severity**: <span style="color:cyan;">Informational</span>
 
 ## Description
 
