@@ -1,31 +1,36 @@
-# Unchecked Input Data
+# Unchecked Input Parameters
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 
 Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid
 states or security issues.
 
-## What should not be done
+## What should be avoided
 
 The following code accepts input without validating its range or format, which can lead to unintended results:
 
 ```rust
-fn process_input(data: u32) {
-    // Processes data with no validation
+fn store_execution_time(hour_of_day: u8) {
+    ExecutedAt::<T>::insert(hour_of_day);
 }
 ```
 
-## What can be done instead
+In this example:
+
+- The `hour_of_day` input should only be valid if it's between 0 and 23 hours. Otherwise, the input is invalid and should return an error.
+
+## Recommended Solution
 
 Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid
 out-of-range values:
 
 ```rust
-fn process_input(data: u32) -> Result<(), Error> {
+fn store_execution_time(hour_of_day: u8) -> Result<(), Error> {
     // Validate input before processing
-    ensure!(data < MAX_LIMIT, Error::<T>::InvalidInput);
+    ensure!(hour_of_day <= 23, Error::<T>::TimeOutOfRange);
+    ExecutedAt::<T>::insert(hour_of_day);
     Ok(())
 }
 ```
