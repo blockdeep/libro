@@ -6,7 +6,8 @@
 
 A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs,
 permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with
-the extrinsic correctly. Additionally Extrinsic documentation provides valuable context inside the code metadata allowing frontend clients and users to get more insight regarding an event that is emitted.
+the extrinsic correctly. Additionally, it provides valuable context inside the code metadata allowing frontend clients
+and users to get more insight regarding its purpose.
 
 ## What should be avoided
 
