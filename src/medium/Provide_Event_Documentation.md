@@ -4,7 +4,7 @@
 
 ## Description
 
-Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose. Additionally Event documentation for each error provides valuable context inside the code metadata allowing frontent clients and users to get more insigh regarding an event that is emmited.
+Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose. Additionally, Event documentation for each error provides valuable context inside the code metadata allowing frontend clients and users to get more insight regarding an event that is emitted.
 
 ## What should be avoided
 
@@ -23,7 +23,7 @@ pub type Event<T: Config> {
 
 In this example:
 
-- No documentation is provided for the evnt variants inside the `Event` enum.
+- No documentation is provided for the event variants inside the `Event` enum.
 
 ## Best practice
 
