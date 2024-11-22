@@ -34,10 +34,11 @@ migrations and validate state consistency before deploying updates:
 impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
     #[cfg(feature = "try-runtime")]
     fn try_state(_n: BlockNumber) -> Result<(), TryRuntimeError> {
-        // Example: Ensure a storage map is non-empty
+        // Example: Ensure a storage map is non-empty.
+        // No need to worry about weight consumption here.
         ensure!(!SomeStorage::<T>::iter().count().is_zero(), "Storage map is empty");
 
-        // Add more sanity checks as needed
+        // Add more sanity checks as needed.
         Ok(())
     }
 }

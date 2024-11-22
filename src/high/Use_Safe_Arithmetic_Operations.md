@@ -13,7 +13,7 @@ The following code performs addition without checking for overflow, which may ca
 unintended value:
 
 ```rust
-// Potential for overflow if a + b exceeds the max value of the type
+// Potential for overflow if a + b exceeds the maximum value of the type.
 let total = a + b;
 ```
 
