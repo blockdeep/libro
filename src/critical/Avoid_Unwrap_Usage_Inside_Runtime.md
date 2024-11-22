@@ -14,8 +14,13 @@ Using `unwrap()` for error handling can result in runtime panics, which are not 
 application crashes:
 
 ```rust
+let my_data = Vec::<u32>::new();
+
 // Potential panic if index 0 is empty
 let value = my_data.get(0).unwrap();
+
+// Same error, with implicit unwrapping
+let value = my_data[0];
 ```
 
 ## Best practice
@@ -23,6 +28,9 @@ let value = my_data.get(0).unwrap();
 Handle errors explicitly by using `Result` and provide descriptive error messages:
 
 ```rust
+let my_data = Vec::<u32>::new();
+
+// Gracefully handling the error
 let value = my_data.get(0).ok_or(Error::<T>::MyError)?;
 ```
 

@@ -30,6 +30,7 @@ out-of-range values:
 fn store_execution_time(hour_of_day: u8) -> Result<(), Error> {
     // Validate input before processing
     ensure!(hour_of_day <= 23, Error::<T>::TimeOutOfRange);
+    
     ExecutedAt::<T>::insert(hour_of_day);
     Ok(())
 }

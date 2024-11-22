@@ -32,6 +32,7 @@ protect<span style="color:red;">Critical</span> functions.
 pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Restrict access to the root (admin) user
     ensure_root(origin)?;
+    
     // Secure function logic here
     execute_critical_operation();
 }

@@ -19,8 +19,10 @@ Avoid using hardcoded weights directly in the function definition of extrinsics.
 #[pallet::weight(Weight::from_parts(10_000, 0) + T::DbWeight::get().reads_writes(1, 1))]
 pub fn do_something(
     origin: OriginFor<T>,
-    some_data: Data
-) -> DispatchResult { /* Rest of the logic */ }
+    some_data: u32
+) -> DispatchResult {
+    // Extrinsic logic
+}
 ```
 
 In this example:
@@ -42,7 +44,7 @@ fn do_something() {
 
     // Execution
 	#[extrinsic_call]
-	_(RawOrigin::Signed(account), data);
+	_(RawOrigin::Signed(account), 5u32);
 }
 
 // Execute the benchmarks and then add the corresponding WeightInfo
@@ -51,7 +53,7 @@ fn do_something() {
 #[pallet::weight(T::WeightInfo::do_something())]
 pub fn do_something(
     origin: OriginFor<T>,
-    some_data: Data
+    some_data: u32
 ) -> DispatchResult {
    // Extrinsic logic
 }
