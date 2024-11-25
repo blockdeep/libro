@@ -19,7 +19,7 @@ use outdated_library::deprecated_fn;
 
 ### Example 2
 
-The following code relies on an outdated library, since it's using an old branch on the polkadot repo, that may contain deprecated or insecure functions:
+The following code relies on an outdated library, since it is using an old branch on the polkadot repo, that may contain deprecated or insecure functions:
 
 ```toml
 # In Cargo.toml
