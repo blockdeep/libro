@@ -28,7 +28,7 @@ In this example
 ## Best practice
 
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
-protect<span style="color:red;">Critical</span> functions.
+protect critical functions.
 
 ```rust
 #[pallet::call_index(0)]
