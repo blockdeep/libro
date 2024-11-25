@@ -30,6 +30,8 @@ In this example
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
 protect critical functions.
 
+### Example 1
+
 ```rust
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::execute_critical_operation())]
@@ -42,7 +44,35 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 }
 ```
 
-Using `ensure_root` enforces that only users with root permissions can execute this function, reducing the risk of
-unauthorized actions and enhancing security.
+In this example:
 
-You can also create your own origin checks by implementing custom origins. See an example here: **ADD example from Polkadot SDK code (GitHub link)**.
+- Using `ensure_root` enforces that only users with root permissions can execute this function.
+
+### Example 2
+
+```rust
+// ---- In pallet/lib.rs ----
+#[pallet::config]
+	pub trait Config: frame_system::Config {
+        //....
+        /// Origin allowed to execute critical Operations.
+		type AuthorizedOrigin: EnsureOrigin<<Self as frame_system::Config>::RuntimeOrigin>;
+    }
+
+#[pallet::call]
+impl<T: Config> Pallet<T> {
+    #[pallet::call_index(0)]
+    #[pallet::weight(T::WeightInfo::execute_critical_operation())]
+    pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
+        // Use custom AuthorizedOrigin check.
+        T::AuthorizedOrigin::ensure_origin(origin)?;
+
+        // Secure function logic here.
+        execute_critical_operation();
+    }
+}
+```
+
+In this example:
+
+- The pallet stores has a configurable Custom origin `AuthorizedOrigin`, that is allowed to execute the permissioned extrinsic.
