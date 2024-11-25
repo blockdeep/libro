@@ -24,6 +24,31 @@ type XcmExecuteFilter = Everything;
 Ideally, no execution extrinsics should be allowed or should at least be restricted to privileged users unless there is
 a clear justification for allowing them.
 
+### Example 1
+
 ```rust
 type XcmExecuteFilter = Nothing;
 ```
+
+In this example:
+
+- The `XcmExecuteFilter` is set to `Nothing`, effectively disabling the execution of extrinsics through XCM for all Locations.
+
+### Example 2
+
+```rust
+pub struct CustomExecuteFilter;
+impl <XcmCall> Contains<(Location, XcmCall)> for CustomExecuteFilter {
+    fn contains(t: &(Location, XcmCall)) -> bool {
+		let some_origin = SomeLocation::get();
+        // Check if the origin location is the desired
+        matches!(&t.0, some_origin)
+    }
+}
+
+type XcmExecuteFilter = CustomExecuteFilter;
+```
+
+In this example:
+
+- A custom filter, `CustomExecuteFilter`, is defined to enforce that extrinsics are executed only when the origin Location matches the configured location specified by `SomeLocation`.
