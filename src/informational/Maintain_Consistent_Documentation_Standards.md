@@ -12,8 +12,8 @@ correctly, especially for new contributors.
 Lack of documentation or minimal comments can leave important details unclear, as shown below:
 
 ```rust
-fn process_data(data: u32) {
-  ...
+fn process_data(data: u32) -> u32 {
+  // ...
 }
 ```
 
@@ -37,7 +37,7 @@ outcomes for each function.
 /// - Result of the processing operation as a `u32`.
 fn process_data(data: u32) -> u32 {
     // Function logic here
-    ...
+    // ...
 }
 ```
 

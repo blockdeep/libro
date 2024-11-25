@@ -1,1 +1,0 @@
-# Maintain consistent documentation standards
