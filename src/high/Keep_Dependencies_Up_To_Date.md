@@ -4,8 +4,7 @@
 
 ## Description
 
-Using outdated libraries can introduce security vulnerabilities, compatibility issues, and reduced performance, as older
-dependencies may lack recent bug fixes and security patches.
+Using outdated libraries can introduce security vulnerabilities, compatibility issues, and reduced performance, as older dependencies may lack recent bug fixes and security patches.
 
 ## What should be avoided
 
@@ -43,5 +42,4 @@ use latest_library::safe_fn;
 sp-runtime = { git = "https://github.com/paritytech/substrate.git", branch = "polkadot-stable2407" }
 ```
 
-By updating to the latest versions, you benefit from security improvements, performance enhancements, and better
-compatibility, ensuring a more robust and secure application.
+By updating to the latest versions, you benefit from security improvements, performance enhancements, and better compatibility, ensuring a more robust and secure application.

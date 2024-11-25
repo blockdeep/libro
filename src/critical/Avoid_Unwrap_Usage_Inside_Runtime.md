@@ -4,14 +4,11 @@
 
 ## Description
 
-Using `unwrap()` and similar methods for error handling can cause runtime panics, leading to crashes if unexpected
-conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production
-environments.
+Using `unwrap()` and similar methods for error handling can cause runtime panics, leading to crashes or block production stoppage if unexpected conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production environments.
 
 ## What should be avoided
 
-Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected
-application crashes:
+Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected application crashes:
 
 ```rust
 // Create an empty vector: [ ]
@@ -43,5 +40,4 @@ let value = my_data.get(0).ok_or(Error::<T>::MyError)?;
 
 In this example:
 
-- The code safely handles the case where `my_data.get(0)` might be `None`, allowing for graceful error handling and
-  reducing the risk of crashes.
+- The code safely handles the case where `my_data.get(0)` might be `None`, allowing for graceful error handling and reducing the risk of panics.

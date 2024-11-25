@@ -4,13 +4,11 @@
 
 ## Description
 
-Benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource
-overuse or transaction failures in real-world usage.
+Benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource overuse or transaction failures in real-world usage.
 
 ## What should be avoided
 
-The following code benchmarks a typical scenario, which may not account for the heaviest possible execution path,
-leading to underestimated weights:
+The following code benchmarks a typical scenario, which may not account for the heaviest possible execution path, leading to underestimated weights:
 
 ### Example 1
 
@@ -59,14 +57,11 @@ fn some_extrinsic() {
 
 In this example:
 
-- The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark,
-  input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated
-  execution cost will be an underestimate.
+- The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark, input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated execution cost will be an underestimate.
 
 ## Best practice
 
-Benchmark at least the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight
-accurately reflects maximum resource usage:
+Benchmark at least the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately reflects maximum resource usage:
 
 ### Example 1
 
@@ -86,8 +81,7 @@ fn worst_case_scenario(s: Linear<1, MAX_ITEMS>) {
 In this improved example:
 
 - `generate_data(s)` creates the maximum allowed data set to simulate a heavy load.
-- By covering the worst-case path, this benchmark provides a realistic weight that prevents unexpected performance
-  issues during peak loads.
+- By covering the worst-case path, this benchmark provides a realistic weight that prevents unexpected performance issues during peak loads.
 
 ### Example 2
 
@@ -105,8 +99,7 @@ fn some_extrinsic() {
 
 ### Example 3
 
-Alternatively, in mission-critical extrinsics that are meant to be used a lot, there could be a more fine-grained
-approach, which is to benchmark each execution path independently:
+Alternatively, in mission-critical extrinsics that are meant to be used a lot, there could be a more fine-grained approach, which is to benchmark each execution path independently:
 
 ```rust
 #[pallet::call_index(0)]
@@ -153,5 +146,4 @@ fn some_extrinsic_path_2() {
 In this example:
 
 - The fee corresponding to the worst-case execution path will be initially taken from the user.
-- However, not necessarily the worst-case execution path will be actually executed, and if the actual consumed fee is
-  lower, the difference will be refunded to the user.
+- However, not necessarily the worst-case execution path will be actually executed, and if the actual consumed fee is lower, the difference will be refunded to the user.

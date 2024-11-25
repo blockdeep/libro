@@ -4,8 +4,7 @@
 
 ## Description
 
-Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid
-states or security issues.
+Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid states or security issues.
 
 ## What should be avoided
 
@@ -23,8 +22,7 @@ In this example:
 
 ## Recommended Solution
 
-Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid
-out-of-range values:
+Implement input validation to ensure data meets expected constraints. This example enforces a maximum limit to avoid out-of-range values:
 
 ```rust
 fn store_execution_time(hour_of_day: u8) -> Result<(), Error> {

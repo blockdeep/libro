@@ -9,8 +9,7 @@ compromising security and functionality.
 
 ## What should be avoided
 
-In the following code, the `execute` function can be called by any user, which may lead to unauthorized or malicious
-actions:
+In the following code, the `execute` function can be called by any user, which may lead to unauthorized or malicious actions:
 
 ```rust
 #[pallet::call_index(0)]
@@ -21,14 +20,13 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 }
 ```
 
-In this example
+In this example:
 
 - The extrinsic can be executed by anyone because there are no access control checks in place, which can be particularly problematic for critical chain operations.
 
 ## Best practice
 
-Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
-protect critical functions.
+Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to protect critical functions.
 
 ### Example 1
 

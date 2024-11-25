@@ -4,8 +4,7 @@
 
 ## Description
 
-Unbounded iterations over large data structures can lead to resource exhaustion and may result in denial of service (
-DoS) attacks if the process consumes too many resources.
+Unbounded iterations over large data structures can lead to extensive weight consumption and may result in denial of service (DDoS) attacks if the extrinsic consumes too many compute or IO resources.
 
 ## What should be avoided
 

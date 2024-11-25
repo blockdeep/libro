@@ -4,17 +4,13 @@
 
 ## Description
 
-As the name suggests, the `Barrier` type in the commonly used XCM executor serves as entry protection for execution on a
-chain. It should be set explicitly to define which origins can execute without cost—such as for unbricking purposes—and
-which should incur charges. Additionally, consider carefully which origins should be entirely restricted from access via
-XCM.
+As the name suggests, the `Barrier` type in the commonly used XCM executor serves as entry protection for execution on a chain. It should be set explicitly to define which origins can execute without cost—such as for un-bricking purposes—and which should incur charges. Additionally, consider carefully which origins should be entirely restricted from access via XCM.
 
 As a rule of thumb, it is always recommended to be as restrictive as possible.
 
 ## What should be avoided
 
-In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this
-configuration
+In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this configuration
 
 ```rust
 pub type Barrier = (

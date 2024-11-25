@@ -4,8 +4,7 @@
 
 ## Description
 
-Functions that modify multiple resources without transactional integrity may leave the system in an inconsistent state
-if an error occurs mid-operation.
+Functions that modify multiple resources without transactional integrity may leave the system in an inconsistent state if an error occurs mid-operation.
 
 ## What should be avoided
 
@@ -30,7 +29,7 @@ Use atomic operations or implement rollback logic to ensure all changes are appl
 
 ```rust
 // Add the Result<(), Error> return type to allow a
-// rollback if an error occurs in any of the funtions.
+// rollback if an error occurs in any of the functions.
 fn transfer_funds(sender: &T::AccountId, recipient: &T::AccountId, amount: u32) -> Result<(), Error> {
     reduce_balance(sender, amount)?;
     increase_balance(recipient, amount)?;

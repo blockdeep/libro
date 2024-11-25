@@ -4,9 +4,7 @@
 
 ## Description
 
-Improper usage of `try_mutate` leads to redundant storage operations, which can negatively impact performance. Using
-both `try_mutate` and `insert` in the same closure causes unnecessary overhead by performing multiple accesses to
-storage.
+Improper usage of `try_mutate` leads to redundant storage operations, which can negatively impact performance. Using both `try_mutate` and `insert` in the same closure causes unnecessary overhead by performing multiple accesses to storage.
 
 ## What should be avoided
 

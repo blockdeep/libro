@@ -4,13 +4,11 @@
 
 ## Description
 
-Unchecked arithmetic operations can lead to overflow or underflow, causing unexpected behavior or errors, especially
-when working with large numbers.
+Unchecked arithmetic operations can lead to overflow or underflow, causing unexpected behavior or errors, especially when working with large numbers.
 
 ## What should be avoided
 
-The following code performs addition without checking for overflow, which may cause the program to wrap around to an
-unintended value:
+The following code performs addition without checking for overflow, which may cause the program to wrap around to an unintended value:
 
 ```rust
 // Potential for overflow if a + b exceeds the maximum value of the type.
@@ -19,8 +17,7 @@ let total: u16 = a + b;
 
 In this example:
 
-- If `a` and `b` are large, the result may exceed the data type’s maximum value, causing an overflow and leading to
-  incorrect results.
+- If `a` and `b` are large, the result may exceed the data type’s maximum value, causing an overflow and leading to incorrect results.
 
 ## Best practice
 
@@ -49,7 +46,6 @@ let total: u16 = a.saturating_add(b);
 In this example:
 
 - `saturating_add` will set `total` to the maximum possible value if `a + b` exceeds the type’s limit.
-- This approach avoids panics or errors by safely capping the result, which is useful when an upper bound is acceptable
-  in the application logic.
+- This approach avoids panics or errors by safely capping the result, which is useful when an upper bound is acceptable in the application logic.
 
 Both methods improve the reliability of arithmetic operations, ensuring predictable behavior without overflow.

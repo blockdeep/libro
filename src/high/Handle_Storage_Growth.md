@@ -1,11 +1,10 @@
-# Handle Storage Growth
+# Be Careful With Storage Growth
 
 **Severity**: <span style="color:orange;">High</span>
 
 ## Description
 
-Allowing unlimited entries in storage structures can lead to overflow, increased costs, and performance issues during
-operations that manage these entries.
+Allowing unlimited entries in storage structures can lead to overflow, increased costs, and performance issues during operations that manage these storage items.
 
 ## What should be avoided
 
@@ -25,8 +24,7 @@ fn add_entry(entry: u32) {
 
 ## Best practice
 
-Using `BoundedVec`, we can set a fixed maximum number of entries, enforcing storage limits directly within the data
-structure. This approach automatically restricts the growth of entries, enhancing efficiency.
+Using `BoundedVec`, we can set a fixed maximum number of entries, enforcing storage limits directly within the data structure. This approach automatically restricts the growth of entries, enhancing efficiency.
 
 ```rust
 #[pallet::storage]
@@ -46,6 +44,4 @@ fn add_entry_limited(entry: u32) -> Result<(), Error> {
 }
 ```
 
-Here, the `BoundedVec` ensures that the number of entries cannot exceed `T::MaxEntries`, which enforces storage limits
-directly. This approach maintains predictable storage usage and efficient operations by preventing uncontrolled
-accumulation of data.
+Here, the `BoundedVec` ensures that the number of entries cannot exceed `T::MaxEntries`, which enforces storage limits directly. This approach maintains predictable storage usage and efficient operations by preventing uncontrolled accumulation of data.

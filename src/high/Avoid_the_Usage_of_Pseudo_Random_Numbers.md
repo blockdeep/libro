@@ -1,11 +1,10 @@
-Avoid the Usage of Pseudo Random Numbers
+# Avoid the Usage of Pseudo Random Numbers
 
 **Severity**: <span style="color:orange;">High</span>
 
 ## Description
 
-Using non-deterministic methods for important process such as selecting/assigning tasks for example or can create opportunities for manipulation, potentially
-allowing certain participants to be chosen more frequently or unfairly.
+Using non-deterministic methods for important process such as selecting/assigning tasks for example or can create opportunities for manipulation, potentially allowing certain participants to be chosen more frequently or unfairly.
 
 ## What should be avoided
 
@@ -28,8 +27,7 @@ fn assign_verifier() -> Verifier {
 
 In this example:
 
-- `rand::random::<usize>() % verifiers.len()` selects a verifier at random, which could result in unfair frequency of
-  selection for certain verifiers.
+- `rand::random::<usize>() % verifiers.len()` selects a verifier at random, which could result in unfair frequency of selection for certain verifiers.
 
 ## Best practice
 
@@ -50,7 +48,5 @@ fn assign_verifier_deterministic(task_id: u32) -> Verifier {
 
 In this improved example:
 
-- The verifier is selected based on `task_id`, ensuring that each task consistently maps to a specific verifier in a
-  fair, predictable way.
-- This approach prevents any single verifier from being chosen disproportionately, ensuring fair distribution and
-  reducing the risk of manipulation.
+- The verifier is selected based on `task_id`, ensuring that each task consistently maps to a specific verifier in a fair, predictable way.
+- This approach prevents any single verifier from being chosen disproportionately, ensuring fair distribution and reducing the risk of manipulation.
