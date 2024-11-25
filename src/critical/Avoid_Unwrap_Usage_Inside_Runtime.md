@@ -14,7 +14,7 @@ Using `unwrap()` for error handling can result in runtime panics, which are not 
 application crashes:
 
 ```rust
-//Create an empty vector: [ ]
+// Create an empty vector: [ ]
 let my_data = Vec::<u32>::new();
 
 // Potential panic if index 0 is empty

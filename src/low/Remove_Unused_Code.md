@@ -28,7 +28,7 @@ fn process_data(data: &Vec<u32>) -> Result<u32, Error> {
 
     // Only this line is necessary
     let important_variable: u32 = compute_data();
-    //...
+    // ...
     
     Ok(important_variable)
 }

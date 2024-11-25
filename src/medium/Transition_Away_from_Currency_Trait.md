@@ -31,7 +31,7 @@ In this example:
 The usage of fungible traits is preferred instead.
 
 ```rust
-//Import the traits from the fungible module
+// Import the traits from the fungible module
 use frame_support::traits::fungible::{Inspect, Mutate};
 
 #[pallet::config]

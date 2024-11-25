@@ -19,7 +19,7 @@ fn store_execution_time(hour_of_day: u8) {
 
 In this example:
 
-- The `hour_of_day` input should only be valid if it's between 0 and 23 hours. Otherwise, the input is invalid and should return an error.
+- The `hour_of_day` input should only be valid if it is between 0 and 23 hours. Otherwise, the input is invalid and should return an error.
 
 ## Recommended Solution
 
