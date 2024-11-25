@@ -4,7 +4,7 @@
 
 ## Description
 
-Omitting tests for boundary cases can leave<span style="color:red;">Critical</span> edge conditions unhandled, leading to potential bugs and
+Omitting tests for boundary cases can leave critical edge conditions unhandled, leading to potential bugs and
 unpredictable behavior, especially when inputs approach their limits.
 
 ## What should be avoided
