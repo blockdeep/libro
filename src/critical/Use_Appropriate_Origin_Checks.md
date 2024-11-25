@@ -30,6 +30,8 @@ In this example
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
 protect critical functions.
 
+### Example 1
+
 ```rust
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::execute_critical_operation())]
@@ -42,7 +44,41 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 }
 ```
 
-Using `ensure_root` enforces that only users with root permissions can execute this function, reducing the risk of
-unauthorized actions and enhancing security.
+In this example:
 
-You can also create your own origin checks by implementing custom origins. See an example here: **ADD example from Polkadot SDK code (GitHub link)**.
+- Using `ensure_root` enforces that only users with root permissions can execute this function.
+
+### Example 2
+
+```rust
+//Store an authorized account
+#[pallet::storage]
+pub type AuthorizedAccount<T: Config> = StorageValue<_, T::AccountId>;
+
+impl<T: Config> Pallet<T> {
+    pub fn ensure_authorized(origin: OriginFor<T>) -> Result<(), DispatchError> {
+        let who: T::AccountId = ensure_signed(origin.clone())?;
+        let authorized_origin: T::AccountId = Migrator::<T>::get();
+
+        ensure!(sender == authorized_origin, Error::<T>::NotAuthorized);
+        Ok(())
+    }
+}
+
+#[pallet::call]
+impl<T: Config> Pallet<T> {
+    #[pallet::call_index(0)]
+    #[pallet::weight(T::WeightInfo::execute_critical_operation())]
+    pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
+        // Restrict access to an authorized account
+        Self::ensure_authorized(origin)?;
+
+        // Secure function logic here
+        execute_critical_operation();
+    }
+}
+```
+
+In this example:
+
+- The pallet stores an Account under `AuthorizedAccount`, that is allowed to execute the permissioned extrinsic, the check is done though the `ensure_authorized()` function.
