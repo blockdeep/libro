@@ -16,22 +16,23 @@ can lead to inefficient data management.
 ```rust
 pub struct Info<AccountId, BlockNumber> {
 	pub owner: AccountId,
+	pub valid_until: BlockNumber,
 	pub more_data_1: u32,
 	pub more_data_2: u32,
 }
 
 #[pallet::storage]
 pub type SomeInfo<T: Config> =
-	StorageMap<_, Identity, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
+	StorageMap<_, Blake2_128Concat, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
 
 #[pallet::storage]
-pub type InfoOwner<T: Config> =
-	StorageMap<_, Identity, SomeId, AccountId, BlockNumberFor<T>>, OptionQuery>;
+pub type InfoOwner<T: Config> = StorageMap<_, Blake2_128Concat, SomeId, T::AccountId, OptionQuery>;
 ```
 
 In this example:
 
-- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` StorageMap.
+- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of
+  the `SomeInfo` StorageMap.
 
 ## Best practice
 
@@ -41,13 +42,14 @@ needs to be accessed frequently, consider optimizing retrieval methods rather th
 ```rust
 pub struct Info<AccountId, BlockNumber> {
 	pub owner: AccountId,
+	pub valid_until: BlockNumber,
 	pub more_data_1: u32,
 	pub more_data_2: u32,
 }
 
 #[pallet::storage]
 pub type SomeInfo<T: Config> =
-	StorageMap<_, Identity, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
+	StorageMap<_, Blake2_128Concat, SomeId, Info<T::AccountId, BlockNumberFor<T>>, OptionQuery>;
 ```
 
 In this example:

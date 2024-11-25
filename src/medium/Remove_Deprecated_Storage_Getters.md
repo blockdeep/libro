@@ -15,7 +15,7 @@ Using `#[pallet::getter]` to define storage getters can lead to issues with futu
 ```rust
 #[pallet::storage]
 #[pallet::getter(fn deprecated_getter)]
-pub type MyValue<T> = StorageValue<_, u32>;
+pub type MyValue<T> = StorageValue<_, u32, OptionQuery>;
 ```
 
 In this example:
@@ -30,7 +30,7 @@ getters:
 
 ```rust
 #[pallet::storage]
-pub type MyValue<T> = StorageValue<_, u32>;
+pub type MyValue<T> = StorageValue<_, u32, OptionQuery>;
 
 // Create a custom getter
 fn get_my_value() -> Option<u32> {
@@ -39,8 +39,8 @@ fn get_my_value() -> Option<u32> {
 
 // Or simply access the storage item directly
 fn process_stuff() {
-    if let my_value = MyValue::<T>::get() {
-        // Use the value here
+    if let Some(my_value) = MyValue::<T>::get() {
+        // Use my_value here
     }
 }
 ```

@@ -21,14 +21,14 @@ impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {
         // Retrieve proposals that have ended at this block number
         let proposals = EndedProposals::<T>::get(block_number);
 
-        for proposal_id in proposals.iter() {
+        for proposal_id in proposals {
             let mut ayes = 0;
             let mut nays = 0;
 
             // Retrieve all votes for the current proposal
             let votes = Votes::<T>::get(proposal_id);
 
-            for vote in votes.iter() {
+            for vote in votes {
                 match vote {
                     VoteType::Aye => ayes = ayes.saturating_add(1),
                     VoteType::Nay => nays = nays.saturating_add(1)
@@ -64,13 +64,11 @@ pub fn some_vote(
 ) -> DispatchResult {
     // Any verification logic
     // ...
-    ProposalVoteAmount::<T>::try_mutate(id, |item| -> Result<(), Error> {
+    ProposalVoteAmount::<T>::mutate(id, |item| -> Result<(), Error> {
         match vote {
             VoteType::Aye => *item.ayes = item.ayes.saturating_add(1),
             VoteType::Nay => *item.nays = item.nays.saturating_add(1);
         }
-
-        Ok(())
     })
 }
 
@@ -78,7 +76,7 @@ fn on_finalize(block_number: T::BlockNumber) {
     // Retrieve proposals that have ended at this block number
     let proposals = EndedProposals::<T>::get(block_number);
 
-    for proposal_id in proposals.iter() {
+    for proposal_id in proposals {
         let (ayes, nays) = ProposalVoteAmount::<T>::get(proposal_id);
         // Process `ayes` and `nays` results as needed
     }

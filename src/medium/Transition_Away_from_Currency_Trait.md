@@ -35,6 +35,7 @@ use frame_support::traits::{Inspect, Mutate};
 
 #[pallet::config]
 pub trait Config: frame_system::Config {
+    // Use the preferred traits
 	type Currency: Inspect<Self::AccountId> + Mutate<Self::AccountId>;
 }
 ```
