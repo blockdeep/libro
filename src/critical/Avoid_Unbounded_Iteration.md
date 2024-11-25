@@ -16,7 +16,7 @@ The following code iterates over all items in `big_data` without any limit, whic
 #[pallet::storage]
 pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
 
-let big_data = UnboundedData:.<T>::get();
+let big_data = UnboundedData::<T>::get();
 for item in big_data {
     // Process each item with no limit
 }
@@ -35,7 +35,7 @@ const MAX_ITEMS: usize = 20;
 #[pallet::storage]
 pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
 
-let big_data = UnboundedData:.<T>::get();
+let big_data = UnboundedData::<T>::get();
 for item in big_data.iter().take(MAX_ITEMS) {
     // Process a limited number of items safely
 }

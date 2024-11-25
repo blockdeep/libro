@@ -17,7 +17,7 @@ pub type Verifiers<T: Config> = StorageValue<_, Vec<T::AccountId>;
 
 fn assign_verifier() -> Verifier {
     let verifiers = Verifiers::<T>::get();
-    
+
     // Random selection from the list
     let index = rand::random::<usize>() % verifiers.len();
     let verifier = verifiers[index];
@@ -33,7 +33,7 @@ In this example:
 
 ## Best practice
 
-Implement a deterministic selection method, such as using the task ID as a basis to ensure a fair, repeatable selection:
+Implement a deterministic selection method, such as using an ID as a basis to ensure a fair, repeatable selection:
 
 ```rust
 #[pallet::storage]

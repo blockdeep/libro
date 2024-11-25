@@ -16,6 +16,7 @@ Avoid using hardcoded weights directly in the function definition of extrinsics.
 
 ```rust
 #[pallet::call_index(0)]
+// Hardcoded Weights
 #[pallet::weight(Weight::from_parts(10_000, 0) + T::DbWeight::get().reads_writes(1, 1))]
 pub fn do_something(
     origin: OriginFor<T>,

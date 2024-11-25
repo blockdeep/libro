@@ -14,7 +14,7 @@ unintended value:
 
 ```rust
 // Potential for overflow if a + b exceeds the maximum value of the type.
-let total = a + b;
+let total: u16 = a + b;
 ```
 
 In this example:
@@ -29,7 +29,7 @@ In this example:
 Use `checked_add` to return an error if the operation exceeds the maximum value:
 
 ```rust
-let total = a.checked_add(b).ok_or(Error::<T>::Overflow)?;
+let total: u16 = a.checked_add(b).ok_or(Error::<T>::Overflow)?;
 ```
 
 In this example:
@@ -43,7 +43,7 @@ Alternatively, `saturating_add` ensures that the result will cap at the maximum 
 overflowing.
 
 ```rust
-let total = a.saturating_add(b);
+let total: u16 = a.saturating_add(b);
 ```
 
 In this example:

@@ -32,6 +32,12 @@ structure. This approach automatically restricts the growth of entries, enhancin
 #[pallet::storage]
 pub type Entries<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
 
+#[pallet::error]
+pub enum Error<T> {
+	///  MaxEntries limit reached
+	TooManyEntries,
+}
+
 fn add_entry_limited(entry: u32) -> Result<(), Error> {
     Entries::<T>::try_mutate(|entries| {
         entries.try_push(entry).map_err(|_| Error::<T>::TooManyEntries)?;

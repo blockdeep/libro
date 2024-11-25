@@ -15,6 +15,10 @@ Setting FeeManager to the unit type () should be done with caution. This setting
 type FeeManager = ();
 ```
 
+In this example:
+
+- `FeeManager` is set to `()`, meaning that there is no mechanism to process or allocate the collected fees, causing them to be automatically burned.
+
 ## Best practice
 
 Configure `FeeManager` to allow fees to be either deposited or distributed.

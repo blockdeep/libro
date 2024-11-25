@@ -49,4 +49,4 @@ fn is_data_present(vec_data: Vec<u32>, item: u32) -> bool {
 
 In this example:
 
-- `vec_data` is always sorted, and hence allows us to use the binary search algorithm for faster and efficient lookups.
+- `vec_data` will always be sorted, and hence allows us to use the binary search algorithm for faster and efficient lookups.
