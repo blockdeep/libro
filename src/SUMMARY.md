@@ -1,9 +1,9 @@
-# Substrate Development Best Practices
+# Polkadot SDK Best Practices
 
 [Introduction](README.md)
 [Summary](TABLE.md)
 
-- [Critical issues](critical/README.md)
+- [Critical](critical/README.md)
 
   - [Use appropriate origin checks](critical/Use_Appropriate_Origin_Checks.md)
   - [Avoid unbounded iteration](critical/Avoid_Unbounded_Iteration.md)
@@ -12,7 +12,7 @@
   - [Use benchmarking for accurate dynamic weights](critical/Use_Benchmarking_for_Accurate_Dynamic_Weights.md)
   - [Prioritize reserve asset transfer over teleport](critical/Prioritize_Reserve_Asset_Transfer_Over_Teleport.md)
 
-- [High severity issues](high/README.md)
+- [High Severity](high/README.md)
 
   - [Benchmark extrinsic worst-case scenario](high/Benchmark_Extrinsic_Worst_Case_Scenario.md)
   - [Keep dependencies up to date](high/Keep_Dependencies_Up_To_Date.md)
@@ -28,7 +28,7 @@
   - [Ensure consistent asset registration by adhering to host chain schema](high/Ensure_Consistent_Asset_Registration_by_Adhering_to_Host_Chain_Schema.md)
   - [Make proper usage of XCM `Junctions`](high/Make_Proper_Usage_of_XCM_Junctions.md)
 
-- [Medium severity issues](medium/README.md)
+- [Medium Severity](medium/README.md)
 
   - [Remove deprecated storage getters](medium/Remove_Deprecated_Storage_Getters.md)
   - [Avoid hardcoded parameters and values](medium/Avoid_Hardcoded_Parameters_and_Values.md)
@@ -51,7 +51,7 @@
   - [Avoid unrestricted XCM execution](medium/Avoid_Unrestricted_XCM_Execution.md)
   - [Implement proper XCM fee management](medium/Implement_Proper_XCM_Fee_Management.md)
 
-- [Low severity issues](low/README.md)
+- [Low Severity](low/README.md)
 
   - [Use appropriate naming conventions](low/Use_Appropriate_Naming_Conventions.md)
   - [Avoid redundant cloning](low/Avoid_Redundant_Cloning.md)
@@ -64,7 +64,7 @@
   - [Expose runtime APIs for key functionalities](low/Expose_Runtime_APIs_For_Key_Functionalities.md)
   - [Remove unused code](low/Remove_Unused_Code.md)
 
-- [Informational issues](informational/README.md)
+- [Informational](informational/README.md)
   - [Maintain consistent documentation standards](informational/Maintain_Consistent_Documentation_Standards.md)
   - [Avoid typographical errors](informational/Avoid_Typographical_Errors.md)
   - [Make backend logic Frontend-Agnostic](informational/Make_Backend_Logic_Frontend_Agnostic.md)
