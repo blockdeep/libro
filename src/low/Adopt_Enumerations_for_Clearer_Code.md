@@ -22,9 +22,14 @@ Define an enumeration to represent distinct categories or statuses more clearly:
 
 ```rust
 enum Status {
+    /// The operation is still being confirmed and can potentially be aborted.
     Pending,
+    /// The operation has been confirmed and it is waiting to be completed.
     InProgress,
+    // The operation was successfully completed.
     Completed,
+    /// The operation was manually aborted by the user.
+    Aborted,
 }
 
 let status = Status::Completed;

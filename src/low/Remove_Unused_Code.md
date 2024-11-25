@@ -13,20 +13,24 @@ Avoid leaving behind unused functions, variables, or code comments that are no l
 ```rust
 // Example of unused code in a function
 
-/* fn process_important_data() {
-    // some logic that is no longer needed
-} */
+// fn process_important_data() {
+//    // ...
+//    // some logic that is no longer needed
+//    // ...
+// } 
 
-fn process_data(data: &Vec<u32>) {
+fn process_data(data: &Vec<u32>) -> Result<u32, Error> {
     // Unused variable that adds no value
     // let important_variable = data[0];
 
     // Unused function that is commented out
     // process_important_data();
 
-    let important_variable = 1 * 2; // Only this line is necessary
-    ...
-    Ok(())
+    // Only this line is necessary
+    let important_variable: u32 = compute_data();
+    //...
+    
+    Ok(important_variable)
 }
 ```
 

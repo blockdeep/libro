@@ -43,7 +43,7 @@ sp_api::decl_runtime_apis! {
 
 // runtime/lib.rs
 impl pallet::PalletApi<Block, AccountId> for Runtime {
-	fn pot_account() -> AccountId {
+	pub fn pot_account() -> AccountId {
 		Pallet::pot_account()
 	}
 }

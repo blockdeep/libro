@@ -12,9 +12,9 @@ inconsistencies in user-facing messages.
 Embedding error messages directly in function logic can be inflexible:
 
 ```rust
-fn something_fails(){
-    ...
-    Err("Insufficient balance");
+fn something_fails() -> Result<(), Error> {
+    // ...
+    Err("Insufficient balance")
 }
 ```
 
@@ -29,9 +29,9 @@ pub enum Error<T> {
 	InsufficientBalance,
 }
 
-fn something_fails(){
-    ...
-    Err(Error::<T>::InsufficientBalance);
+fn something_fails() -> DispatchError<()> {
+    // ...
+    Err(Error::<T>::InsufficientBalance)
 }
 ```
 

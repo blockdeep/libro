@@ -13,9 +13,8 @@ purpose.
 Returning an input parameter without modification is redundant and can be confusing:
 
 ```rust
-fn project_validation(project_metadata: Metadata) -> Metadata {
-    // Perform validation
-    // ...
+fn project_validation(project_metadata: Metadata) -> Result<Metadata, Error> {
+    validate_metadata(&metadata)?;
 
     // Returns the same value without changes
     project_metadata
@@ -29,6 +28,7 @@ If the return value is not needed, avoid returning it, focusing the function sol
 ```rust
 fn project_validation(project_metadata: &Metadata) -> Result<(), Error> {
     // Perform validation without returning project_metadata
+    validate_metadata(metadata)?;
 
     Ok(())
 }
