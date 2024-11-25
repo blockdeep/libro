@@ -1,24 +1,18 @@
 # Introduction
 
-Welcome to the Substrate Development Best Practices guide. This resource compiles essential insights and best practices
-derived from comprehensive code reviews across various Substrate-based projects. The purpose of this guide is to help
-developers, auditors, and contributors understand and address common issues that can arise in blockchain development on
-Substrate, an open-source blockchain framework designed by Parity Technologies.
+Welcome to the Polkadot SDK Development Best Practices guide. This resource compiles essential insights and best practices derived from comprehensive code reviews across various Polkadot projects. The purpose of this guide is to help developers, auditors, and contributors understand and address common issues that can arise in blockchain development while building on Substrate.
 
 ## Why this guide?
 
-Substrate is a powerful and flexible framework, but developing robust, secure, and efficient blockchain applications
-requires attention to detail and adherence to best practices. This guide serves as a practical reference to help you
-avoid common pitfalls, enhance code readability, and ensure optimal performance and security.
+Substrate is a powerful and flexible framework, but developing robust, secure, and efficient blockchain applications requires attention to detail and adherence to best practices. This guide serves as a practical reference to help you avoid common pitfalls, enhance code readability, and ensure optimal performance and security.
 
-## What you will find here
+## Structure
 
 This guide is organized by issue severity to help prioritize improvements. Each section covers a severity level:
 
-- **Critical**: Issues that pose significant security or functionality risks and require immediate action.
+- **Critical**: Issues that pose significant security or performance risks and require immediate action.
 - **High**: Issues that may not be catastrophic but could impact performance, security, or stability.
-- **Medium**: Issues that affect maintainability, readability, and efficiency, important to address for a well-optimized
-  codebase.
+- **Medium**: Issues that affect maintainability, readability, and efficiency, important to address for a well-optimized codebase.
 - **Low**: Minor concerns that can improve code clarity and efficiency, but with limited immediate impact.
 - **Informational**: Suggestions and recommendations that help maintain best practices but are not essential.
 
@@ -30,15 +24,7 @@ Each issue is presented with:
 
 ## How to use this guide
 
-Whether you are conducting a code review, refactoring, or writing new Substrate modules, this guide is designed to
-provide actionable insights and practical solutions. We encourage readers to consult this guide regularly to maintain
-high standards of quality, security, and efficiency in their projects.
-
-## A collaborative effort
-
-This guide is part of a collaborative effort to elevate the quality of blockchain development. By following these best
-practices, you contribute to building a resilient and trustworthy ecosystem on Substrate. Thank you for your commitment
-to excellence in blockchain development.
+Whether you are conducting a code review, refactoring, or writing new Substrate modules, this guide is designed to provide actionable insights and practical solutions. We encourage readers to consult this guide regularly to maintain high standards of quality, security, and efficiency in their projects.
 
 ## Let’s get started!
 

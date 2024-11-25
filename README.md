@@ -1,6 +1,6 @@
-# Substrate Development Best Practices
+# Polkadot SDK Best Practices
 
-This repository includes a compilation of the best coding practices when developing on Substrate.
+Compilation of the coding best practices for Polkadot SDK, presented as a mdbook.
 
 ## Installation
 
