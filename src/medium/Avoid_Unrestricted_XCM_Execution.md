@@ -41,7 +41,8 @@ pub struct CustomExecuteFilter;
 impl <XcmCall> Contains<(Location, XcmCall)> for CustomExecuteFilter {
     fn contains(t: &(Location, XcmCall)) -> bool {
 		let some_origin = SomeLocation::get();
-        // Check if the origin location is the desired
+		
+        // Check if the origin location is the desired one.
         matches!(&t.0, some_origin)
     }
 }
