@@ -51,29 +51,23 @@ In this example:
 ### Example 2
 
 ```rust
-//Store an authorized account
-#[pallet::storage]
-pub type AuthorizedAccount<T: Config> = StorageValue<_, T::AccountId>;
-
-impl<T: Config> Pallet<T> {
-    pub fn ensure_authorized(origin: OriginFor<T>) -> Result<(), DispatchError> {
-        let who: T::AccountId = ensure_signed(origin.clone())?;
-        let authorized_origin: T::AccountId = Migrator::<T>::get();
-
-        ensure!(sender == authorized_origin, Error::<T>::NotAuthorized);
-        Ok(())
+// ---- In pallet/lib.rs ----
+#[pallet::config]
+	pub trait Config: frame_system::Config {
+        //....
+        /// Origin allowed to execute critical Operations.
+		type AuthorizedOrigin: EnsureOrigin<<Self as frame_system::Config>::RuntimeOrigin>;
     }
-}
 
 #[pallet::call]
 impl<T: Config> Pallet<T> {
     #[pallet::call_index(0)]
     #[pallet::weight(T::WeightInfo::execute_critical_operation())]
     pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
-        // Restrict access to an authorized account
-        Self::ensure_authorized(origin)?;
+        // Use custom AuthorizedOrigin check.
+        T::AuthorizedOrigin::ensure_origin(origin)?;
 
-        // Secure function logic here
+        // Secure function logic here.
         execute_critical_operation();
     }
 }
@@ -81,4 +75,4 @@ impl<T: Config> Pallet<T> {
 
 In this example:
 
-- The pallet stores an Account under `AuthorizedAccount`, that is allowed to execute the permissioned extrinsic, the check is done though the `ensure_authorized()` function.
+- The pallet stores has a configurable Custom origin `AuthorizedOrigin`, that is allowed to execute the permissioned extrinsic.
