@@ -12,7 +12,7 @@ overuse or transaction failures in real-world usage.
 The following code benchmarks a typical scenario, which may not account for the heaviest possible execution path,
 leading to underestimated weights:
 
-### Example 1:
+### Example 1
 
 ```rust
 #[benchmark]
@@ -31,7 +31,7 @@ In this example:
 
 - The benchmark uses a small data set (`10` items), which may not reflect the workload in a worst-case scenario.
 
-### Example 2:
+### Example 2
 
 ```rust
 #[pallet::call_index(0)]

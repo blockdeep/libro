@@ -14,16 +14,20 @@ with `Asset Hub`’s foreign assets. Given the chain’s intended integration wi
 developers, potentially causing fundamental misunderstandings about the asset types referenced in the documentation.
 
 ```rust
-let foreign_asset_balance: BalanceOfAsset<T> = balance.into();
-
-let pot_account = Self::account_id();
-
-pallet_assets::Pallet::<T>::transfer_keep_alive(
-    RawOrigin::Signed(pot_account.clone()).into(),
-    id.clone(),
-    T::Lookup::unlookup(who.clone()),
-    foreign_asset_balance,
-)?;
+fn transfer_foreign(receiver: T::AccountId, balance: u32) -> Result<(), Error> {
+    // The name of this variable is not appropiate.
+    let foreign_asset_balance: BalanceOfAsset<T> = balance.into();
+    
+    let pot_account: T::AccountId = Self::account_id();
+    pallet_assets::Pallet::<T>::transfer_keep_alive(
+        RawOrigin::Signed(pot_account.clone()).into(),
+        id.clone(),
+        receiver,
+        foreign_asset_balance,
+    )?;
+    
+    Ok(())
+}
 ```
 
 ## Best practice

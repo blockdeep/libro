@@ -14,6 +14,15 @@ Hardcoding values, such as limits or thresholds, can make it difficult to adapt 
 ```rust
 // Hardcoded limit
 const LIMIT: u32 = 100;
+
+impl<T: Config> Pallet<T> {
+    fn do_something() {
+        // No configurable limit
+        for i in 0..T::LIMIT {
+            // Logic that uses the configurable limit
+        }
+    }
+}
 ```
 
 In this example:
@@ -34,14 +43,15 @@ pub trait Config: frame_system::Config {
 impl<T: Config> Pallet<T> {
     fn do_something() {
         // Access configurable limit
-        let limit = T::LIMIT;
-        // Logic that uses the configurable limit
+        for i in 0..T::LIMIT {
+          // Logic that uses the configurable limit
+        }
     }
 }
 
 // --- In runtime/lib.rs file ---
 impl some_pallet::Config for Runtime {
-    ...
+    // ...
     type LIMIT = 100;
 }
 ```

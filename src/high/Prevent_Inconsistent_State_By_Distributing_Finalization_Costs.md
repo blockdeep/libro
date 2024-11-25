@@ -13,10 +13,14 @@ In the following example, one function is responsible for finalizing all previou
 potential failure and high resource usage:
 
 ```rust
+#[pallet::storage]
+pub type PendingOperations<T: Config> = StorageValue<_, Vec<UserOperation>>;
+
 fn finalize_operations() {
-    for item in pending_operations {
+    let pending_operations = PendingOperations::<T>::get();
+    for operation in pending_operations {
         // Finalizing all operations at once
-        complete_operation(item);
+        complete_operation(operations);
     }
 }
 ```
@@ -27,7 +31,7 @@ Use a claim-based process where each participant finalizes their operation indiv
 distribute the load.
 
 ```rust
-fn claim_operation(participant: AccountId) -> Result<(), Error> {
+fn claim_operation(participant: T::AccountId) -> Result<(), Error> {
     // Each participant finalizes their own operation
     complete_operation_for(participant)?;
     Ok(())

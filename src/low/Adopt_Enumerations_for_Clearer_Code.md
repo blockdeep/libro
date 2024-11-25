@@ -13,7 +13,13 @@ Using a string or integer to represent distinct categories increases the risk of
 
 ```rust
 // Using string literals for statuses
-let status = "completed";
+let mut status = "pending";
+
+status = if condition {
+    "completed"
+} else {
+    "aborted"
+}
 ```
 
 ## Best practice
@@ -22,12 +28,23 @@ Define an enumeration to represent distinct categories or statuses more clearly:
 
 ```rust
 enum Status {
+    /// The operation is still being confirmed and can potentially be aborted.
     Pending,
+    /// The operation has been confirmed and it is waiting to be completed.
     InProgress,
+    // The operation was successfully completed.
     Completed,
+    /// The operation was manually aborted by the user.
+    Aborted,
 }
 
-let status = Status::Completed;
+let mut status = Status::Pending;
+
+status = if condition {
+    Status::Completed
+} else {
+    Status::Aborted
+}
 ```
 
 Enumerations make the code more robust and less prone to errors, improving readability.

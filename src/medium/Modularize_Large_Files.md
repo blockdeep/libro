@@ -20,14 +20,14 @@ fn calculate_fees() -> u32 { /* fee calculation logic */ }
 
 fn validate_data() -> Result<(), Error> { /* data validation logic */ }
 
-pub struct SomeStruct{
-  ...
+pub struct SomeStruct {
+  // ...
 }
 
-pub type MyType = BoundedVec<u8, 20>;
+pub type MyType = BoundedVec<u8, ConstU32<8>>;
 
 pub enum UsefulEnum {
-  ...
+  // ...
 }
 ```
 
@@ -53,13 +53,13 @@ pub fn validate_data() -> Result<(), Error> { /* data validation logic */ }
 
 // --- ./types.rs ---
 pub struct SomeStruct{
-  ...
+  // ...
 }
 
-pub type MyType = BoundedVec<u8, 20>;
+pub type MyType = BoundedVec<u8, ConstU32<20>>;
 
 pub enum UsefulEnum {
-  ...
+  // ...
 }
 ```
 

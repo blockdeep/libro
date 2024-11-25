@@ -16,33 +16,35 @@ several examples of poor naming practices:
 ### Functions
 
 ```rust
+// Function name lacks specificity.
+// Also, it does not follow the snake-case naming convention.
 fn processData() {
-    // Function name lacks specificity
-    // Also, it does not follow the snake-case naming convention
+    // ...
 }
 
+// Function name is too generic.
 fn doStuff() {
-    // Function name is too generic
+    // ...
 }
 ```
 
 ### Variables
 
 ```rust
-// Variable name 'x' does not convey its purpose
+// Variable name 'x' does not convey its purpose.
 let x = 10;
 
-// 'tmp' is not descriptive of its role
+// 'tmp' is not descriptive of its role.
 let tmp = calculate_total();
 ```
 
 ### Types
 
 ```rust
-// The type alias 'B' provides no clarity about its purpose
+// The type alias 'B' provides no clarity about its purpose.
 type B = u32;
 
-// Struct and field names lack descriptive context
+// Struct and field names lack descriptive context.
 struct Info {
     count: u32,
     extra_data: Vec<u8>,
@@ -63,19 +65,21 @@ consistent naming styles:
 ### Functions
 
 ```rust
+// Descriptive function name specifies that it processes transaction data.
 fn process_transaction_data() {
-    // Descriptive function name specifies that it processes transaction data
+    // ...
 }
 
+// Descriptive name clearly conveys the function's purpose.
 fn calculate_user_balance() {
-    // Descriptive name clearly conveys the function's purpose
+    // ...
 }
 ```
 
 ### Variables
 
 ```rust
-// Variable name 'total_price' indicates its role in the calculation
+// Variable name 'total_price' indicates its role in the calculation.
 let total_price = 10;
 
 // Descriptive variable name reflects its purpose
@@ -85,13 +89,14 @@ let updated_balance = calculate_total();
 ### Types
 
 ```rust
-// Provides context that the alias represents a user's balance
+// Provides context that the alias represents a user's balance.
 type AccountBalance = u32;
 
-// Meaningful struct and field names improve clarity
+// Meaningful struct and field names improve clarity.
 struct UserDetails {
     age: u32,
     email: Vec<u8>,
+    balance: AccountBalance,
 }
 ```
 

@@ -13,6 +13,10 @@ The following code iterates over all items in `big_data` without any limit, whic
 `big_data` is large:
 
 ```rust
+#[pallet::storage]
+pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
+
+let big_data = UnboundedData::<T>::get();
 for item in big_data {
     // Process each item with no limit
 }
@@ -26,6 +30,12 @@ Use a bounded iterator or limit the number of items processed in each iteration.
 resource usage and keeps operations predictable.
 
 ```rust
+const MAX_ITEMS: usize = 20;
+
+#[pallet::storage]
+pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
+
+let big_data = UnboundedData::<T>::get();
 for item in big_data.iter().take(MAX_ITEMS) {
     // Process a limited number of items safely
 }
@@ -41,7 +51,8 @@ Alternatively, you can use bounded data structures and perform the iteration ove
 #[pallet::storage]
 pub type BoundedData<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
 
-for item in BoundedData::<T>::get() {
+let bounded_data = BoundedData::<T>::get();
+for item in bounded_data {
     // Iterates over a data structure with bounded size.
 }
 ```

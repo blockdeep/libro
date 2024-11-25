@@ -12,11 +12,11 @@ if an error occurs mid-operation.
 Modifying multiple resources without rollback mechanisms can lead to partial updates if an error occurs:
 
 ```rust
-fn transfer_funds(sender: &AccountId, recipient: &AccountId, amount: u32) -> () {
+fn transfer_funds(sender: &T::AccountId, recipient: &T::AccountId, amount: u32) {
     reduce_balance(sender, amount);
 
-    // No rollback if this fails
-    increase_balance(recipient, amount);
+    // Ignoring the result. No rollback if this fails.
+    let _ = increase_balance(recipient, amount);
 }
 ```
 
@@ -30,8 +30,8 @@ Use atomic operations or implement rollback logic to ensure all changes are appl
 
 ```rust
 // Add the Result<(), Error> return type to allow a
-// rollback if an error occurs in any of the funtions
-fn transfer_funds(sender: &AccountId, recipient: &AccountId, amount: u32) -> Result<(), Error> {
+// rollback if an error occurs in any of the funtions.
+fn transfer_funds(sender: &T::AccountId, recipient: &T::AccountId, amount: u32) -> Result<(), Error> {
     reduce_balance(sender, amount)?;
     increase_balance(recipient, amount)?;
     Ok(())

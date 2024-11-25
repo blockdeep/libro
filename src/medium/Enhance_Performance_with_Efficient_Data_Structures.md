@@ -13,7 +13,9 @@ Using a `Vec` for frequent lookups is often inefficient, as it requires linear-t
 
 ```rust
 // Linear search
-let result = vec_data.contains(&item);
+fn is_data_present(data: Vec<u32>, item: u32) -> bool {
+    data.contains(&item)
+}
 ```
 
 ## Best practice
@@ -24,7 +26,9 @@ Consider data structures like `HashSet` or `BTreeSet` for improved lookup perfor
 
 ```rust
 // Constant or logarithmic time search
-let result = set_data.contains(&item);
+fn is_data_present(set_data: HashSet<u32>, item: u32) -> bool
+    set_data.contains(&item)
+}
 ```
 
 In this example:
@@ -36,10 +40,13 @@ In this example:
 By keeping the `Vec` sorted we can use binary search, which is a much more efficient search algorithm.
 
 ```rust
-// Binary search provides a logarithmic time search
-let result = vec_data.binary_search(&item);
+// Binary search provides a logarithmic time search.
+// The array MUST be sorted.
+fn is_data_present(vec_data: Vec<u32>, item: u32) -> bool {
+    vec_data.binary_search(&item)
+}
 ```
 
 In this example:
 
-- `vec_data` is always sorted, and hence allows us to use the binary search algorithm for faster and efficient lookups.
+- `vec_data` will always be sorted, and hence allows us to use the binary search algorithm for faster and efficient lookups.

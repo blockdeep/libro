@@ -12,9 +12,11 @@ Unnecessary reads and writes increase execution time and storage costs, impactin
 Reading from and then writing to storage separately leads to redundant operations:
 
 ```rust
-let mut value = MyStorage::<T>::get();
-value += 1;
-MyStorage::<T>::put(value);
+// Reading
+let value = MyStorage::<T>::get();
+
+// Writting
+MyStorage::<T>::put(value + 1);
 ```
 
 ## Best practice
@@ -22,10 +24,10 @@ MyStorage::<T>::put(value);
 Use `try_mutate` or `try_mutate_exists` to combine read and write logic in a single, efficient operation:
 
 ```rust
-MyStorage::<T>::try_mutate(|value| -> Result<(), Error> {
-    value.saturating_add(One::one());
-    Ok(())
-})?;
+// Reading and writting at once
+MyStorage::<T>::mutate(|value| {
+    value += 1;
+});
 ```
 
 This approach minimizes storage operations, improving both performance and resource usage.

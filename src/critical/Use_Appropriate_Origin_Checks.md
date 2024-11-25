@@ -21,10 +21,14 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 }
 ```
 
+In this example
+
+- The extrinsic can be executed by anyone because there are no access control checks in place, which can be particularly problematic for critical chain operations.
+
 ## Best practice
 
 Implement appropriate origin checks to restrict function access to specific users or roles, such as elevated origins, to
-protect<span style="color:red;">Critical</span> functions.
+protect critical functions.
 
 ```rust
 #[pallet::call_index(0)]
@@ -32,6 +36,7 @@ protect<span style="color:red;">Critical</span> functions.
 pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
     // Restrict access to the root (admin) user
     ensure_root(origin)?;
+
     // Secure function logic here
     execute_critical_operation();
 }

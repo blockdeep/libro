@@ -12,7 +12,7 @@ or contributors who rely on clear naming and consistent language.
 Typographical errors can make code less readable and may even lead to bugs if used inconsistently:
 
 ```rust
-// Typo in variable name
+// Typo in variable name.
 let amout_valu = 100;
 ```
 
@@ -27,7 +27,7 @@ Perform thorough proofreading to catch typos and enhance clarity, ensuring varia
 descriptive.
 
 ```rust
-// Correctly spelled variable name
+// Correctly spelled variable name.
 let amount_value = 100;
 ```
 

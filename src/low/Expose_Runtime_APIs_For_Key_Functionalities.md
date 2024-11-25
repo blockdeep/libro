@@ -12,6 +12,7 @@ external clients. This restriction can prevent users and other clients from obta
 Avoid limiting key functionalities to internal runtime use only, as shown below:
 
 ```rust
+// Functionality only accessible inside the pallet.
 pub fn pot_account() -> T::AccountId {
 	T::PotId::get().into_account_truncating()
 }
@@ -43,7 +44,7 @@ sp_api::decl_runtime_apis! {
 
 // runtime/lib.rs
 impl pallet::PalletApi<Block, AccountId> for Runtime {
-	fn pot_account() -> AccountId {
+	pub fn pot_account() -> AccountId {
 		Pallet::pot_account()
 	}
 }

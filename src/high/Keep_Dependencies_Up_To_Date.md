@@ -9,7 +9,7 @@ dependencies may lack recent bug fixes and security patches.
 
 ## What should be avoided
 
-### Example 1:
+### Example 1
 
 The following code relies on an outdated library that may contain deprecated or insecure functions:
 
@@ -17,9 +17,9 @@ The following code relies on an outdated library that may contain deprecated or 
 use outdated_library::deprecated_fn;
 ```
 
-### Example 2:
+### Example 2
 
-The following code relies on an outdated library that may contain deprecated or insecure functions:
+The following code relies on an outdated library, since it is using an old branch on the polkadot repo, that may contain deprecated or insecure functions:
 
 ```toml
 # In Cargo.toml
@@ -30,15 +30,13 @@ sp-runtime = { git = "https://github.com/paritytech/substrate.git", branch = "po
 
 Regularly update dependencies to their latest stable versions, ensuring the use of secure and well-maintained functions:
 
-### Example 1:
+### Example 1
 
 ```rust
 use latest_library::safe_fn;
 ```
 
-### Example 2:
-
-The following code relies on an outdated library that may contain deprecated or insecure functions:
+### Example 2
 
 ```toml
 # In Cargo.toml

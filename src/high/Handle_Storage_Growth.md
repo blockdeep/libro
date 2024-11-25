@@ -13,11 +13,13 @@ The following code allows adding entries without any limit, leading to uncontrol
 
 ```rust
 #[pallet::storage]
-pub type Entries<T: Config> = StorageValue<_, Vec<Entry>>;
+pub type Entries<T: Config> = StorageValue<_, Vec<u32>>;
 
-fn add_entry(entry: Entry) {
+fn add_entry(entry: u32) {
     // Adds entries without limits
-    entries.push(entry);
+    Entries::<T>::mutate(|entries| {
+        entries.push(entry);
+    });
 }
 ```
 
@@ -28,10 +30,19 @@ structure. This approach automatically restricts the growth of entries, enhancin
 
 ```rust
 #[pallet::storage]
-pub type Entries<T: Config> = StorageValue<_, BoundedVec<Entry, T::MaxEntries>>;
+pub type Entries<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
 
-fn add_entry_limited(entry: Entry) -> Result<(), Error> {
-    Entries::<T>::try_push(entry).map_err(|_| Error::<T>::TooManyEntries)
+#[pallet::error]
+pub enum Error<T> {
+	///  MaxEntries limit reached
+	TooManyEntries,
+}
+
+fn add_entry_limited(entry: u32) -> Result<(), Error> {
+    Entries::<T>::try_mutate(|entries| {
+        entries.try_push(entry).map_err(|_| Error::<T>::TooManyEntries)?;
+        Ok(())
+    })
 }
 ```
 

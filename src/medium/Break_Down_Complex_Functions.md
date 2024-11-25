@@ -13,7 +13,7 @@ Combining multiple responsibilities in a single function increases its complexit
 
 ```rust
 fn process_transaction() {
-    // Transaction validion code
+    // Transaction validation code
     // ...
 
     // Fee calculation code
