@@ -7,7 +7,7 @@
 
   - [Use appropriate origin checks](critical/Use_Appropriate_Origin_Checks.md)
   - [Avoid unbounded iteration](critical/Avoid_Unbounded_Iteration.md)
-  - [Unchecked input data](critical/Unchecked_Input_Data.md)
+  - [Unchecked input parameters](critical/Unchecked_Input_Parameters.md)
   - [Avoid unwrap usage inside runtime](critical/Avoid_Unwrap_Usage_Inside_Runtime.md)
   - [Use benchmarking for accurate dynamic weights](critical/Use_Benchmarking_for_Accurate_Dynamic_Weights.md)
   - [Prioritize reserve asset transfer over teleport](critical/Prioritize_Reserve_Asset_Transfer_Over_Teleport.md)
@@ -54,9 +54,9 @@
 - [Low Severity](low/README.md)
 
   - [Use appropriate naming conventions](low/Use_Appropriate_Naming_Conventions.md)
-  - [Avoid unnecessary cloning](low/Avoid_Unnecessary_Cloning)
+  - [Avoid unnecessary cloning](low/Avoid_Unnecessary_Cloning.md)
   - [Avoid hardcoded error messages](low/Avoid_Hardcoded_Error_Messages.md)
-  - [Adopt enumerations for optional input](low/Adopt_Enums_for_Optional_Input)
+  - [Adopt enumerations for optional input](low/Adopt_Enums_for_Optional_Input.md)
   - [Implement descriptive logging](low/Implement_Descriptive_Logging.md)
   - [Remove unnecessary return values](low/Remove_Unnecessary_Return_Values.md)
   - [Avoid repetitive generic type instantiation](low/Avoid_Repetitive_Generic_Type_Instantiation.md)

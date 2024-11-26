@@ -6,7 +6,7 @@
 
 Hardcoding weights for extrinsics in a blockchain can lead to significant inaccuracies in execution resource estimation. When weights are fixed, they may not reflect the actual execution costs or resource usage, resulting in either overestimation or underestimation.
 
-A hardcoded weight might underestimate the cost of processing transactions with complex logic inside, resulting in unexpected execution costs and causing issues when building a block. Conversely, overestimated weights could prevent some transactions from executing, wasting network resources, and limiting scalability.
+A hardcoded weight might underestimate the cost of processing transactions with complex logic, resulting in unexpected execution costs and causing issues when building a block. Conversely, overestimated weights could prevent some transactions from executing, wasting network resources and limiting scalability.
 
 ## What should be avoided
 
@@ -28,8 +28,7 @@ pub fn do_something(
 
 In this example:
 
-- The weight is fixed, leading to potential inaccuracies in resource estimation, which can result in suboptimal
-  performance and affect transaction processing on the network.
+- The weight is fixed, leading to potential inaccuracies in resource estimation, which can result in suboptimal performance and affect transaction processing on the network.
 
 ## Best practice
 

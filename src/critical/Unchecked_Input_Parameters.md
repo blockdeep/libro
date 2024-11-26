@@ -1,10 +1,10 @@
 # Unchecked Input Parameters
 
-**Severity**: <span style="color:red;">Critical</span>
+**Severity**: Critical
 
 ## Description
 
-Lack of input validation can lead to unexpected behaviors and vulnerabilities, as unverified inputs might cause invalid states or security issues.
+In Substrate runtime development, lack of input validation can lead to vulnerabilities and unexpected behaviors. Unverified inputs might result in invalid states, security issues, or exploitation by malicious actors, disrupting the normal operation of the blockchain.
 
 ## What should be avoided
 
@@ -34,5 +34,4 @@ fn store_execution_time(hour_of_day: u8) -> Result<(), Error> {
 }
 ```
 
-By validating inputs, we prevent potentially harmful values from entering the system, enhancing reliability and
-security.
+By validating inputs, we prevent potentially harmful values from entering the system, enhancing reliability and security.

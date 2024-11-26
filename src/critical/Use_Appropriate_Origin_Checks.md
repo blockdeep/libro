@@ -4,8 +4,7 @@
 
 ## Description
 
-Leaving extrinsics open to all users without proper origin checks can allow unauthorized actions, potentially
-compromising security and functionality.
+Leaving extrinsics open to all users without proper origin checks can allow unauthorized actions, potentially compromising security and functionality. Critical operations must enforce strict access control to ensure that only authorized users or roles can execute them.
 
 ## What should be avoided
 
@@ -73,4 +72,4 @@ impl<T: Config> Pallet<T> {
 
 In this example:
 
-- The pallet stores has a configurable Custom origin `AuthorizedOrigin`, that is allowed to execute the permissioned extrinsic.
+- The pallet uses a configurable custom origin `AuthorizedOrigin` to specify which entities are allowed to execute the permissioned extrinsic.

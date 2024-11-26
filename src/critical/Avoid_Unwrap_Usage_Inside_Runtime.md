@@ -1,14 +1,14 @@
 # Avoid Unwrap Usage Inside Runtime
 
-**Severity**: <span style="color:red;">Critical</span>
+**Severity**: Critical
 
 ## Description
 
-Using `unwrap()` and similar methods for error handling can cause runtime panics, leading to crashes or block production stoppage if unexpected conditions arise. Explicit error handling provides more robust and predictable behavior, especially in production environments.
+Using `unwrap()` and similar methods for error handling in Substrate runtime development can lead to runtime panics, which are particularly dangerous in a decentralized network. Such panics can cause block production to halt, disrupt the network, and compromise the reliability of the blockchain. Explicit error handling ensures more robust and predictable behavior, safeguarding the system against unexpected conditions in production environments.
 
 ## What should be avoided
 
-Using `unwrap()` for error handling can result in runtime panics, which are not user-friendly and may lead to unexpected application crashes:
+The following example demonstrates how using `unwrap()` for error handling can result in runtime panics, which are neither user-friendly nor safe in a blockchain context:
 
 ```rust
 // Create an empty vector: [ ]
@@ -21,6 +21,8 @@ let value = my_data.get(0).unwrap();
 let value = my_data[0];
 ```
 
+In a Substrate runtime, such panics could stop block production, making the entire chain unrecoverable or in the best case provoking downtimes.
+
 ## Best practice
 
 Handle errors explicitly by using `Result` and provide descriptive error messages:
@@ -28,7 +30,7 @@ Handle errors explicitly by using `Result` and provide descriptive error message
 ```rust
 #[pallet::error]
 pub enum Error<T> {
-	/// Custom error
+	// Custom error
 	MyError,
 }
 

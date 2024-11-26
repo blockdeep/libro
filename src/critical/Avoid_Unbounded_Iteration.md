@@ -4,12 +4,11 @@
 
 ## Description
 
-Unbounded iterations over large data structures can lead to extensive weight consumption and may result in denial of service (DDoS) attacks if the extrinsic consumes too many compute or IO resources.
+Unbounded iterations over large data structures in substrate runtimes can lead to excessive weight consumption during transaction execution. Every operation must account for its computational cost to maintain network security and prevent abuse. Unbounded iterations can result in denial-of-service (DDoS) attacks if an extrinsic consumes too many computation or storage reads and writes, blocking other operations and degrading network performance.
 
 ## What should be avoided
 
-The following code iterates over all items in `big_data` without any limit, which can overwhelm system resources if
-`big_data` is large:
+The following example illustrates an iteration over all items in `big_data` without any limit. In a blockchain context, such an operation can lead to unpredictable execution times and excessive resource usage:
 
 ```rust
 #[pallet::storage]
@@ -25,8 +24,7 @@ for item in big_data {
 
 ### Option 1: Process up to a maximum number of elements
 
-Use a bounded iterator or limit the number of items processed in each iteration. This approach prevents excessive
-resource usage and keeps operations predictable.
+Use a bounded iterator or limit the number of items processed in each iteration. This approach prevents excessive resource usage and keeps operations predictable, ensuring the execution weight remains within acceptable bounds.
 
 ```rust
 const MAX_ITEMS: usize = 20;
@@ -40,11 +38,11 @@ for item in big_data.iter().take(MAX_ITEMS) {
 }
 ```
 
-By setting a maximum limit, we can control the processing load and avoid potential performance issues.
+By setting a maximum limit, you can control the processing load and avoid potential performance issues that could compromise the blockchain's stability.
 
 ### Option 2: Use a bounded data structure
 
-Alternatively, you can use bounded data structures and perform the iteration over them.
+Alternatively, use bounded data structures to enforce strict size limits at the data storage level. This ensures that the maximum number of iterations is predefined and controlled.
 
 ```rust
 #[pallet::storage]
@@ -56,4 +54,4 @@ for item in bounded_data {
 }
 ```
 
-By using a bounded data structure, we ensure the maximum number of iterations is under control.
+Using a bounded data structure ensures compliance with weight management policies and reduces the risk of performance bottlenecks or attacks on the blockchain.
