@@ -4,7 +4,7 @@
 
 ## Description
 
-The use of a hardcoded size for `BondedVec` limits flexibility and maintainability. Introducing a configurable parameter allows for easier adjustments and improves readability and code scalability.
+In Substrate, using a fixed size for `BoundedVec` restricts flexibility and makes it harder to adapt to changing requirements. A hardcoded size is often not sufficient as the blockchain evolves, requiring updates that may lead to redeployments and governance interventions. By making the size configurable through the `Config` trait, developers can enhance maintainability and adaptability, enabling runtime-specific adjustments without altering the core pallet logic.
 
 ## What should be avoided
 

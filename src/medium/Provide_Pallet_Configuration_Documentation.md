@@ -4,7 +4,7 @@
 
 ## Description
 
-Pallet configuration items (types, constants, or associated items within the `Config` trait) that lack documentation can confuse developers and users. Without clear descriptions, it becomes harder to understand their purpose, leading to misconfigurations or inefficient implementations.
+Pallet configuration items (types, constants, or associated items within the `Config` trait) define critical customization points for integrating a pallet into a runtime. Proper documentation for these items is essential, as their descriptions are included in the runtime's metadata, which is accessible to frontend developers, runtime integrators, and other tools interacting with the blockchain. Clear documentation helps developers understand the purpose, constraints, and expected usage of configuration items, reducing the risk of misconfigurations. It also enables frontend developers to provide better user experiences by offering contextual information about the runtime’s configuration. Ensuring thorough documentation promotes clarity, collaboration, and robust integration within the Substrate ecosystem.
 
 ## What should be avoided
 

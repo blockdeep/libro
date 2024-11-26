@@ -4,7 +4,9 @@
 
 ## Description
 
-A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs, permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with the extrinsic correctly. Additionally, it provides valuable context inside the code metadata allowing frontend clients and users to get more insight regarding its purpose.
+An extrinsic in Substrate is a primary interface for interacting with the blockchain. It represents a transaction or an inherent operation submitted by users or the system itself, allowing them to invoke specific logic defined in the runtime. As extrinsics directly impact the state of the blockchain, ensuring their functionality, clarity, and correctness is crucial for maintaining the network's integrity. Proper documentation of extrinsics provides developers and users with the context needed to understand their purpose, inputs, permissions, and potential outcomes, reducing the risk of misuse or errors.
+
+A lack of documentation for extrinsics can lead to confusion about their functionality, expected inputs, permissions, and possible errors. This makes it harder for developers and users to correctly interact with the runtime. Providing comprehensive documentation for extrinsics ensures clarity, improves usability, and offers valuable insights to both frontend clients and users, reducing the likelihood of misuse or unexpected errors.
 
 ## What should be avoided
 

@@ -4,8 +4,7 @@
 
 ## Description
 
-Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like
-`on_finalize` can significantly impact block execution time and lead to performance bottlenecks. Hooks are triggered automatically for every block, and if they contain complex or large-scale computations, there could be a reduction in transaction throughput and potentially affect the network’s overall performance.
+Performing resource-intensive operations, such as iterating over large data sets, within runtime hooks like `on_finalize` can significantly impact block execution time and lead to performance bottlenecks. Hooks are executed automatically for every block, and if they contain computationally heavy tasks, they can reduce transaction throughput and degrade network performance, especially as on-chain activity scales.
 
 ## What should be avoided
 
@@ -54,16 +53,17 @@ Track necessary values as they are submitted, distributing the computation workl
 #[pallet::weight(T::WeightInfo::some_vote())]
 pub fn some_vote(
     origin: OriginFor<T>,
-	vote: VoteType
+    vote: VoteType
 ) -> DispatchResult {
-    // Any verification logic
-    // ...
+    // Verification logic
     ProposalVoteAmount::<T>::mutate(id, |item| -> Result<(), Error> {
         match vote {
             VoteType::Aye => *item.ayes = item.ayes.saturating_add(1),
-            VoteType::Nay => *item.nays = item.nays.saturating_add(1);
+            VoteType::Nay => *item.nays = item.nays.saturating_add(1),
         }
-    })
+    })?;
+
+    Ok(())
 }
 
 fn on_finalize(block_number: T::BlockNumber) {
@@ -86,29 +86,26 @@ Allow users to close/finalize manually by explicitly calling an extrinsic when n
 #[pallet::weight(T::WeightInfo::close_proposal())]
 pub fn close_proposal(
     origin: OriginFor<T>,
-	proposal_id: ProposalId
+    proposal_id: u32
 ) -> DispatchResult {
-    // previous logic
-    // ...
-
     let proposal = Proposals::<T>::get(proposal_id);
-    // Make sure proposal has not ended
     ensure!(proposal.end_block < current_block, Error::<T>::ProposalHasNotEnded);
 
-    // Proceed to calculation
     let mut ayes = 0;
     let mut nays = 0;
 
-    // Retrieve all votes for the current proposal
     let votes = Votes::<T>::get(proposal_id);
 
     for vote in votes.iter() {
         match vote {
             VoteType::Aye => ayes = ayes.saturating_add(1),
-            VoteType::Nay => nays = nays.saturating_add(1)
+            VoteType::Nay => nays = nays.saturating_add(1),
         }
     }
 
     // Process `ayes` and `nays` results as needed
+    Ok(())
 }
 ```
+
+These approaches shift heavy computations away from automatic hooks and ensure more efficient block execution while maintaining network performance.

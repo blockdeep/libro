@@ -4,8 +4,9 @@
 
 ## Description
 
-Omitting tests for boundary cases can leave critical edge conditions unhandled, leading to potential bugs and
-unpredictable behavior, especially when inputs approach their limits.
+Testing is crucial in the Substrate environment because the runtime is deterministic and forms the backbone of the blockchain. Any untested edge case could lead to bugs that propagate across all nodes, potentially halting the chain or causing irreparable state corruption. Since runtime updates require careful governance and coordinated upgrades, fixing errors post-deployment can be complex and time-consuming. Developers should aim for 100% test coverage to ensure that every possible scenario is accounted for, minimizing risks and guaranteeing the runtime behaves predictably and securely under all conditions.
+
+Skipping tests for edge cases can result in unhandled scenarios where inputs approach their limits, leading to potential bugs and unpredictable runtime behavior. Edge cases often expose vulnerabilities that typical inputs might not trigger, making them essential for ensuring the robustness and reliability of the system.
 
 ## What should be avoided
 

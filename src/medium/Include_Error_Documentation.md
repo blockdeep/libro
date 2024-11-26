@@ -4,7 +4,7 @@
 
 ## Description
 
-Lack of documentation on error variants can make it challenging for developers to understand and address issues. Adding documentation for each error provides valuable context in code metadata, making it easier to identify the cause of failures.
+Errors in runtime code are crucial for communicating issues to developers and users. Without proper documentation, understanding the purpose and cause of specific errors can be challenging, leading to longer debugging cycles and potential misinterpretation of error messages. Documenting error variants ensures clarity and provides essential context directly in the codebase, making it easier for developers to identify and address issues efficiently.
 
 ## What should be avoided
 

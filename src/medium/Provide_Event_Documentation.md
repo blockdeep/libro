@@ -4,7 +4,7 @@
 
 ## Description
 
-Events emitted by the runtime lack proper documentation, making it harder for users to understand their purpose. Additionally, Event documentation for each error provides valuable context inside the code metadata allowing frontend clients and users to get more insight regarding an event that is emitted.
+Events in Substrate serve as a critical communication layer between the runtime and external clients, providing insights into state changes and operations. Proper documentation of events is essential because it is embedded into the runtime's metadata, which can be accessed by frontend developers and users. This documentation helps users understand the purpose and context of emitted events, ensuring that interactions with the blockchain are clear and predictable. Without proper documentation, frontend developers may struggle to display meaningful messages or interpret blockchain actions, leading to a suboptimal user experience. By documenting each event variant, developers create a richer, more user-friendly ecosystem that bridges the gap between the runtime and external interfaces.
 
 ## What should be avoided
 

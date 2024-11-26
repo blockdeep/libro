@@ -4,7 +4,7 @@
 
 ## Description
 
-Logging messages in migration scripts should provide clear and specific information about the migration process. Adding more explicit logs helps track progress, identify issues, and understand the migration flow.
+Logging messages in migration scripts should provide clear and specific information about the migration process. In Substrate-based blockchains, where migrations often involve updating on-chain state, detailed logs are critical for tracking progress, diagnosing issues, and ensuring transparency during the process. Insufficient logging can make it difficult to pinpoint errors or understand the steps taken during a migration.
 
 ## What should be avoided
 
@@ -13,6 +13,10 @@ Using general log messages in migration scripts provides minimal information:
 ```rust
 log::info!("Migration started");
 ```
+
+In this example:
+
+- The log message gives no indication of what migration is running, what data is being processed, or whether specific conditions were met, making debugging and tracking nearly impossible.
 
 ## Best practice
 
