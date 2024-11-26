@@ -1,11 +1,10 @@
-# Adopt Enumerations for Clearer Code
+# Adopt Enums for Optional Input
 
 **Severity**: <span style="color:green;">Low</span>
 
 ## Description
 
-Using basic types (e.g., strings, integers) instead of enumerations for distinct categories or statuses can lead to
-errors and make the code less readable.
+Using basic types (e.g., strings, integers) instead of enumerations for distinct categories or optional input can lead to errors and make the code less readable.
 
 ## What should be avoided
 
@@ -24,7 +23,7 @@ status = if condition {
 
 ## Best practice
 
-Define an enumeration to represent distinct categories or statuses more clearly:
+Define an enum to represent distinct categories or statuses more clearly:
 
 ```rust
 enum Status {
@@ -47,4 +46,4 @@ status = if condition {
 }
 ```
 
-Enumerations make the code more robust and less prone to errors, improving readability.
+Enums make the code more robust and less prone to errors, improving readability.

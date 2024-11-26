@@ -4,8 +4,7 @@
 
 ## Description
 
-The use of a hardcoded size for `BondedVec` limits flexibility and maintainability. Introducing a configurable parameter
-allows for easier adjustments and improves readability and code scalability.
+The use of a hardcoded size for `BondedVec` limits flexibility and maintainability. Introducing a configurable parameter allows for easier adjustments and improves readability and code scalability.
 
 ## What should be avoided
 
@@ -40,5 +39,4 @@ impl some_pallet::Config for Runtime {
 }
 ```
 
-This approach allows the `MaxDomainSize` to be defined in the runtime configuration, making the code adaptable and
-easier to maintain.
+This approach allows the `MaxDomainSize` to be defined in the runtime configuration, making the code adaptable and easier to maintain.

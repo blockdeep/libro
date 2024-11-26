@@ -4,9 +4,7 @@
 
 ## Description
 
-Pallet configuration items (types, constants, or associated items within the `Config` trait) that lack documentation can
-confuse developers and users. Without clear descriptions, it becomes harder to understand their purpose, leading to
-misconfigurations or inefficient implementations.
+Pallet configuration items (types, constants, or associated items within the `Config` trait) that lack documentation can confuse developers and users. Without clear descriptions, it becomes harder to understand their purpose, leading to misconfigurations or inefficient implementations.
 
 ## What should be avoided
 
@@ -42,12 +40,8 @@ pub trait Config: frame_system::Config {
 
 Documenting the pallet's configuration has lots of benefits:
 
-1. **Improved Clarity**: Developers implementing the pallet can easily understand the purpose and expected usage of
-   configuration items.
-2. **Reduced Misconfigurations**: Clear documentation minimizes the risk of setting inappropriate values or types during
-   runtime configuration.
-3. **Better Collaboration**: Well-documented configuration traits facilitate onboarding of new contributors and reduce
-   the learning curve for your codebase.
+1. **Improved Clarity**: Developers implementing the pallet can easily understand the purpose and expected usage of configuration items.
+2. **Reduced Misconfigurations**: Clear documentation minimizes the risk of setting inappropriate values or types during runtime configuration.
+3. **Better Collaboration**: Well-documented configuration traits facilitate onboarding of new contributors and reduce the learning curve for your codebase.
 
-By ensuring proper documentation for configuration items, you enhance the maintainability, usability, and robustness of
-your pallet.
+By ensuring proper documentation for configuration items, you enhance the maintainability, usability, and robustness of your pallet.

@@ -4,9 +4,7 @@
 
 ## Description
 
-Defining complex generic types repeatedly within a codebase leads to verbosity and reduces code maintainability. When a
-specific type instance of a generic struct is needed multiple times, duplicating its definition can make the code harder
-to read and more error-prone if updates to the type are required.
+Defining complex generic types repeatedly within a codebase leads to verbosity and reduces code maintainability. When a specific type instance of a generic struct is needed multiple times, duplicating its definition can make the code harder to read and more error-prone if updates to the type are required.
 
 ## What should be avoided
 
@@ -57,14 +55,11 @@ pub fn do_something(
 
 In this example:
 
-- The `SomeInfo` generic type is defined twice with the same parameters, making the code repetitive and harder to
-  maintain.
+- The `SomeInfo` generic type is defined twice with the same parameters, making the code repetitive and harder to maintain.
 
 ## Best practice
 
-Define a type alias for the specific instance of the generic type, and reuse this alias throughout the code. By creating
-a single type alias, such as `SomeInfoOf<T>`, for the specific instance, you can reference it without repeating its full
-definition.
+Define a type alias for the specific instance of the generic type, and reuse this alias throughout the code. By creating a single type alias, such as `SomeInfoOf<T>`, for the specific instance, you can reference it without repeating its full definition.
 
 ```rust
 pub type SomeInfoOf<T> = SomeInfo<

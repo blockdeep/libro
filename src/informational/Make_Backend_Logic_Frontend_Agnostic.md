@@ -9,8 +9,7 @@ flexibility and maintain consistency across different interfaces.
 
 ## What should be avoided
 
-The following example ties backend logic to frontend-specific display preferences, which can cause inconsistencies and
-make the backend harder to adapt:
+The following example ties backend logic to frontend-specific display preferences, which can cause inconsistencies and make the backend harder to adapt:
 
 ```rust
 fn display_value() -> &str {
@@ -28,8 +27,7 @@ In this example:
 
 ## Best practice
 
-Keep backend functions agnostic to frontend requirements. Instead, return a raw value that can be formatted by the
-frontend as needed:
+Keep backend functions agnostic to frontend requirements. Instead, return a raw value that can be formatted by the frontend as needed:
 
 ```rust
 fn display_value_generic() -> u32 {
@@ -42,7 +40,5 @@ fn display_value_generic() -> u32 {
 
 In this approach:
 
-- The backend returns a generic data type (e.g., `u32`), allowing frontends to format or display the value according to
-  their own requirements.
-- This separation keeps backend code adaptable and frontend-agnostic, making it easier to support diverse interfaces and
-  localization needs.
+- The backend returns a generic data type (e.g., `u32`), allowing frontend to format or display the value according to their own requirements.
+- This separation keeps backend code adaptable and frontend-agnostic, making it easier to support diverse interfaces and localization needs.

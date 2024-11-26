@@ -4,14 +4,11 @@
 
 ## Description
 
-Inconsistent or vague naming conventions can make code harder to read and understand, slowing down development and
-increasing the likelihood of errors. Clear and consistent naming improves code readability and helps maintain a
-well-organized codebase.
+Inconsistent or vague naming conventions can make code harder to read and understand, slowing down development and increasing the likelihood of errors. Clear and consistent naming improves code readability and helps maintain a well-organized codebase.
 
 ## What should be avoided
 
-Vague or inconsistent naming conventions make it unclear what a function, variable, or type is supposed to do. Here are
-several examples of poor naming practices:
+Vague or inconsistent naming conventions make it unclear what a function, variable, or type is supposed to do. Here are several examples of poor naming practices:
 
 ### Functions
 
@@ -59,8 +56,7 @@ In these examples:
 
 ## Best practice
 
-Use clear and descriptive names that convey the purpose and role of each function, variable, or type, and follow
-consistent naming styles:
+Use clear and descriptive names that convey the purpose and role of each function, variable, or type, and follow consistent naming styles:
 
 ### Functions
 

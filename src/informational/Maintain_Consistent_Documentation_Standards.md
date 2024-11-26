@@ -4,8 +4,7 @@
 
 ## Description
 
-Inconsistent documentation across modules can create knowledge gaps, making code harder to understand, maintain, and use
-correctly, especially for new contributors.
+Inconsistent documentation across modules can create knowledge gaps, making code harder to understand, maintain, and use correctly, especially for new contributors.
 
 ## What should be avoided
 
@@ -19,13 +18,11 @@ fn process_data(data: u32) -> u32 {
 
 In this example:
 
-- The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for
-  others to understand, use or modify it confidently.
+- The function lacks a description of its purpose, parameters, and potential side effects, making it difficult for others to understand, use or modify it confidently.
 
 ## Best practice
 
-Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected
-outcomes for each function.
+Establish a consistent documentation standard that includes detailed descriptions, parameter explanations, and expected outcomes for each function.
 
 ```rust
 /// Processes the provided data by performing necessary calculations.
@@ -41,5 +38,4 @@ fn process_data(data: u32) -> u32 {
 }
 ```
 
-With a standardized documentation format, each function is clearly explained, making the codebase easier to understand
-and maintain. This approach reduces the risk of misinterpretation and supports team collaboration.
+With a standardized documentation format, each function is clearly explained, making the codebase easier to understand and maintain. This approach reduces the risk of misinterpretation and supports team collaboration.

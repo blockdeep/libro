@@ -4,8 +4,7 @@
 
 ## Description
 
-Complex functions with multiple responsibilities are harder to test, understand, and maintain, increasing the risk of
-errors and making debugging more difficult.
+Complex functions with multiple responsibilities are harder to test, understand, and maintain; increasing the risk of errors and making debugging more difficult.
 
 ## What should be avoided
 

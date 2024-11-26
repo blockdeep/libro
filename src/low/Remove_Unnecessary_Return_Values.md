@@ -4,9 +4,7 @@
 
 ## Description
 
-Returning values that are not modified or required by the function can clutter the code, leading to inefficiencies and
-reducing readability. Removing these unnecessary return values simplifies function signatures and clarifies function
-purpose.
+Returning values that are not modified or required by the function can clutter the code, leading to inefficiencies and reducing readability. Removing these unnecessary return values simplifies function signatures and clarifies function purpose.
 
 ## What should be avoided
 
@@ -36,5 +34,4 @@ fn project_validation(project_metadata: &Metadata) -> Result<(), Error> {
 
 In this approach:
 
-- The function is more straightforward, focusing only on validation without an unnecessary return value, improving
-  clarity and maintainability.
+- The function is more straightforward, focusing only on validation without an unnecessary return value, improving clarity and maintainability.

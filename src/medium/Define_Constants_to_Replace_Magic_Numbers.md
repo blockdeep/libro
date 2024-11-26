@@ -4,8 +4,7 @@
 
 ## Description
 
-Magic numbers (unexplained numeric constants) can make code hard to understand and maintain, as their purpose is often
-unclear without comments or context.
+Magic numbers (unexplained numeric constants) can make code hard to understand and maintain, as their purpose is often unclear without comments or context.
 
 ## What should be avoided
 

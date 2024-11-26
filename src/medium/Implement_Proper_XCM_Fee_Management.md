@@ -4,7 +4,7 @@
 
 ## Description
 
-The `FeeManager` trait is used to manage fees for executing XCM messages. When properly configured, it allows for fees to be distributed to specified accounts or components. However, if `FeeManager` is set to the empty unit type (()), all fees will be burned
+The `FeeManager` trait is used to manage fees for executing XCM messages. When properly configured, it allows for fees to be distributed to specified accounts or components. However, if `FeeManager` is set to the empty unit type (()), all fees will be burned.
 
 ## What should be avoided
 
@@ -31,5 +31,4 @@ type FeeManager = XcmFeeManagerFromComponents<
 >;
 ```
 
-In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to
-a `StakingPot` account.
+In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to a `StakingPot` account.

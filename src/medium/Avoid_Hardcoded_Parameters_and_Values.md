@@ -4,8 +4,7 @@
 
 ## Description
 
-Hardcoding parameters reduces flexibility, making the code less adaptable to different environments and configurations.
-Configurable parameters allow for greater versatility and make the code easier to adjust as requirements change.
+Hardcoding parameters reduces flexibility, making the code less adaptable to different environments and configurations. Configurable parameters allow for greater versatility and make the code easier to adjust as requirements change.
 
 ## What should be avoided
 
@@ -27,8 +26,7 @@ impl<T: Config> Pallet<T> {
 
 In this example:
 
-- `LIMIT` is fixed at compile time, so changing it requires editing the code, recompiling, and redeploying, which can be
-  inefficient.
+- `LIMIT` is fixed at compile time, so changing it requires editing the code, recompiling, and redeploying, which can be inefficient.
 
 ## Best practice
 

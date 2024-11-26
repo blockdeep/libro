@@ -4,9 +4,7 @@
 
 ## Description
 
-Large files with numerous functions and types reduce readability, making it difficult for developers to navigate,
-understand, and maintain the code. Modularizing large files into smaller, logically organized modules enhances
-readability and simplifies code management.
+Large files with numerous functions and types reduce readability, making it difficult for developers to navigate, understand, and maintain the code. Modularizing large files into smaller, logically organized modules enhances readability and simplifies code management.
 
 ## What should be avoided
 
@@ -65,7 +63,5 @@ pub enum UsefulEnum {
 
 In this modularized structure:
 
-- Each module (`transaction.rs`, `fees.rs`, `validation.rs`) contains related functions, making the codebase more
-  organized and easier to navigate.
-- Developers can work on specific modules without wading through unrelated code, enhancing maintainability and team
-  collaboration.
+- Each module (`transaction.rs`, `fees.rs`, `validation.rs`) contains related functions, making the codebase more organized and easier to navigate.
+- Developers can work on specific modules without wading through unrelated code, enhancing maintainability and team collaboration.

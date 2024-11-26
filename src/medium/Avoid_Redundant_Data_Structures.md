@@ -4,14 +4,11 @@
 
 ## Description
 
-Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and
-usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each
-storage location synchronized, potentially causing errors or unnecessary maintenance.
+Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each storage location synchronized, potentially causing errors or unnecessary maintenance.
 
 ## What should be avoided
 
-Avoid creating separate data structures or fields that duplicate data already present within another structure, as this
-can lead to inefficient data management.
+Avoid creating separate data structures or fields that duplicate data already present within another structure, as this can lead to inefficient data management.
 
 ```rust
 pub struct Info<AccountId, BlockNumber> {
@@ -31,13 +28,11 @@ pub type InfoOwner<T: Config> = StorageMap<_, Blake2_128Concat, SomeId, T::Accou
 
 In this example:
 
-- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of
-  the `SomeInfo` StorageMap.
+- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` StorageMap.
 
 ## Best practice
 
-To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data
-needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
+To prevent redundant storage usage, maintain data within a single structure or storage map whenever possible. If data needs to be accessed frequently, consider optimizing retrieval methods rather than duplicating data in multiple places.
 
 ```rust
 pub struct Info<AccountId, BlockNumber> {

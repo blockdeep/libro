@@ -4,8 +4,7 @@
 
 ## Description
 
-Failing to expose essential functions via Runtime APIs limits access to valuable runtime data and functionalities for
-external clients. This restriction can prevent users and other clients from obtaining essential information.
+Failing to expose essential functions via Runtime APIs limits access to valuable runtime data and functionalities for external clients. This restriction can prevent users and other clients from obtaining essential on-chain information.
 
 ## What should be avoided
 
@@ -20,14 +19,11 @@ pub fn pot_account() -> T::AccountId {
 
 In this example:
 
-- Although a function is available to retrieve the account ID of an internal pot, it is only accessible within the
-  runtime. This limitation prevents clients or users from querying the account balance or initiating transfers to this
-  account, as there is no way to know which account this is.
+- Although a function is available to retrieve the account ID of an internal pot, it is only accessible within the runtime. This limitation prevents clients or users from querying the account balance or initiating transfers to this account, as there is no way to know which account this is.
 
 ## Best practice
 
-Expose necessary runtime functionalities by implementing Runtime APIs. This approach allows external users or clients to
-access useful information as needed.
+Expose necessary runtime functionalities by implementing Runtime APIs. This approach allows external users or clients to access useful information as needed.
 
 ```rust
 // pallet/lib.rs

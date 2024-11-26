@@ -4,9 +4,7 @@
 
 ## Description
 
-The `#[pallet::getter]` attribute in Substrate is deprecated and may lead to compatibility issues in future framework
-versions. Using direct access methods or new approaches for storage access helps maintain compatibility and aligns with
-current best practices.
+The `#[pallet::getter]` attribute in Substrate is deprecated and may lead to compatibility issues in future framework versions. Using direct access methods or new approaches for storage access helps maintain compatibility and aligns with current best practices.
 
 ## What should be avoided
 
@@ -20,13 +18,11 @@ pub type MyValue<T> = StorageValue<_, u32, OptionQuery>;
 
 In this example:
 
-- The `#[pallet::getter]` attribute defines a deprecated getter function (`deprecated_getter`), which may no longer be
-  supported in future Substrate versions.
+- The `#[pallet::getter]` attribute defines a deprecated getter function (`deprecated_getter`), which may no longer be supported in future Substrate versions.
 
 ## Best practice
 
-Access the storage value directly or use custom functions to handle storage access without relying on deprecated
-getters:
+Access the storage value directly or use custom functions to handle storage access without relying on deprecated getters:
 
 ```rust
 #[pallet::storage]

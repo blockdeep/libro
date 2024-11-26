@@ -54,13 +54,13 @@
 - [Low Severity](low/README.md)
 
   - [Use appropriate naming conventions](low/Use_Appropriate_Naming_Conventions.md)
-  - [Avoid redundant cloning](low/Avoid_Redundant_Cloning.md)
+  - [Avoid unnecessary cloning](low/Avoid_Redundant_Cloning.md)
   - [Avoid hardcoded error messages](low/Avoid_Hardcoded_Error_Messages.md)
   - [Adopt enumerations for clearer code](low/Adopt_Enumerations_for_Clearer_Code.md)
   - [Implement descriptive logging](low/Implement_Descriptive_Logging.md)
   - [Remove unnecessary return values](low/Remove_Unnecessary_Return_Values.md)
   - [Avoid repetitive generic type instantiation](low/Avoid_Repetitive_Generic_Type_Instantiation.md)
-  - [Update benchmarks with deprecated syntax](low/Update_Benchmarks_With_Deprecated_Syntax.md)
+  - [Update benchmarks with latest syntax](low/Update_Benchmarks_With_Latest_Syntax.md)
   - [Expose runtime APIs for key functionalities](low/Expose_Runtime_APIs_For_Key_Functionalities.md)
   - [Remove unused code](low/Remove_Unused_Code.md)
 

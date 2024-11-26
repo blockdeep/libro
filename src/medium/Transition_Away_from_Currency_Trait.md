@@ -4,9 +4,7 @@
 
 ## Description
 
-Using deprecated traits, such as `Currency`, can lead to issues with compatibility in newer versions of Substrate and
-may limit functionality as updates to the ecosystem continue. Migrating to the recommended traits ensures ongoing
-support, compatibility with future releases, and access to newer features.
+Using deprecated traits, such as `Currency`, can lead to issues with compatibility in newer versions of Substrate and may limit functionality as updates to the ecosystem continue. Migrating to the recommended traits ensures ongoing support, compatibility with future releases, and access to newer features.
 
 ## What should be avoided
 

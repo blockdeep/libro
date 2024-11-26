@@ -4,10 +4,7 @@
 
 ## Description
 
-A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs,
-permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with
-the extrinsic correctly. Additionally, it provides valuable context inside the code metadata allowing frontend clients
-and users to get more insight regarding its purpose.
+A lack of documentation for extrinsics can lead to misunderstandings about their functionality, expected inputs, permissions, and possible errors. Proper documentation ensures that developers and users understand how to interact with the extrinsic correctly. Additionally, it provides valuable context inside the code metadata allowing frontend clients and users to get more insight regarding its purpose.
 
 ## What should be avoided
 
@@ -50,6 +47,5 @@ pub fn transfer(sender: OriginFor<T>, recipient: AccountId, amount: BalanceOf<T>
 
 In this example:
 
-- Each parameter, required permission, and potential error is clearly documented, ensuring users know exactly how to
-  interact with the extrinsic and what conditions to expect.
+- Each parameter, required permission, and potential error is clearly documented, ensuring users know exactly how to interact with the extrinsic and what conditions to expect.
 - This level of detail minimizes confusion and supports safer, more effective use of the extrinsic.

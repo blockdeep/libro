@@ -4,8 +4,7 @@
 
 ## Description
 
-Without descriptive logging, debugging and monitoring issues become challenging, as the log entries may lack context or
-detail.
+Without descriptive logging, debugging and monitoring issues become challenging, as the log entries may lack context or detail.
 
 ## What should be avoided
 

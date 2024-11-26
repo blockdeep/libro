@@ -4,8 +4,10 @@
 
 ## Description
 
-Choosing inefficient data structures can lead to suboptimal performance, especially as data scales, causing slowdowns
-and increased resource usage.
+Choosing inefficient data structures can lead to suboptimal performance, especially as data scales, causing slowdowns and increased resource usage.
+
+This is a broader Data Structures concepts related issue, and we are only giving a basic example here. 
+Readers are encouraged to use appropriate data structures as per their use-cases.
 
 ## What should be avoided
 

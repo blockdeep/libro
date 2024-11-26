@@ -26,8 +26,7 @@ In this example:
 
 ## Best practice
 
-Include tests for boundary conditions to verify that the code handles edge cases, such as zero, maximum, and just beyond
-maximum values:
+Include tests for boundary conditions to verify that the code handles edge cases, such as zero, maximum, and just beyond maximum values:
 
 ```rust
 #[test]
@@ -45,7 +44,5 @@ fn test_process_data_with_boundary_cases() {
 
 In this improved example:
 
-- We test the function at `0` (minimum boundary), `MAX_LIMIT` (maximum boundary), and `MAX_LIMIT + 1` (just beyond the
-  maximum).
-- This ensures that `process_data` behaves correctly at all crucial boundaries, improving robustness and reducing the
-  risk of bugs in production.
+- We test the function at `0` (minimum boundary), `MAX_LIMIT` (maximum boundary), and `MAX_LIMIT + 1` (just beyond the maximum).
+- This ensures that `process_data` behaves correctly at all crucial boundaries, improving robustness and reducing the risk of bugs in production.

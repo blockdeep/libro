@@ -4,8 +4,7 @@
 
 ## Description
 
-Logging messages in migration scripts should provide clear and specific information about the migration process. Adding
-more explicit logs helps track progress, identify issues, and understand the migration flow.
+Logging messages in migration scripts should provide clear and specific information about the migration process. Adding more explicit logs helps track progress, identify issues, and understand the migration flow.
 
 ## What should be avoided
 
@@ -30,5 +29,4 @@ if let Some(bucket) = translate(process) {
 
 In this example:
 
-- Each log message includes specific information, making it easier to trace migration steps and identify issues if they
-  occur.
+- Each log message includes specific information, making it easier to trace migration steps and identify issues if they occur.

@@ -4,9 +4,7 @@
 
 ## Description
 
-Lack of documentation on error variants can make it challenging for developers to understand and address issues. Adding
-documentation for each error provides valuable context in code metadata, making it easier to identify the cause of
-failures.
+Lack of documentation on error variants can make it challenging for developers to understand and address issues. Adding documentation for each error provides valuable context in code metadata, making it easier to identify the cause of failures.
 
 ## What should be avoided
 
@@ -40,5 +38,4 @@ pub enum Error {
 
 In this example:
 
-- Documenting each error variant provides more context, helping developers understand the cause and appropriate response
-  for each error.
+- Documenting each error variant provides more context, helping developers understand the cause and appropriate response for each error.
