@@ -4,7 +4,7 @@
 
 ## Description
 
-It is recommended to avoid using well-known nomenclature for naming conventions. Conduct preliminary research on terms commonly used by popular chains (e.g., relay chains or system chains) before finalizing names.
+When naming terms related to assets, functions, or variables in Substrate development, it is crucial to avoid using well-known nomenclature that may already be strongly associated with other frameworks or ecosystems, such as `Asset Hub`. Misusing common terms like "foreign" or "native" can lead to confusion and misunderstandings, especially when the terminology overlaps with terms already established in other projects. It is recommended to conduct preliminary research into terms widely used by popular chains or modules to ensure clarity and consistency, preventing potential integration issues and improving the accuracy of documentation and code.
 
 ## What should be avoided
 

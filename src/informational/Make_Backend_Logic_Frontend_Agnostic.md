@@ -4,8 +4,7 @@
 
 ## Description
 
-Backend logic should be designed independently of frontend-specific values, formats, or preferences to ensure
-flexibility and maintain consistency across different interfaces.
+Backend logic should be independent of frontend-specific details, such as display formats, localization preferences, or user interface requirements, to ensure flexibility and consistency across different interfaces. By decoupling the backend from frontend concerns, developers can create a more maintainable and scalable system that can adapt to various frontend implementations without needing significant backend changes. This approach allows the backend to provide raw, unformatted data that can be tailored by the frontend to meet specific needs, promoting cleaner, more reusable code.
 
 ## What should be avoided
 
