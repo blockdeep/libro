@@ -1,6 +1,6 @@
 # Avoid Unwrap Usage Inside Runtime
 
-**Severity**: Critical
+**Severity**: <span style="color:red;">Critical</span>
 
 ## Description
 
