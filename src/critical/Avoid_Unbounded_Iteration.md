@@ -4,7 +4,7 @@
 
 ## Description
 
-Unbounded iterations over large data structures in substrate runtimes can lead to excessive weight consumption during transaction execution. Every operation must account for its computational cost to maintain network security and prevent abuse. Unbounded iterations can result in denial-of-service (DDoS) attacks if an extrinsic consumes too many computation or storage reads and writes, blocking other operations and degrading network performance.
+Unbounded iterations over large data structures in Substrate runtimes can lead to excessive weight consumption during transaction execution. Every operation must account for its computational cost to maintain network security and prevent abuse. Unbounded iterations can result in denial-of-service (DDoS) attacks if an extrinsic consumes too many computation or storage reads and writes, blocking other operations and degrading network performance.
 
 ## What should be avoided
 
