@@ -4,7 +4,7 @@
 
 ## Description
 
-Using non-deterministic methods for important process such as selecting/assigning tasks for example or can create opportunities for manipulation, potentially allowing certain participants to be chosen more frequently or unfairly.
+In Substrate runtime development, using non-deterministic methods for critical processes, such as selecting or assigning tasks, can create opportunities for manipulation. This may allow certain participants to be chosen more frequently or unfairly, undermining the trust and fairness essential to decentralized systems.
 
 ## What should be avoided
 

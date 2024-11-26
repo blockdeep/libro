@@ -2,7 +2,7 @@
 
 ## Description
 
-In the context of blockchain runtime development, critical issues represent the most severe vulnerabilities or performance concerns. These issues can lead to catastrophic failures, significant security breaches, data loss, or system outages. When unaddressed, they may compromise core blockchain functionalities, resulting in a complete breakdown of system integrity or operational stability.
+In the context of Substrate runtime development, critical issues represent the most severe vulnerabilities or performance concerns. These issues can lead to catastrophic failures, significant security breaches, data loss, or system outages. When unaddressed, they may compromise core blockchain functionalities, resulting in a complete breakdown of system integrity or operational stability.
 
 ## Implications
 

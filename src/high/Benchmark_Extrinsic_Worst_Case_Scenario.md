@@ -4,7 +4,11 @@
 
 ## Description
 
-Benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource overuse or transaction failures in real-world usage.
+In Substrate, benchmarks are used to measure the computational cost of runtime operations, such as extrinsics, storage accesses, and logic execution. These costs are quantified in **weights**, which represent the time and resources required to execute a specific operation on the blockchain.
+
+Through benchmarking, developers define the **`WeightInfo`** trait, which associates each extrinsic with a weight value based on the benchmarks. The runtime then uses these weights to enforce limits on block execution and calculate fees dynamically.
+
+By performing benchmarks that account for worst-case scenarios, developers ensure their runtime remains efficient, secure, and scalable under real-world conditions. However, benchmarks that only cover typical scenarios may underestimate execution weights, potentially leading to resource overuse or transaction failures in real-world usage. To ensure accurate weight calculations, benchmarks must account for the heaviest possible execution path.
 
 ## What should be avoided
 
@@ -32,6 +36,7 @@ In this example:
 ### Example 2
 
 ```rust
+// ---- In pallet/lib.rs ----
 #[pallet::call_index(0)]
 #[pallet::weight(T::WeightInfo::some_extrinsic())]
 pub fn some_extrinsic(origin: OriginFor<T>, input: bool) -> DispatchResult {
@@ -45,6 +50,7 @@ pub fn some_extrinsic(origin: OriginFor<T>, input: bool) -> DispatchResult {
   Ok(())
 }
 
+// ---- In pallet/benchmarks.rs ----
 #[benchmark]
 fn some_extrinsic() {
   let input = true;
@@ -57,15 +63,16 @@ fn some_extrinsic() {
 
 In this example:
 
-- The worst path occurs when input is false, as this triggers the very_heavy_function() call. However, in the benchmark, input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated execution cost will be an underestimate.
+- The worst path occurs when input is false, as this triggers the `very_heavy_function` call. However, in the benchmark, input is set to true, meaning the benchmark will only measure the faster execution path. Consequently, the calculated execution cost will be an underestimate.
 
 ## Best practice
 
-Benchmark at least the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately reflects maximum resource usage:
+Benchmark at least the worst-case path by simulating the heaviest possible workload, ensuring the calculated weight accurately reflects maximum resource usage.
 
 ### Example 1
 
 ```rust
+// ---- In pallet/benchmarks.rs ----
 #[benchmark]
 fn worst_case_scenario(s: Linear<1, MAX_ITEMS>) {
     // Benchmark with dynamic data
@@ -86,6 +93,7 @@ In this improved example:
 ### Example 2
 
 ```rust
+// ---- In pallet/benchmarks.rs ----
 #[benchmark]
 fn some_extrinsic() {
   // Set the value to execute the worst-case path.
@@ -99,9 +107,10 @@ fn some_extrinsic() {
 
 ### Example 3
 
-Alternatively, in mission-critical extrinsics that are meant to be used a lot, there could be a more fine-grained approach, which is to benchmark each execution path independently:
+For mission-critical extrinsics that are used frequently, consider benchmarking each execution path independently for finer weight granularity:
 
 ```rust
+// ---- In pallet/lib.rs ----
 #[pallet::call_index(0)]
 #[pallet::weight(
      T::WeightInfo::some_extrinsic_path_1().max(
@@ -118,6 +127,7 @@ pub fn some_extrinsic(origin: OriginFor<T>, input: bool) -> DispatchResultWithPo
   Ok(Some(weight).into())
 }
 
+// ---- In pallet/benchmarks.rs ----
 #[benchmark]
 fn some_extrinsic_path_1() {
   // Set the value to execute the path where the variable is true.
@@ -145,5 +155,5 @@ fn some_extrinsic_path_2() {
 
 In this example:
 
-- The fee corresponding to the worst-case execution path will be initially taken from the user.
-- However, not necessarily the worst-case execution path will be actually executed, and if the actual consumed fee is lower, the difference will be refunded to the user.
+- The fee corresponding to the worst-case execution path is initially charged to the user.
+- If the actual execution consumes fewer resources than the worst-case scenario, the difference is refunded to the user.

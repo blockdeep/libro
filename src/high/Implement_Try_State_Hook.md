@@ -4,7 +4,11 @@
 
 ## Description
 
-The absence of `try-state` hooks prevents runtime sanity checks, making it harder to ensure that the storage state is sensible after upgrades or other critical operations. These hooks are only executed when the runtime is built with the `try-runtime` feature and provide a mechanism to validate state without altering storage, ensuring consistency and correctness. It is a best practice to run `try-runtime` prior to any migration to catch potential issues in a controlled environment.
+In Substrate, **hooks** are specialized lifecycle methods that allow pallets to perform operations at specific points during the blockchain runtime's execution cycle. Common hooks include `on_initialize`, `on_finalize`, and `offchain_worker`, each serving a distinct purpose, such as initializing block-specific logic, finalizing block-level operations, or executing off-chain tasks.
+
+The **`try-state` hook** is a specialized hook used exclusively during `try-runtime` builds. Unlike other hooks that are part of normal runtime operations, `try-state` is designed to validate storage state without altering it. This makes it an invaluable tool for debugging and testing, as it enables developers to simulate runtime upgrades, migrations, and other critical changes in a controlled environment.
+
+The absence of `try-state` hooks prevents runtime sanity checks, making it harder to ensure that the storage state is sensible after upgrades or other critical operations. These hooks are executed only when the runtime is built with the `try-runtime` feature and provide a mechanism to validate state without altering storage, ensuring consistency and correctness. It is a best practice to run `try-runtime` prior to any migration to catch potential issues in a controlled environment.
 
 ## What should be avoided
 

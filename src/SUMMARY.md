@@ -18,7 +18,7 @@
   - [Keep dependencies up to date](high/Keep_Dependencies_Up_To_Date.md)
   - [Avoid the usage of pseudo random numbers](high/Avoid_the_Usage_of_Pseudo_Random_Numbers.md)
   - [Use safe arithmetic operations](high/Use_Safe_Arithmetic_Operations.md)
-  - [Be careful with storage growth](high/Handle_Storage_Growth.md)
+  - [Be careful with storage growth](high/Be_Careful_With_Storage_Growth.md)
   - [Prevent inconsistent state by distributing state commitment costs](high/Prevent_Inconsistent_State_By_Distributing_Finalization_Costs.md)
   - [Use atomic operations to prevent state inconsistencies](high/Use_Atomic_Operations_To_Prevent_State_Inconsistencies.md)
   - [Avoid redundant storage access in mutations](high/Avoid_Redundant_Storage_Access_in_Mutations.md)

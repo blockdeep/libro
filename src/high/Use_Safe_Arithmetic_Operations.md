@@ -4,7 +4,7 @@
 
 ## Description
 
-Unchecked arithmetic operations can lead to overflow or underflow, causing unexpected behavior or errors, especially when working with large numbers.
+In Substrate runtime development, uncontrolled overflow or underflow is a critical issue because it can cause the chain to stall. Substrate’s deterministic execution model requires every node in the network to process transactions in the exact same way. If an unchecked arithmetic operation causes an overflow or underflow, the runtime will panic, leading to an unrecoverable state for the affected block.
 
 ## What should be avoided
 
@@ -36,8 +36,7 @@ In this example:
 
 ### Option 2: Use Saturating Arithmetic
 
-Alternatively, `saturating_add` ensures that the result will cap at the maximum value of the type rather than
-overflowing.
+Alternatively, `saturating_add` ensures that the result will cap at the maximum value of the type rather than overflowing:
 
 ```rust
 let total: u16 = a.saturating_add(b);

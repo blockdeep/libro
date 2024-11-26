@@ -1,10 +1,10 @@
 # Use Atomic Operations to Prevent State Inconsistencies
 
-**Severity**: <span style="color:orange;">High</span>
+**Severity**: High
 
 ## Description
 
-Functions that modify multiple resources without transactional integrity may leave the system in an inconsistent state if an error occurs mid-operation.
+Functions that modify multiple resources without transactional integrity may leave the system in an inconsistent state if an error occurs mid-operation. In a blockchain environment, where state consistency is critical to maintain trust and operational stability, this can lead to data corruption, incorrect balances, or unexpected behavior.
 
 ## What should be avoided
 
@@ -21,7 +21,7 @@ fn transfer_funds(sender: &T::AccountId, recipient: &T::AccountId, amount: u32) 
 
 In this example:
 
-- Lack of Error Handling: If increase_balance fails, there is no mechanism to revert the changes made by reduce_balance. This creates an inconsistent state where the sender’s balance has been reduced, but the recipient’s balance hasn’t been updated accordingly, leading to potential issues in the system’s data integrity.
+- **Lack of Error Handling**: If `increase_balance` fails, there is no mechanism to revert the changes made by `reduce_balance`. This results in an inconsistent state where the sender’s balance is reduced, but the recipient’s balance remains unchanged, violating the atomicity of the transaction.
 
 ## Best practice
 
@@ -37,4 +37,9 @@ fn transfer_funds(sender: &T::AccountId, recipient: &T::AccountId, amount: u32) 
 }
 ```
 
-In this example, if any part of the operation fails, the function returns an error, ensuring data consistency.
+In this example:
+
+- **Transactional Integrity**: If any part of the operation fails, the function returns an error, and no changes are committed.
+- **Consistency**: Both `reduce_balance` and `increase_balance` succeed or fail together, maintaining the state integrity of the system.
+
+Ensuring atomicity in such operations prevents inconsistencies and safeguards the reliability of the blockchain state.

@@ -4,7 +4,7 @@
 
 ## Description
 
-Allowing unlimited entries in storage structures can lead to overflow, increased costs, and performance issues during operations that manage these storage items.
+Allowing unlimited entries in storage structures can lead to uncontrolled storage growth, resulting in overflow, increased costs, and performance issues during operations that manage these storage items. In a blockchain context, this can impact execution weight, hinder scalability, and degrade network performance.
 
 ## What should be avoided
 
@@ -32,7 +32,7 @@ pub type Entries<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
 
 #[pallet::error]
 pub enum Error<T> {
-	///  MaxEntries limit reached
+	/// MaxEntries limit reached
 	TooManyEntries,
 }
 

@@ -4,11 +4,11 @@
 
 ## Description
 
-Improper usage of `try_mutate` leads to redundant storage operations, which can negatively impact performance. Using both `try_mutate` and `insert` in the same closure causes unnecessary overhead by performing multiple accesses to storage.
+In Substrate runtime development, improper usage of `try_mutate` can lead to redundant storage operations, negatively impacting performance and increasing the overall weight of the extrinsic. Using both `try_mutate` and `insert` in the same closure causes unnecessary overhead by performing multiple storage accesses, which is particularly costly in terms of computation and I/O in a blockchain environment.
 
 ## What should be avoided
 
-Using `try_mutate` followed by `insert` in a nested closure causes redundant writes:
+Using `try_mutate` followed by `insert` in a nested closure results in redundant writes:
 
 ```rust
 #[pallet::storage]
@@ -17,7 +17,7 @@ pub type MyStorage<T: Config> = StorageValue<_, u32>;
 let new_value = 4_u32;
 MyStorage::<T>::try_mutate(id, |item| -> Result<(), Error> {
     // Raise an error if the condition is not met
-    ensure!(new_value < 10, Error::<T>::InvalidValue);
+    ensure!(new_value < 10 && item.is_none(), Error::<T>::InvalidValue);
     
     *item = Some(new_value);
 
