@@ -1,6 +1,6 @@
 # Use Atomic Operations to Prevent State Inconsistencies
 
-**Severity**: High
+**Severity**: <span style="color:orange;">High</span>
 
 ## Description
 
