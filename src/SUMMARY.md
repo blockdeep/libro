@@ -54,9 +54,9 @@
 - [Low Severity](low/README.md)
 
   - [Use appropriate naming conventions](low/Use_Appropriate_Naming_Conventions.md)
-  - [Avoid unnecessary cloning](low/Avoid_Redundant_Cloning.md)
+  - [Avoid unnecessary cloning](low/Avoid_Unnecessary_Cloning)
   - [Avoid hardcoded error messages](low/Avoid_Hardcoded_Error_Messages.md)
-  - [Adopt enumerations for clearer code](low/Adopt_Enumerations_for_Clearer_Code.md)
+  - [Adopt enumerations for optional input](low/Adopt_Enums_for_Optional_Input)
   - [Implement descriptive logging](low/Implement_Descriptive_Logging.md)
   - [Remove unnecessary return values](low/Remove_Unnecessary_Return_Values.md)
   - [Avoid repetitive generic type instantiation](low/Avoid_Repetitive_Generic_Type_Instantiation.md)
