@@ -4,7 +4,7 @@
 
 ## Description
 
-Unused code can clutter a codebase, making it more difficult to read, maintain, and optimize.
+Unused code can create unnecessary clutter, making the code harder to read, maintain, and optimize. As the codebase grows, leaving unused functions, variables, or comments in place leads to confusion and inefficiency. By removing or commenting out redundant code, developers can enhance the clarity of the codebase, making it easier for both current and future team members to understand and work with the system.
 
 ## What should be avoided
 

@@ -4,7 +4,7 @@
 
 ## Description
 
-Using basic types (e.g., strings, integers) instead of enumerations for distinct categories or optional input can lead to errors and make the code less readable.
+In Substrate development, using basic types (such as strings or integers) to represent distinct categories or optional input can lead to subtle bugs, such as typos or confusion in handling different states. Enums, on the other hand, offer a more structured approach, making it clear which values are valid and reducing the risk of errors. Using enums for representing states or categories improves both code readability and robustness, particularly in large codebases where clarity is essential.
 
 ## What should be avoided
 

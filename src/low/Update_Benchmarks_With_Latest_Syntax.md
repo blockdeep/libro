@@ -4,7 +4,7 @@
 
 ## Description
 
-Using deprecated syntax for defining benchmarks can lead to compatibility issues with future updates and may lack support for newer features. Transitioning to the latest syntax enhances readability, maintainability, and compatibility with the latest Substrate tooling.
+Substrate's benchmarking system has evolved significantly between versions 1 and 2, with v2 introducing major improvements in flexibility, clarity, and modularity. In v1, the `benchmarks!` macro was used to define benchmarks in a less modular, more embedded format, making the code harder to maintain and update. The introduction of the `#[benchmarks]` attribute in v2 offers a cleaner, more organized approach. This new syntax separates setup, execution, and verification into distinct functions, improving code readability and making it easier to implement and update benchmarks as the Substrate framework evolves. Transitioning to v2 ensures compatibility with the latest tooling and enhances the overall development experience, providing a more robust foundation for performance testing in Substrate runtimes.
 
 ## What should be avoided
 

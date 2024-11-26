@@ -4,7 +4,7 @@
 
 ## Description
 
-Without descriptive logging, debugging and monitoring issues become challenging, as the log entries may lack context or detail.
+In Substrate runtime development, logging is an essential tool for monitoring and debugging. Without descriptive and contextual logging, it becomes difficult to trace the flow of operations or identify issues effectively. Log messages that lack sufficient detail can make troubleshooting slow and inefficient, especially when dealing with complex or production-grade systems. By implementing descriptive logging, developers provide valuable insights that can help quickly diagnose problems, track system behavior, and improve the overall maintainability and observability of the blockchain runtime.
 
 ## What should be avoided
 
