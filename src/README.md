@@ -10,11 +10,11 @@ Substrate is a powerful and flexible framework, but developing robust, secure, a
 
 This guide is organized by issue severity to help prioritize improvements. Each section covers a severity level:
 
-- **Critical**: Issues that pose significant security or performance risks and require immediate action.
-- **High**: Issues that may not be catastrophic but could impact performance, security, or stability.
-- **Medium**: Issues that affect maintainability, readability, and efficiency, important to address for a well-optimized codebase.
-- **Low**: Minor concerns that can improve code clarity and efficiency, but with limited immediate impact.
-- **Informational**: Suggestions and recommendations that help maintain best practices but are not essential.
+- **<span style="color:red;">Critical</span>**: Issues that pose significant security or performance risks and require immediate action.
+- **<span style="color:orange;">High</span>**: Issues that may not be catastrophic but could impact performance, security, or stability.
+- **<span style="color:gold;">Medium</span>**: Issues that affect maintainability, readability, and efficiency, important to address for a well-optimized codebase.
+- **<span style="color:green;">Low</span>**: Minor concerns that can improve code clarity and efficiency, but with limited immediate impact.
+- **<span style="color:cyan;">Informational</span>**: Suggestions and recommendations that help maintain best practices but are not essential.
 
 Each issue is presented with:
 
