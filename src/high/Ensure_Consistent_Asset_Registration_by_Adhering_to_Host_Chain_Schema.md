@@ -32,7 +32,7 @@ The host’s adopted schema must be carefully studied and followed. In the case 
 
 ```rust
 // In runtime/xcm_config.rs file
-pub const AssetOfY: Location = Location::new(1, [Parachain(PARA_ID_OF_Y));
+pub const AssetOfY: Location = Location::new(1, [Parachain(PARA_ID_OF_Y)]);
 ```
 
 More complex cases, such as `pallet-assets`' created assets from another system, may have a more intricate `Location`. Nonetheless, the host should provide a clear schema, which all integrating systems are expected to respect and adhere to.

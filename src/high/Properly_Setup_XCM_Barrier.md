@@ -10,7 +10,7 @@ As a rule of thumb, it is always recommended to be as restrictive as possible.
 
 ## What should be avoided
 
-In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this configuration
+In the following example, there is a clear vulnerability: any origin can execute XCM for free on the chain using this configuration:
 
 ```rust
 pub type Barrier = (
@@ -23,10 +23,11 @@ pub type Barrier = (
 );
 ```
 
+This configuration allows overly permissive unpaid execution, exposing the system to abuse and unauthorized access.
+
 ## Best practice
 
-Properly identify each relevant case, aiming to be as restrictive as possible while also requiring explicit
-authorization for unpaid execution when necessary.
+Properly identify each relevant case, aiming to be as restrictive as possible while also requiring explicit authorization for unpaid execution when necessary:
 
 ```rust
 pub type Barrier = (
@@ -44,7 +45,7 @@ pub type Barrier = (
         UniversalLocation,
         ConstU32<8>,
     >,
-)
+);
 ```
 
-It is also highly recommended to support the configuration with inline comments that clarify the intended outcome.
+Inline comments, as shown above, help clarify the purpose and intent of each rule, ensuring the configuration aligns with security best practices. This approach minimizes vulnerabilities by restricting access and enforcing explicit checks for unpaid execution.

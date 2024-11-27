@@ -4,7 +4,7 @@
 
 ## Description
 
-The `#[pallet::getter]` attribute in Substrate is deprecated and may lead to compatibility issues in future framework versions. Using direct access methods or new approaches for storage access helps maintain compatibility and aligns with current best practices.
+The `#[pallet::getter]` attribute in Substrate is deprecated, and its continued use may lead to compatibility issues with future framework updates. Adopting modern approaches for storage access ensures compatibility with evolving standards. By transitioning away from deprecated getters, developers can maintain cleaner, more forward-compatible code while leveraging direct storage access or custom getter methods tailored to their needs.
 
 ## What should be avoided
 

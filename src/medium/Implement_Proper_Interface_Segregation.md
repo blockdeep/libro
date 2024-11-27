@@ -4,11 +4,11 @@
 
 ## Description
 
-Overloading interfaces with too many responsibilities can create unnecessary complexity, making code harder to understand, test, and maintain. The Interface Segregation Principle (ISP) encourages the design of smaller, more focused interfaces that are easier to manage and modify.
+Overloading interfaces with too many responsibilities creates unnecessary complexity, making code harder to understand, test, and maintain. The [Interface Segregation Principle (ISP)](https://en.wikipedia.org/wiki/Interface_segregation_principle) advocates for designing smaller, more focused interfaces that are easier to manage and adapt. This principle ensures that implementing types are not burdened with methods they do not use, promoting modular and reusable code.
 
 ## What should be avoided
 
-Using a single interface (or trait) that encompasses multiple, unrelated responsibilities increases the complexity of the code and creates tight coupling.
+Using a single interface (or trait) that encompasses multiple, unrelated responsibilities increases complexity and creates tight coupling:
 
 ```rust
 trait FullService {
@@ -20,11 +20,11 @@ trait FullService {
 
 In this example:
 
-- The FullService trait contains methods for unrelated operations (saving, loading, and processing), leading to unnecessary dependencies for any type that implements it.
+- The `FullService` trait combines unrelated methods for saving, loading, and processing. Any type implementing this trait would be forced to define all three methods, even if it only requires one or two of these responsibilities, leading to unnecessary dependencies.
 
 ## Best practice
 
-Break down interfaces into smaller, focused traits to simplify code:
+Break down interfaces into smaller, focused traits to simplify code and improve modularity:
 
 ```rust
 trait Save {
@@ -40,4 +40,4 @@ trait Process {
 }
 ```
 
-This approach keeps interfaces focused, improving code readability and maintainability.
+In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to a `StakingPot` account.

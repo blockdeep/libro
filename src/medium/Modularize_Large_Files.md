@@ -4,7 +4,7 @@
 
 ## Description
 
-Large files with numerous functions and types reduce readability, making it difficult for developers to navigate, understand, and maintain the code. Modularizing large files into smaller, logically organized modules enhances readability and simplifies code management.
+In Substrate development, projects often contain a `lib.rs` file of a pallet or runtime configuration that is excessively large as it accumulates all logic, types, and configurations in one place. This is common in older templates but makes the codebase harder to navigate, understand, and maintain. Modern Substrate templates showcase best practices by modularizing `lib.rs` into smaller, purpose-specific modules, significantly improving code readability and scalability. Developers are encouraged to follow these newer conventions to align with contemporary standards and ensure their pallets are easier to maintain and extend.
 
 ## What should be avoided
 

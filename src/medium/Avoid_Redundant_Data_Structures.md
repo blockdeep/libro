@@ -4,7 +4,7 @@
 
 ## Description
 
-Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and usage. Redundant storage also introduces risks of data inconsistency, as it requires additional logic to keep each storage location synchronized, potentially causing errors or unnecessary maintenance.
+Storing the same information in multiple storage structures leads to redundancy, which increases storage complexity and usage. In Substrate runtimes, where every storage access contributes to execution weight, redundant storage not only wastes resources but also introduces risks of data inconsistency. Synchronizing multiple storage locations adds unnecessary complexity to the logic and increases the likelihood of errors, making maintenance more challenging.
 
 ## What should be avoided
 
@@ -28,7 +28,7 @@ pub type InfoOwner<T: Config> = StorageMap<_, Blake2_128Concat, SomeId, T::Accou
 
 In this example:
 
-- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` StorageMap.
+- The `InfoOwner` storage map is redundant since the owner is already stored within the `Info` structure that is part of the `SomeInfo` storage map.
 
 ## Best practice
 
@@ -49,4 +49,4 @@ pub type SomeInfo<T: Config> =
 
 In this example:
 
-- The `InfoOwner` storage map was deleted to remove storage redundancy.
+- The `InfoOwner` storage map was deleted to remove storage redundancy. Retrieval of the `owner` field can now be performed directly from the `Info` structure within `SomeInfo`, ensuring consistency and reducing maintenance complexity.

@@ -4,7 +4,9 @@
 
 ## Description
 
-Hardcoding parameters reduces flexibility, making the code less adaptable to different environments and configurations. Configurable parameters allow for greater versatility and make the code easier to adjust as requirements change.
+Hardcoding parameters reduces flexibility, making the code less adaptable to changing environments or configurations. In Substrate runtime development, this rigidity can lead to unnecessary re-deployments and upgrades when requirements change. Configurable parameters enhance versatility, allowing runtime adjustments without altering the source code.
+
+A pallet configuration in Polkadot SDK is a set of associated types and constants defined in the `Config` trait of a pallet. These configurations allow developers to parameterize aspects of the pallet’s behavior, such as limits, thresholds, or external dependencies, at the runtime level. By implementing the `Config` trait in the runtime, these values can be adjusted dynamically for different environments without modifying or redeploying the pallet’s source code. This makes it an ideal replacement for hardcoded constants, providing flexibility and adaptability to evolving requirements.
 
 ## What should be avoided
 
@@ -26,14 +28,14 @@ impl<T: Config> Pallet<T> {
 
 In this example:
 
-- `LIMIT` is fixed at compile time, so changing it requires editing the code, recompiling, and redeploying, which can be inefficient.
+- `LIMIT` is fixed at compile time, meaning any change requires editing the source code, recompiling, and redeploying the runtime. This process is inefficient and can disrupt the network.
 
 ## Best practice
 
 Use configurable traits to allow parameter adjustments at the runtime level, enhancing flexibility and adaptability:
 
 ```rust
-// --- In pallet/lib.rs file ----
+// --- In pallet/lib.rs file ---
 pub trait Config: frame_system::Config {
     const LIMIT: u32;
 }
@@ -42,7 +44,7 @@ impl<T: Config> Pallet<T> {
     fn do_something() {
         // Access configurable limit
         for i in 0..T::LIMIT {
-          // Logic that uses the configurable limit
+            // Logic that uses the configurable limit
         }
     }
 }

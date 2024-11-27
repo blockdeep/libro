@@ -4,7 +4,9 @@
 
 ## Description
 
-Failing to expose essential functions via Runtime APIs limits access to valuable runtime data and functionalities for external clients. This restriction can prevent users and other clients from obtaining essential on-chain information.
+Runtime APIs in Substrate are a vital mechanism for exposing key runtime functionalities to external clients, such as frontend applications, wallets, or other off-chain systems. These APIs provide a way for external parties to interact with the blockchain, query on-chain data, and invoke runtime logic remotely, all while maintaining the security and integrity of the blockchain.
+
+Failing to expose essential functions via Runtime APIs limits access to valuable runtime data, preventing users and clients from retrieving crucial on-chain information or interacting with the blockchain efficiently. By exposing necessary runtime functionalities, developers can enable richer, more interactive decentralized applications (dApps), fostering a more connected ecosystem.
 
 ## What should be avoided
 

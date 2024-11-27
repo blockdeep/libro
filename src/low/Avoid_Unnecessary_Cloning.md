@@ -4,7 +4,7 @@
 
 ## Description
 
-Unused code and redundant cloning increase code size and reduce efficiency, leading to unnecessary memory usage and processing overhead. Removing unused code and minimizing cloning helps maintain a cleaner, more efficient codebase.
+Unnecessary cloning and unused code increase memory usage and processing overhead, leading to inefficiencies in Substrate runtime development. Each clone operation results in additional memory allocations, which can quickly add up, especially in resource-constrained environments. By avoiding unnecessary cloning and ensuring that data is accessed directly through references, developers can improve both memory efficiency and performance, maintaining a cleaner and more optimized codebase.
 
 ## What should be avoided
 

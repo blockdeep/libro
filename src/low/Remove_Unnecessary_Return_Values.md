@@ -4,7 +4,7 @@
 
 ## Description
 
-Returning values that are not modified or required by the function can clutter the code, leading to inefficiencies and reducing readability. Removing these unnecessary return values simplifies function signatures and clarifies function purpose.
+Returning unnecessary values in functions can clutter the code, making it harder to read and maintain. Unused return values do not add value and can lead to confusion about the function's purpose. By removing redundant return values, developers can simplify function signatures, reduce cognitive load, and make the code more efficient. This practice also enhances the clarity of the function’s intent, helping future developers understand the logic more easily and ensuring a cleaner codebase.
 
 ## What should be avoided
 

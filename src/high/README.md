@@ -2,8 +2,8 @@
 
 ## Description
 
-High-severity issues are serious but not as immediately threatening as critical ones. They often involve security vulnerabilities, significant performance inefficiencies, or non-trivial functional errors. While they may not lead to immediate system failure, high-severity issues have the potential to degrade system performance or expose the application to potential exploits.
+High-severity issues are serious problems that, while not immediately threatening the system's stability, pose a significant risk to its operation. In the context of Polkadot SDK, these issues can disrupt key functionalities, create vulnerabilities, or degrade performance over time. Unlike critical issues that can cause immediate chain halts or data corruption, high-severity issues tend to manifest gradually but can still severely impact the network if left unresolved.
 
 ## Implications
 
-Unresolved high-severity issues can lead to operational inefficiencies, intermittent failures, or an increased risk of security exploits. These issues should be prioritized just below critical issues and resolved as soon as feasible, as they can hinder system performance and overall user experience in substantial ways.
+Unresolved high-severity issues can lead to persistent operational inefficiencies or even chain stalls under certain conditions, especially if they affect essential runtime logic such as storage management or resource-heavy calculations. These issues increase the likelihood of security exploits and degrade the user experience, potentially eroding trust in the network. High-severity issues should be addressed with urgency, as their prolonged existence could escalate into critical problems, threatening the network’s performance and reliability.

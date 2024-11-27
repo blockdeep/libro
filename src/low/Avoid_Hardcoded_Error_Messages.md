@@ -4,8 +4,7 @@
 
 ## Description
 
-Hardcoding error messages directly in code can make localization and future updates difficult, leading to
-inconsistencies in user-facing messages.
+Hardcoding error messages directly in Substrate code can make it difficult to manage and update error handling across the runtime. When error messages are embedded within function logic, localization becomes cumbersome, and updating messages in the future may lead to inconsistencies. By using enums for error handling, developers can centralize and standardize error messages, making the code more flexible, easier to maintain, and adaptable to future changes, including localization for different languages or regions.
 
 ## What should be avoided
 

@@ -4,7 +4,7 @@
 
 ## Description
 
-Defining complex generic types repeatedly within a codebase leads to verbosity and reduces code maintainability. When a specific type instance of a generic struct is needed multiple times, duplicating its definition can make the code harder to read and more error-prone if updates to the type are required.
+Repeatedly defining complex generic types in Substrate can make the code unnecessarily verbose and harder to maintain. When a specific instance of a generic type is needed multiple times, repeating its definition can clutter the code, increase the risk of errors, and make it more challenging to update the type when changes are required. By using type aliases for complex generic types, developers can simplify the code, improve readability, and make it easier to maintain by ensuring that the type is only defined once.
 
 ## What should be avoided
 

@@ -4,11 +4,11 @@
 
 ## Description
 
-The `FeeManager` trait is used to manage fees for executing XCM messages. When properly configured, it allows for fees to be distributed to specified accounts or components. However, if `FeeManager` is set to the empty unit type (()), all fees will be burned.
+The `FeeManager` trait is used to manage fees for executing XCM messages. When properly configured, it allows for fees to be distributed to specified accounts or components. However, if `FeeManager` is set to the empty tuple type `()`, all fees will be burned.
 
 ## What should be avoided
 
-Setting FeeManager to the unit type () should be done with caution. This setting will automatically burn all fees collected.
+Setting FeeManager to the unit type `()` should be done with caution. This setting will automatically burn all fees collected.
 
 ```rust
 // Fees will be burned.

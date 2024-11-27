@@ -4,7 +4,7 @@
 
 ## Description
 
-Inconsistent or vague naming conventions can make code harder to read and understand, slowing down development and increasing the likelihood of errors. Clear and consistent naming improves code readability and helps maintain a well-organized codebase.
+Inconsistent or unclear naming conventions can create confusion, making the codebase harder to read and maintain. Vague function, variable, or type names can slow down development and increase the likelihood of errors, as developers may struggle to understand the purpose of various components. Clear and consistent naming conventions improve code readability, reduce ambiguity, and help maintain an organized codebase that is easier to work with, especially as the project grows. By adhering to proper naming conventions, developers ensure that their code is intuitive, maintainable, and scalable.
 
 ## What should be avoided
 

@@ -4,7 +4,7 @@
 
 ## Description
 
-Complex functions with multiple responsibilities are harder to test, understand, and maintain; increasing the risk of errors and making debugging more difficult.
+Complex functions with multiple responsibilities are harder to test, understand, and maintain, increasing the risk of errors and making debugging more difficult. In Substrate runtime development, where precise logic is critical for the correct functioning of the blockchain, overly complex functions can lead to bugs that are challenging to identify and resolve, potentially impacting the entire network.
 
 ## What should be avoided
 
@@ -25,6 +25,10 @@ fn process_transaction() {
     // ...
 }
 ```
+
+In this example:
+
+- The function mixes validation, fee calculation, balance updates, and storage modifications, making it difficult to pinpoint the source of issues or extend the logic without introducing errors.
 
 ## Best practice
 
