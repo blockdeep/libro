@@ -4,7 +4,7 @@
 
 ## Description
 
-Leaving extrinsics open to all users without proper origin checks can allow unauthorized actions, potentially compromising security and functionality. Critical operations must enforce strict access control to ensure that only authorized users or roles can execute them.
+Leaving critical or privileged extrinsics without proper origin checks can allow unauthorized actions, potentially compromising security and functionality. Critical operations must enforce strict access control to ensure that only authorized users or roles can execute them.
 
 ## What should be avoided
 
@@ -43,7 +43,7 @@ pub fn execute_critical_operation(origin: OriginFor<T>) -> DispatchResult {
 
 In this example:
 
-- Using `ensure_root` enforces that only users with root permissions can execute this function.
+- Using `ensure_root` enforces that only users or groups with elevated permissions can execute this function.
 
 ### Example 2
 
@@ -72,4 +72,4 @@ impl<T: Config> Pallet<T> {
 
 In this example:
 
-- The pallet uses a configurable custom origin `AuthorizedOrigin` to specify which entities are allowed to execute the permissioned extrinsic.
+- The pallet uses a configurable custom origin `AuthorizedOrigin` to specify which entities are allowed to execute the extrinsic.

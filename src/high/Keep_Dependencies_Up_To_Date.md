@@ -18,7 +18,7 @@ use outdated_library::deprecated_fn;
 
 ### Example 2
 
-The following configuration uses an outdated branch of the Polkadot-Sdk repository, which may include deprecated features, unresolved issues, or security vulnerabilities:
+The following configuration uses an outdated branch of the Polkadot-SDK repository, which may include deprecated features, unresolved issues, or security vulnerabilities:
 
 ```toml
 # In Cargo.toml
@@ -39,11 +39,11 @@ use latest_library::safe_fn;
 
 ### Example 2
 
-Ensure you are using the most recent stable branch of the Substrate repository:
+Ensure you are using the most recent stable branch of the Polkadot SDK repository:
 
 ```toml
 # In Cargo.toml
-sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-stable2407" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-stable2409" }
 ```
 
 By updating to the latest versions, you benefit from security improvements, performance enhancements, and better compatibility, ensuring a more robust and secure application.

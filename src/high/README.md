@@ -2,7 +2,7 @@
 
 ## Description
 
-High-severity issues are serious problems that, while not immediately threatening the system's stability, pose a significant risk to its operation. In the context of Substrate runtime development, these issues can disrupt key functionalities, create vulnerabilities, or degrade performance over time. Unlike critical issues that can cause immediate chain halts or data corruption, high-severity issues tend to manifest gradually but can still severely impact the network if left unresolved.
+High-severity issues are serious problems that, while not immediately threatening the system's stability, pose a significant risk to its operation. In the context of Polkadot SDK, these issues can disrupt key functionalities, create vulnerabilities, or degrade performance over time. Unlike critical issues that can cause immediate chain halts or data corruption, high-severity issues tend to manifest gradually but can still severely impact the network if left unresolved.
 
 ## Implications
 

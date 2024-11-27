@@ -1,10 +1,10 @@
-# Benchmark Extrinsic Worst-case Scenario
+# Benchmark Extrinsic Worst-case Scenarios
 
 **Severity**: <span style="color:orange;">High</span>
 
 ## Description
 
-In Substrate, benchmarks are used to measure the computational cost of runtime operations, such as extrinsics, storage accesses, and logic execution. These costs are quantified in **weights**, which represent the time and resources required to execute a specific operation on the blockchain.
+In Polkadot SDK, benchmarks are used to measure the computational cost of runtime operations, such as extrinsics, storage accesses, and logic execution. These costs are quantified in **weights**, which represent the time and resources required to execute a specific operation on the blockchain.
 
 Through benchmarking, developers define the **`WeightInfo`** trait, which associates each extrinsic with a weight value based on the benchmarks. The runtime then uses these weights to enforce limits on block execution and calculate fees dynamically.
 

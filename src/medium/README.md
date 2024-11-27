@@ -2,7 +2,7 @@
 
 ## Description
 
-Medium-severity issues in Substrate development often stem from outdated practices, insufficient modularity, or inadequate adherence to modern standards. While these issues do not immediately compromise the blockchain's core functionality or security, they can negatively impact runtime performance, maintainability, and metadata quality, which are crucial for efficient interaction with frontends and other ecosystem components. Addressing these issues aligns the runtime with Substrate's best practices, ensuring compatibility with future updates and scalability as the chain evolves.
+Medium-severity issues in context of Polkadot SDK often stem from outdated conventions, insufficient modularity, or inadequate adherence to modern standards. While these issues do not immediately compromise the blockchain's core functionality or security, they can negatively impact runtime performance, maintainability, and metadata quality, which are crucial for efficient interaction with frontends and other ecosystem components. Addressing these issues aligns the runtime with Substrate's best practices, ensuring compatibility with future updates and scalability as the chain evolves.
 
 ## Implications
 

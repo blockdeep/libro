@@ -2,7 +2,7 @@
 
 ## Description
 
-Low-severity issues in Substrate development are generally minor concerns that do not compromise the core functionality or security of the blockchain. These issues often relate to inefficiencies, inconsistent naming conventions, or areas where readability can be improved. While they are not critical, addressing these issues ensures the code remains clean, maintainable, and easy to understand. Resolving low-severity issues can enhance developer productivity, improve the quality of the codebase, and contribute to smoother long-term development and collaboration.
+Low-severity issues in context of Polkadot SDK are generally minor concerns that do not compromise the core functionality or security of the blockchain. These issues often relate to inefficiencies, inconsistent naming conventions, or areas where readability can be improved. While they are not critical, addressing these issues ensures the code remains clean, maintainable, and easy to understand. Resolving low-severity issues can enhance developer productivity, improve the quality of the codebase, and contribute to smoother long-term development and collaboration.
 
 ## Implications
 

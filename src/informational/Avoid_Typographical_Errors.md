@@ -4,7 +4,7 @@
 
 ## Description
 
-Typographical errors, while often overlooked, can significantly affect the clarity and professionalism of a Substrate codebase. In a decentralized environment where precision is critical, such errors can lead to confusion, incorrect assumptions, and even subtle bugs. Whether in variable names, comments, or documentation, ensuring accuracy in spelling helps maintain clear communication within the team and with external contributors, reducing the likelihood of misunderstandings and improving the overall quality of the project.
+Typographical errors, while often overlooked, can significantly affect the clarity and reliability of a codebase. In a decentralized environment where precision is critical, such errors can lead to confusion, incorrect assumptions, and even subtle bugs. Whether in variable names, comments, or documentation, ensuring accuracy in spelling helps maintain clear communication within the team and with external contributors, reducing the likelihood of misunderstandings and improving the overall quality of the project.
 
 ## What should be avoided
 

@@ -4,7 +4,7 @@
 
 ## Description
 
-Using `unwrap()` and similar methods for error handling in Substrate runtime development can lead to runtime panics, which are particularly dangerous in a decentralized network. Such panics can cause block production to halt, disrupt the network, and compromise the reliability of the blockchain. Explicit error handling ensures more robust and predictable behavior, safeguarding the system against unexpected conditions in production environments.
+Using `unwrap()` and similar methods for error handling in Substrate runtime/pallet code can lead to runtime panics, which are particularly dangerous in a decentralized network. Such panics can cause block production to halt, disrupt the network, and compromise the reliability of the blockchain. Explicit error handling ensures more robust and predictable behavior, safeguarding the system against unexpected conditions in production environments.
 
 ## What should be avoided
 

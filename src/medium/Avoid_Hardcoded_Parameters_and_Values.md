@@ -4,9 +4,9 @@
 
 ## Description
 
-Hardcoding parameters reduces flexibility, making the code less adaptable to changing environments or configurations. In Substrate runtime development, this rigidity can lead to unnecessary redeployments and upgrades when requirements change. Configurable parameters enhance versatility, allowing runtime adjustments without altering the source code.
+Hardcoding parameters reduces flexibility, making the code less adaptable to changing environments or configurations. In Substrate runtime development, this rigidity can lead to unnecessary re-deployments and upgrades when requirements change. Configurable parameters enhance versatility, allowing runtime adjustments without altering the source code.
 
-A pallet configuration in Substrate is a set of associated types and constants defined in the `Config` trait of a pallet. These configurations allow developers to parameterize aspects of the pallet’s behavior, such as limits, thresholds, or external dependencies, at the runtime level. By implementing the `Config` trait in the runtime, these values can be adjusted dynamically for different environments without modifying or redeploying the pallet’s source code. This makes it an ideal replacement for hardcoded constants, providing flexibility and adaptability to evolving requirements.
+A pallet configuration in Polkadot SDK is a set of associated types and constants defined in the `Config` trait of a pallet. These configurations allow developers to parameterize aspects of the pallet’s behavior, such as limits, thresholds, or external dependencies, at the runtime level. By implementing the `Config` trait in the runtime, these values can be adjusted dynamically for different environments without modifying or redeploying the pallet’s source code. This makes it an ideal replacement for hardcoded constants, providing flexibility and adaptability to evolving requirements.
 
 ## What should be avoided
 

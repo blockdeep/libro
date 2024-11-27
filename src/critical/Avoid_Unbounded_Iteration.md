@@ -4,18 +4,18 @@
 
 ## Description
 
-Unbounded iterations over large data structures in Substrate runtimes can lead to excessive weight consumption during transaction execution. Every operation must account for its computational cost to maintain network security and prevent abuse. Unbounded iterations can result in denial-of-service (DDoS) attacks if an extrinsic consumes too many computation or storage reads and writes, blocking other operations and degrading network performance.
+Unbounded iterations over large data structures in Substrate runtimes can lead to excessive weight consumption during transaction execution. Every operation must account for its computational cost to maintain security and prevent abuse. Unbounded iterations can result in spam or denial-of-service (DDoS) attacks if an extrinsic consumes too much weight, blocking other operations and degrading blockchain performance.
 
 ## What should be avoided
 
-The following example illustrates an iteration over all items in `big_data` without any limit. In a blockchain context, such an operation can lead to unpredictable execution times and excessive resource usage:
+The following example illustrates an iteration over all items in `big_data_set` without any limit. In a blockchain context, such an operation can lead to unpredictable execution times and excessive resource usage:
 
 ```rust
 #[pallet::storage]
 pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
 
-let big_data = UnboundedData::<T>::get();
-for item in big_data {
+let big_data_set = UnboundedData::<T>::get();
+for item in big_data_set {
     // Process each item with no limit
 }
 ```
