@@ -48,7 +48,6 @@
   - [Implement tests for all error cases](medium/Implement_Tests_For_All_Error_Cases.md)
   - [Avoid resource intensive execution inside hooks](medium/Avoid_Resource_Intensive_Execution_Inside_Hooks.md)
   - [Transition away from `Currency` trait](medium/Transition_Away_from_Currency_Trait.md)
-  - [Avoid unrestricted XCM execution](medium/Avoid_Unrestricted_XCM_Execution.md)
   - [Implement proper XCM fee management](medium/Implement_Proper_XCM_Fee_Management.md)
 
 - [Low Severity](low/README.md)
