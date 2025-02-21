@@ -2,6 +2,10 @@
 
 Compilation of the coding best practices for Polkadot SDK, presented as a mdbook.
 
+## Live site
+
+🔗 https://libro.blockdeep.dev
+
 ## Installation
 
 ```shell
