@@ -17,7 +17,7 @@ Avoid leaving behind unused functions, variables, or code comments that are no l
 //    // ...
 //    // some logic that is no longer needed
 //    // ...
-// } 
+// }
 
 fn process_data(data: &Vec<u32>) -> Result<u32, Error> {
     // Unused variable that adds no value
@@ -29,15 +29,15 @@ fn process_data(data: &Vec<u32>) -> Result<u32, Error> {
     // Only this line is necessary
     let important_variable: u32 = compute_data();
     // ...
-    
+
     Ok(important_variable)
 }
 ```
 
 In this example:
 
-- The process_important_data function is commented out and no longer needed but has not been removed.
-- The important_variable initialized with data[0] is also commented out and unnecessary.
+- The `process_important_data` function is commented out and no longer needed but has not been removed.
+- The `important_variable` initialized with `data[0]` is also commented out and unnecessary.
 
 ## Best practice
 

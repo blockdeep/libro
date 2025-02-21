@@ -52,7 +52,7 @@ In these examples:
 
 - The function names `processData` and `doStuff` are too vague, providing no insight into their purpose.
 - The variable names `x` and `tmp` do not describe the data they hold, making the code harder to follow.
-- The type alias `T` and struct `Info` lack meaningful context, obscuring their intent.
+- The type alias `B` and struct `Info` lack meaningful context, obscuring their intent.
 
 ## Best practice
 
