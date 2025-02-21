@@ -40,4 +40,5 @@ trait Process {
 }
 ```
 
-In this example, the `FeeManager` accepts `WaivedLocations` that are exempt from fees and transfers any charged fees to a `StakingPot` account.
+In this example:
+- Distinct traits are implemented so that each component provides only the functionality it actually needs, thereby enhancing modularity and reducing coupling.

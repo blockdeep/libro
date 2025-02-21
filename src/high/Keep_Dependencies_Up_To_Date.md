@@ -43,7 +43,7 @@ Ensure you are using the most recent stable branch of the Polkadot SDK repositor
 
 ```toml
 # In Cargo.toml
-sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-stable2409" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk.git", branch = "polkadot-stable2412-1" }
 ```
 
 By updating to the latest versions, you benefit from security improvements, performance enhancements, and better compatibility, ensuring a more robust and secure application.

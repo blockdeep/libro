@@ -8,7 +8,7 @@ Leaving critical or privileged extrinsics without proper origin checks can allow
 
 ## What should be avoided
 
-In the following code, the `execute` function can be called by any user, which may lead to unauthorized or malicious actions:
+In the following code, the `execute_critical_operation` function can be called by any user, which may lead to unauthorized or malicious actions:
 
 ```rust
 #[pallet::call_index(0)]
