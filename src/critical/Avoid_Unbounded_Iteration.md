@@ -12,7 +12,7 @@ The following example illustrates an iteration over all items in `big_data_set` 
 
 ```rust
 #[pallet::storage]
-pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
+pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>>;
 
 let big_data_set = UnboundedData::<T>::get();
 for item in big_data_set {
@@ -30,7 +30,7 @@ Use a bounded iterator or limit the number of items processed in each iteration.
 const MAX_ITEMS: usize = 20;
 
 #[pallet::storage]
-pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>;
+pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>>;
 
 let big_data = UnboundedData::<T>::get();
 for item in big_data.iter().take(MAX_ITEMS) {
