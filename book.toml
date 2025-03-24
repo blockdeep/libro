@@ -8,3 +8,6 @@ title = "Polkadot SDK Best Practices"
 
 [output.html]
 additional-css = [ "style.css" ]
+git-repository-url = "https://github.com/blockdeep/libro"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/blockdeep/libro/edit/main/{path}"
