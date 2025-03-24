@@ -22,7 +22,6 @@
   - [Prevent inconsistent state by distributing state commitment costs](high/Prevent_Inconsistent_State_By_Distributing_Finalization_Costs.md)
   - [Use atomic operations to prevent state inconsistencies](high/Use_Atomic_Operations_To_Prevent_State_Inconsistencies.md)
   - [Avoid redundant storage access in mutations](high/Avoid_Redundant_Storage_Access_in_Mutations.md)
-  - [Prevent unnecessary reads and writes in storage access](high/Prevent_Unnecessary_Reads_and_Writes_in_Storage_Access.md)
   - [Implement `try-state` Hook](high/Implement_Try_State_Hook.md)
   - [Properly setup XCM `Barrier`](high/Properly_Setup_XCM_Barrier.md)
   - [Ensure consistent asset registration by adhering to host chain schema](high/Ensure_Consistent_Asset_Registration_by_Adhering_to_Host_Chain_Schema.md)
