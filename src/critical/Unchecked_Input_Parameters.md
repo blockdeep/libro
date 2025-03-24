@@ -61,7 +61,7 @@ impl HourOfDay {
 }
 
 fn store_execution_time(hour_of_day: u8) -> Result<(), Error> {
-    let hour_of_day = HourOfDay::try_from();
+    let hour_of_day = HourOfDay::try_from(hour_of_day).map_err(|_| Error::<T>::TimeOutOfRange)?;
 
     ExecutedAt::<T>::insert(hour_of_day.get_raw());
     Ok(())
