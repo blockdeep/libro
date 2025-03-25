@@ -12,11 +12,13 @@ The following example illustrates an iteration over all items in `big_data_set` 
 
 ```rust
 #[pallet::storage]
-pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>>;
+pub type UnboundedData<T: Config> = StorageMap<_, Blake2_128Concat, T::AccountId, u32>;
 
-let big_data_set = UnboundedData::<T>::get();
-for item in big_data_set {
-    // Process each item with no limit
+fn iterate_over_data() {
+    let big_data_set = UnboundedData::<T>::iter();
+    for (acc, data) in big_data_set {
+        // Process each item with no limit
+    }
 }
 ```
 
@@ -30,11 +32,13 @@ Use a bounded iterator or limit the number of items processed in each iteration.
 const MAX_ITEMS: usize = 20;
 
 #[pallet::storage]
-pub type UnboundedData<T: Config> = StorageValue<_, Vec<u32>>;
+pub type UnboundedData<T: Config> = StorageMap<_, Blake2_128Concat, T::AccountId, u32>;
 
-let big_data = UnboundedData::<T>::get();
-for item in big_data.iter().take(MAX_ITEMS) {
-    // Process a limited number of items safely
+fn iterate_over_data() {
+    let big_data = UnboundedData::<T>::iter();
+    for (acc, data) in big_data.take(MAX_ITEMS) {
+        // Process a limited number of items safely
+    }
 }
 ```
 
@@ -46,11 +50,13 @@ Alternatively, use bounded data structures to enforce strict size limits at the 
 
 ```rust
 #[pallet::storage]
-pub type BoundedData<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
+pub type BoundedData<T: Config> = StorageValue<_, BoundedBTreeMap<T::AccountId, u32, T::MaxEntries>>;
 
-let bounded_data = BoundedData::<T>::get();
-for item in bounded_data {
-    // Iterates over a data structure with bounded size.
+fn iterate_over_data() {
+    let bounded_data = BoundedData::<T>::get();
+    for (acc, data) in bounded_data {
+        // Iterates over a data structure with bounded size.
+    }
 }
 ```
 
