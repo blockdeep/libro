@@ -12,6 +12,7 @@ The following code allows adding entries without any limit, leading to uncontrol
 
 ```rust
 #[pallet::storage]
+#[pallet::unbounded]
 pub type Entries<T: Config> = StorageValue<_, Vec<u32>>;
 
 fn add_entry(entry: u32) {
@@ -32,15 +33,13 @@ pub type Entries<T: Config> = StorageValue<_, BoundedVec<u32, T::MaxEntries>>;
 
 #[pallet::error]
 pub enum Error<T> {
-	/// MaxEntries limit reached
+	/// MaxEntries limit reached.
 	TooManyEntries,
 }
 
-fn add_entry_limited(entry: u32) -> Result<(), Error> {
-    Entries::<T>::try_mutate(|entries| {
-        entries.try_push(entry).map_err(|_| Error::<T>::TooManyEntries)?;
-        Ok(())
-    })
+fn add_entry_limited(entry: u32) -> Result<(), DispatchError> {
+    Entries::<T>::try_append(entry).map_err(|_| Error::<T>::TooManyEntries)?;
+    Ok(())
 }
 ```
 
