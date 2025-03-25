@@ -29,6 +29,7 @@
 
 - [Medium Severity](medium/README.md)
 
+  - [Append entries efficiently](medium/Append_Entries_Efficiently.md)
   - [Remove deprecated storage getters](medium/Remove_Deprecated_Storage_Getters.md)
   - [Avoid hardcoded parameters and values](medium/Avoid_Hardcoded_Parameters_and_Values.md)
   - [Include tests for edge cases](medium/Include_Tests_for_Edge_Cases.md)

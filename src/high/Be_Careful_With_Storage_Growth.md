@@ -37,7 +37,7 @@ pub enum Error<T> {
 	TooManyEntries,
 }
 
-fn add_entry_limited(entry: u32) -> Result<(), Error> {
+fn add_entry_limited(entry: u32) -> Result<(), DispatchError> {
     Entries::<T>::try_append(entry).map_err(|_| Error::<T>::TooManyEntries)?;
     Ok(())
 }
